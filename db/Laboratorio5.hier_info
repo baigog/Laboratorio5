@@ -7,6 +7,7 @@ Clk => ultimo[4].CLK
 Clk => ultimo[5].CLK
 Clk => ultimo[6].CLK
 Clk => ultimo[7].CLK
+Clk => busy~reg0.CLK
 Clk => RE~reg0.CLK
 Clk => data_ready~reg0.CLK
 Clk => direccion[0].CLK
@@ -52,6 +53,7 @@ Rst => direccion[6].ACLR
 Rst => direccion[7].ACLR
 Rst => current_state~3.DATAIN
 Rst => ultimo[0].ENA
+Rst => busy~reg0.ENA
 Rst => ultimo[7].ENA
 Rst => ultimo[6].ENA
 Rst => ultimo[5].ENA
@@ -72,5 +74,6 @@ address[6] <= direccion[6].DB_MAX_OUTPUT_PORT_TYPE
 address[7] <= direccion[7].DB_MAX_OUTPUT_PORT_TYPE
 data_ready <= data_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RE <= RE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+busy <= busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

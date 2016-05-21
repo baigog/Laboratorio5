@@ -2,11 +2,7 @@
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
-# Error 133: Unable to remove directory "E:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim/rtl_work".
 # vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# 
-# File exists. (errno = EEXIST)
 # vmap work rtl_work
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
 # vmap -modelsim_quiet work rtl_work 
@@ -15,41 +11,56 @@
 # ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd}
+# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 01:49:05 on May 20,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd 
+# Start time: 19:52:09 on May 21,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity LCD_CONTR
-# -- Compiling architecture BEH of LCD_CONTR
-# End time: 01:49:05 on May 20,2016, Elapsed time: 0:00:00
+# -- Compiling package PAKETE
+# End time: 19:52:09 on May 21,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd}
+# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 01:49:05 on May 20,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd 
+# Start time: 19:52:09 on May 21,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity LCD_CONTR_TB
-# -- Compiling architecture TB of LCD_CONTR_TB
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 01:49:05 on May 20,2016, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Loading package PAKETE
+# -- Compiling entity Mem_fsm
+# -- Compiling architecture beh of Mem_fsm
+# End time: 19:52:09 on May 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:52:09 on May 21,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package PAKETE
+# -- Compiling entity Mem_FSM_TB
+# -- Compiling architecture tb of Mem_FSM_TB
+# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 19:52:09 on May 21,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  LCD_CONTR_TB
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" LCD_CONTR_TB 
-# Start time: 01:49:06 on May 20,2016
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Mem_FSM_TB
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" Mem_FSM_TB 
+# Start time: 19:52:09 on May 21,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.lcd_contr_tb(tb)
 # Loading ieee.numeric_std(body)
-# Loading work.lcd_contr(beh)
+# Loading work.pakete
+# Loading work.mem_fsm_tb(tb)
+# Loading work.mem_fsm(beh)
 # 
 # add wave *
 # view structure
@@ -57,10 +68,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: INICIALIZACioN FINALIZADA
-#    Time: 750 ns  Iteration: 1  Instance: /lcd_contr_tb
 # ** Failure: FIN
-#    Time: 750 ns  Iteration: 1  Process: /lcd_contr_tb/APLICA_ENTRADAS File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd
-# Break in Process APLICA_ENTRADAS at E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd line 49
-# End time: 01:51:43 on May 20,2016, Elapsed time: 0:02:37
+#    Time: 6850 ns  Iteration: 2  Process: /mem_fsm_tb/Aplica_entradas File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd
+# Break in Process Aplica_entradas at C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd line 57
+# End time: 19:59:38 on May 21,2016, Elapsed time: 0:07:29
 # Errors: 0, Warnings: 0

@@ -16,7 +16,8 @@ entity Mem_fsm is
 		
 		address		:	out	std_logic_vector(7 downto 0) ;-- direccion de memoria apuntada
 		data_ready	:	out	std_logic;	-- Salida que indica que el dato esta listo
-		RE				:	out	std_logic	-- Read Enable
+		RE				:	out	std_logic;	-- Read Enable
+		busy			:	out	std_logic	-- Salida que indica si se esta en estado inicial
 	);
 end Mem_fsm;
 
@@ -88,37 +89,52 @@ begin
 		RE <= '0';
 	elsif(rising_edge(Clk)) then
 		case current_state is
+			when IDLE =>
+				direccion <= Inicial0;
+				data_ready <= '0';
+				RE <= '0';
+				busy <= '0';
 			when INIT0 =>
 				direccion <= Inicial0;
 				ultimo <= Inicial1;
 				RE <= '1';
+				busy <= '1';
 			when INIT1 =>
 				direccion <= Inicial1;
 				ultimo <= Inicial2;
 				RE <= '1';
+				busy <= '1';
 			when INIT2 =>
 				direccion <= Inicial2;
 				ultimo <= Inicial3;
 				RE <= '1';
+				busy <= '1';
 			when INIT3 =>
 				direccion <= Inicial3;
 				ultimo <= Final3;
 				RE <= '1';
+				busy <= '1';
 			when INIT4 =>
 				direccion <= Inicial0;
 				ultimo <= Final3;
 				RE <= '1';
+				busy <= '1';
 			when ACTUAL =>
 				RE <= '1';
-				Data_ready <= '1';
+				data_ready <= '1';
+				busy <= '1';
 			when NEXT_DATA =>
 				direccion <= std_logic_vector(unsigned(direccion)+1);
+				RE <= '1';
+				busy <= '1';
 			when ESPERA =>
 				RE <= '1';
+				busy <= '1';
 			when others =>
 				direccion <= Inicial0;
 				data_ready <= '0';
 				RE <= '0';
+				busy <= '1';
 			end case;
 	end if;
 end process;

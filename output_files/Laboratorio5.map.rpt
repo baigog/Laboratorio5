@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio5
-Sat May 21 11:54:03 2016
+Sat May 21 19:29:57 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat May 21 11:54:03 2016       ;
+; Analysis & Elaboration Status      ; Successful - Sat May 21 19:29:57 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
 ; Top-level Entity Name              ; Mem_fsm                                     ;
@@ -60,7 +60,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -158,37 +158,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat May 21 11:53:48 2016
+    Info: Processing started: Sat May 21 19:29:38 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
-    Info (12022): Found design unit 1: pll2-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
-    Info (12023): Found entity 1: PLL2 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
+    Info (12022): Found design unit 1: pll2-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
+    Info (12023): Found entity 1: PLL2 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file pll/pll1.vhd
-    Info (12022): Found design unit 1: pll1-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
-    Info (12023): Found entity 1: PLL1 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
+    Info (12022): Found design unit 1: pll1-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
+    Info (12023): Found entity 1: PLL1 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: ROM-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 14
-    Info (12023): Found entity 1: ROM File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 6
+    Info (12022): Found design unit 1: ROM-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm.vhd
-    Info (12022): Found design unit 1: Mem_fsm-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 23
-    Info (12023): Found entity 1: Mem_fsm File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
+    Info (12022): Found design unit 1: Mem_fsm-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 24
+    Info (12023): Found entity 1: Mem_fsm File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
 Info (12021): Found 1 design units, including 0 entities, in source file mem.vhd
-    Info (12022): Found design unit 1: PAKETE File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd Line: 5
+    Info (12022): Found design unit 1: PAKETE File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_hz.vhd
-    Info (12022): Found design unit 1: DF_HZ-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/DF_HZ.vhd Line: 27
-    Info (12023): Found entity 1: DF_HZ File: E:/Mega/Facultad/FPGA/Laboratorio5/DF_HZ.vhd Line: 8
+    Info (12022): Found design unit 1: DF_HZ-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 27
+    Info (12023): Found entity 1: DF_HZ File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr.vhd
-    Info (12022): Found design unit 1: LCD_CONTR-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 36
-    Info (12023): Found entity 1: LCD_CONTR File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 5
+    Info (12022): Found design unit 1: LCD_CONTR-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 36
+    Info (12023): Found entity 1: LCD_CONTR File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr_tb.vhd
-    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
-    Info (12023): Found entity 1: LCD_CONTR_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
+    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
+    Info (12023): Found entity 1: LCD_CONTR_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm_tb.vhd
+    Info (12022): Found design unit 1: Mem_FSM_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 8
+    Info (12023): Found entity 1: Mem_FSM_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 5
 Info (12127): Elaborating entity "Mem_FSM" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 844 megabytes
-    Info: Processing ended: Sat May 21 11:54:03 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 803 megabytes
+    Info: Processing ended: Sat May 21 19:29:57 2016
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:44
 
 
