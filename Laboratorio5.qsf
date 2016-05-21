@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Mem_FSM
+set_global_assignment -name TOP_LEVEL_ENTITY RS232_FSM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:28:47  MAY 16, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
@@ -65,11 +65,11 @@ set_global_assignment -name QIP_FILE PLL/PLL1.qip
 set_global_assignment -name SOURCE_FILE PLL/PLL2.cmp
 set_global_assignment -name SOURCE_FILE PLL/PLL1.cmp
 set_global_assignment -name VHDL_FILE ROM.vhd
-set_global_assignment -name VHDL_FILE Mem_FSM.vhd
 set_global_assignment -name VHDL_FILE Mem.vhd
 set_global_assignment -name VHDL_FILE DF_HZ.vhd
 set_global_assignment -name VHDL_FILE LCD_CONTR.vhd
 set_global_assignment -name VHDL_FILE LCD_CONTR_TB.vhd
+set_global_assignment -name VHDL_FILE RS232_FSM.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
