@@ -4,111 +4,75 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "EN",
+					"name" : "address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "RWOUT",
+					"name" : "address[1]",
 					"strict" : false
 				},
 				{
-					"name" : "RS",
+					"name" : "address[2]",
 					"strict" : false
 				},
 				{
-					"name" : "BUSY",
+					"name" : "address[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[0]",
+					"name" : "address[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[1]",
+					"name" : "address[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[2]",
+					"name" : "address[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[3]",
+					"name" : "address[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[4]",
+					"name" : "data_ready",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[5]",
+					"name" : "RE",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[6]",
+					"name" : "Clk",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[7]",
+					"name" : "Rst",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "BT1",
 					"strict" : false
 				},
 				{
-					"name" : "RST",
+					"name" : "BT0",
 					"strict" : false
 				},
 				{
-					"name" : "DATAWR",
+					"name" : "BT2",
 					"strict" : false
 				},
 				{
-					"name" : "SMODE",
+					"name" : "RS_READY",
 					"strict" : false
 				},
 				{
-					"name" : "INIT",
+					"name" : "BT3",
 					"strict" : false
 				},
 				{
-					"name" : "CLR",
-					"strict" : false
-				},
-				{
-					"name" : "DCTRL",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[7]",
+					"name" : "switch",
 					"strict" : false
 				}
 			]

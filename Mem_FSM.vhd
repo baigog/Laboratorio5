@@ -31,7 +31,7 @@ signal current_state,next_state:FSM_states;
 begin
 botones <= (BT3,BT2,BT1,BT0);
 address <= direccion;
-PROXIMO_ESTADO: process(next_state, BT0, BT1, BT2, BT3, RS_READY)
+PROXIMO_ESTADO: process(current_state, botones, switch, direccion, ultimo, RS_READY)
 begin
 next_state <= ACTUAL;
 	case current_state is
