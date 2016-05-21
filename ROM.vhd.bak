@@ -15,7 +15,7 @@ architecture beh of ROM is
 	begin
 	rom_proc : process (clk)
 	begin
-		if (rising_edge(clk) and (oe='1')) then
+		if rising_edge(clk) then
 		data_out <= mem(to_integer(unsigned(address)));
 	end if;
 	end process rom_proc;

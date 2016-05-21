@@ -22,14 +22,6 @@ package PAKETE is
 		080 => x"6F", 081 => x"20", 082 => x"4D", 083 => x"6F", 084 => x"6E", 085 => x"61", 086 => x"63", 087 => x"6F", 
 		088 => x"0A", 089 => x"0D", 090 => x"4C", 091 => x"65", 092 => x"74", 093 => x"20", 094 => x"69", 095 => x"74", 
 		096 => x"20", 097 => x"62", 098 => x"65", 099 => x"0A", 100 => x"0D", others => x"00");
- 		
-	constant Inicial0 : rom_word := x"00";
-	constant Inicial1 : rom_word := x"2F";
-	constant Inicial2 : rom_word := x"45";
-	constant Inicial3 : rom_word := x"5A";
-	constant Final3	: rom_word := x"65";
-	
-	
-	attribute romstyle : string;
+ 	attribute romstyle : string;
 	attribute romstyle of mem: signal is "M512";
 end package PAKETE;

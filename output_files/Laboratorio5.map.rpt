@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio5
-Fri May 20 01:38:24 2016
+Sat May 21 11:33:01 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -37,10 +37,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri May 20 01:38:24 2016       ;
+; Analysis & Elaboration Status      ; Successful - Sat May 21 11:33:01 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
-; Top-level Entity Name              ; LCD_CONTR                                   ;
+; Top-level Entity Name              ; Mem_fsm                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -60,7 +60,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -71,7 +71,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; LCD_CONTR          ; Laboratorio5       ;
+; Top-level entity name                                                      ; Mem_FSM            ; Laboratorio5       ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,23 +158,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Fri May 20 01:38:09 2016
+    Info: Processing started: Sat May 21 11:32:45 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
+    Info (12022): Found design unit 1: pll2-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
+    Info (12023): Found entity 1: PLL2 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file pll/pll1.vhd
+    Info (12022): Found design unit 1: pll1-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
+    Info (12023): Found entity 1: PLL1 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: ROM-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm.vhd
+    Info (12022): Found design unit 1: Mem_fsm-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 23
+    Info (12023): Found entity 1: Mem_fsm File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file mem.vhd
+    Info (12022): Found design unit 1: PAKETE File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_hz.vhd
-    Info (12022): Found design unit 1: DF_HZ-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/DF_HZ.vhd Line: 27
-    Info (12023): Found entity 1: DF_HZ File: E:/Mega/Facultad/FPGA/Laboratorio5/DF_HZ.vhd Line: 8
+    Info (12022): Found design unit 1: DF_HZ-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 27
+    Info (12023): Found entity 1: DF_HZ File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr.vhd
-    Info (12022): Found design unit 1: LCD_CONTR-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 36
-    Info (12023): Found entity 1: LCD_CONTR File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 5
+    Info (12022): Found design unit 1: LCD_CONTR-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 36
+    Info (12023): Found entity 1: LCD_CONTR File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr_tb.vhd
-    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
-    Info (12023): Found entity 1: LCD_CONTR_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
-Info (12127): Elaborating entity "LCD_CONTR" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 840 megabytes
-    Info: Processing ended: Fri May 20 01:38:24 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
+    Info (12023): Found entity 1: LCD_CONTR_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
+Info (12127): Elaborating entity "Mem_FSM" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(37): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(39): signal "botones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(41): signal "botones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(43): signal "botones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(45): signal "botones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(47): signal "switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(61): signal "direccion" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(61): signal "ultimo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(66): signal "switch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 66
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 801 megabytes
+    Info: Processing ended: Sat May 21 11:33:01 2016
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:36
 
 

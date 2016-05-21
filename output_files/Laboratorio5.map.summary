@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri May 20 01:38:24 2016
+Analysis & Elaboration Status : Successful - Sat May 21 11:33:01 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : LCD_CONTR
+Top-level Entity Name : Mem_fsm
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge
