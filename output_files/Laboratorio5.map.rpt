@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio5
-Sat May 21 19:29:57 2016
+Sat May 21 21:34:33 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -37,10 +37,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat May 21 19:29:57 2016       ;
+; Analysis & Elaboration Status      ; Successful - Sat May 21 21:34:33 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
-; Top-level Entity Name              ; Mem_fsm                                     ;
+; Top-level Entity Name              ; Parity                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -71,7 +71,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; Mem_FSM            ; Laboratorio5       ;
+; Top-level entity name                                                      ; Parity             ; Laboratorio5       ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,7 +158,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat May 21 19:29:38 2016
+    Info: Processing started: Sat May 21 21:34:15 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
@@ -173,8 +173,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm.vhd
     Info (12022): Found design unit 1: Mem_fsm-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 24
     Info (12023): Found entity 1: Mem_fsm File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
-Info (12021): Found 1 design units, including 0 entities, in source file mem.vhd
+Info (12021): Found 2 design units, including 0 entities, in source file mem.vhd
     Info (12022): Found design unit 1: PAKETE File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 5
+    Info (12022): Found design unit 2: PAKETE-body File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file df_hz.vhd
     Info (12022): Found design unit 1: DF_HZ-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 27
     Info (12023): Found entity 1: DF_HZ File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DF_HZ.vhd Line: 8
@@ -187,11 +188,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file lcd_con
 Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm_tb.vhd
     Info (12022): Found design unit 1: Mem_FSM_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 8
     Info (12023): Found entity 1: Mem_FSM_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 5
-Info (12127): Elaborating entity "Mem_FSM" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file parity.vhd
+    Info (12022): Found design unit 1: Parity-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd Line: 15
+    Info (12023): Found entity 1: Parity File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file parity_tb.vhd
+    Info (12022): Found design unit 1: Parity_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd Line: 8
+    Info (12023): Found entity 1: Parity_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd Line: 5
+Info (12127): Elaborating entity "Parity" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 803 megabytes
-    Info: Processing ended: Sat May 21 19:29:57 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Processing ended: Sat May 21 21:34:33 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:42
 
 

@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 package PAKETE is
+	
+	function Paridad (input:std_logic_vector(7 downto 0)) return std_logic;
+	
 	constant data_length : natural := 8;
 	constant addr_length : natural := 8;
 	constant mem_size : natural := 2**addr_length;
@@ -31,5 +34,21 @@ package PAKETE is
 	
 	
 	attribute romstyle : string;
-	attribute romstyle of mem: signal is "M512";
+	attribute romstyle of mem: signal is "M512";	
+	
 end package PAKETE;
+
+
+package body PAKETE is
+
+	function Paridad (input:std_logic_vector(7 downto 0)) return std_logic is
+		
+		variable bit_paridad: std_logic;
+		
+		begin
+			bit_paridad := input(7) xor input(6) xor input(5) xor input(4) xor input(3) xor input(2) xor input(1) xor input(0);
+		return bit_paridad;
+		
+	end function;
+
+end PAKETE;
