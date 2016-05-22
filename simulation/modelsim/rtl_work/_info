@@ -8,25 +8,25 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim
-Elcd_contr
-Z1 w1463719076
+Ers232_fsm
+Z1 w1463902449
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd
-Z6 FE:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd
+Z5 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
+Z6 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
 l0
 L5
-VW61lzoOHHJ?8?6IBA2mGB3
-!s100 IXRYoSUYzcmQK^^8WRMkZ0
+VhnHmS`^^=Ve^7OKL3Aoc?0
+!s100 3LPkENdiTh=`YjCmXe6:G2
 Z7 OV;C;10.4b;61
 31
-Z8 !s110 1463719745
+Z8 !s110 1463902705
 !i10b 1
-Z9 !s108 1463719745.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd|
-Z11 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd|
+Z9 !s108 1463902705.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
+Z11 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1
@@ -34,11 +34,11 @@ Abeh
 R2
 R3
 R4
-DEx4 work 9 lcd_contr 0 22 W61lzoOHHJ?8?6IBA2mGB3
-l45
-L36
-VVP7841^Cc1ZTVI@l@fEfY3
-!s100 e^mzl9An=408f?R`[kh?d0
+DEx4 work 9 rs232_fsm 0 22 hnHmS`^^=Ve^7OKL3Aoc?0
+l24
+L20
+VP8MDZmgP4^bcSJj_JQ8>;3
+!s100 nAkMC96U;h66d1AZ74Ud91
 R7
 31
 R8
@@ -49,42 +49,44 @@ R11
 !i113 1
 R12
 R13
-Elcd_contr_tb
-Z14 w1463719722
+Ers232_fsm_tb
+Z14 w1463902682
+R2
 R3
 R4
 R0
-Z15 8E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd
-Z16 FE:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd
+Z15 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
+Z16 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
 l0
-L4
-Vz=nP`Ide?hEV6NLZejkgX0
-!s100 DidhddGT2]8<PfJ`OOd;33
+L5
+V5eONf@aez6KJMbmA7C]BX1
+!s100 <?_;=R[eiXJGRLa9UhM3o3
 R7
 31
-R8
+Z17 !s110 1463902706
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd|
-Z18 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd|
+Z18 !s108 1463902706.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd|
+Z20 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd|
 !i113 1
 R12
 R13
 Atb
+R2
 R3
 R4
-DEx4 work 12 lcd_contr_tb 0 22 z=nP`Ide?hEV6NLZejkgX0
+DEx4 work 12 rs232_fsm_tb 0 22 5eONf@aez6KJMbmA7C]BX1
 l33
-L7
-VLl5`bBblmCbddiJh4AaU[3
-!s100 iF9;DE<SgzMznL??ek21E0
+L8
+VG_@G`jYS^WWRPJHAMa9n@1
+!s100 aW10WV_oRSm?CS=8d>lc41
 R7
 31
-R8
-!i10b 1
-R9
 R17
+!i10b 1
 R18
+R19
+R20
 !i113 1
 R12
 R13

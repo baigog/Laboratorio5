@@ -4,51 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "EN",
-					"strict" : false
-				},
-				{
-					"name" : "RWOUT",
-					"strict" : false
-				},
-				{
-					"name" : "RS",
-					"strict" : false
-				},
-				{
 					"name" : "BUSY",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[0]",
+					"name" : "SHIFT",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[1]",
+					"name" : "SS",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[2]",
+					"name" : "SEL[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DATA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DATA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DATA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DATA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DATA[7]",
+					"name" : "SEL[1]",
 					"strict" : false
 				},
 				{
@@ -60,55 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "DATAWR",
+					"name" : "DATA_READY",
 					"strict" : false
 				},
 				{
-					"name" : "SMODE",
-					"strict" : false
-				},
-				{
-					"name" : "INIT",
-					"strict" : false
-				},
-				{
-					"name" : "CLR",
-					"strict" : false
-				},
-				{
-					"name" : "DCTRL",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DATAIN[7]",
+					"name" : "SR_DONE",
 					"strict" : false
 				}
 			]

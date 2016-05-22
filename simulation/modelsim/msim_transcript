@@ -1,55 +1,76 @@
-# do Laboratorio5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do Laboratorio5_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# Error 133: Unable to remove directory "E:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# 
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
-# vmap -modelsim_quiet work rtl_work 
+# vmap -modelsim_quiet work gate_work 
 # Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd}
+# vcom -93 -work work {Laboratorio5_7_1200mv_85c_slow.vho}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 01:49:05 on May 20,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd 
+# Start time: 15:54:20 on May 22,2016
+# vcom -reportprogress 300 -93 -work work Laboratorio5_7_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity RS232_FSM
+# -- Compiling architecture structure of RS232_FSM
+# End time: 15:54:21 on May 22,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:54:21 on May 22,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity LCD_CONTR
-# -- Compiling architecture BEH of LCD_CONTR
-# End time: 01:49:05 on May 20,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 01:49:05 on May 20,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LCD_CONTR_TB
-# -- Compiling architecture TB of LCD_CONTR_TB
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 01:49:05 on May 20,2016, Elapsed time: 0:00:00
+# -- Compiling entity RS232_FSM_TB
+# -- Compiling architecture TB of RS232_FSM_TB
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:54:21 on May 22,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  LCD_CONTR_TB
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" LCD_CONTR_TB 
-# Start time: 01:49:06 on May 20,2016
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /RS1=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  RS232_FSM_TB
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /RS1=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" RS232_FSM_TB 
+# Start time: 15:54:21 on May 22,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.lcd_contr_tb(tb)
 # Loading ieee.numeric_std(body)
-# Loading work.lcd_contr(beh)
+# Loading work.rs232_fsm_tb(tb)
+# SDF 10.4b Compiler 2015.05 May 27 2015
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.rs232_fsm(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading instances from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
+# Loading timing data from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /rs232_fsm_tb File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
 # 
 # add wave *
 # view structure
@@ -57,10 +78,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: INICIALIZACioN FINALIZADA
-#    Time: 750 ns  Iteration: 1  Instance: /lcd_contr_tb
 # ** Failure: FIN
-#    Time: 750 ns  Iteration: 1  Process: /lcd_contr_tb/APLICA_ENTRADAS File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd
-# Break in Process APLICA_ENTRADAS at E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd line 49
-# End time: 01:51:43 on May 20,2016, Elapsed time: 0:02:37
+#    Time: 256770 ps  Iteration: 2  Process: /rs232_fsm_tb/APLICA_ENTRADAS File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
+# Break in Process APLICA_ENTRADAS at E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd line 44
+# End time: 15:55:39 on May 22,2016, Elapsed time: 0:01:18
 # Errors: 0, Warnings: 0
