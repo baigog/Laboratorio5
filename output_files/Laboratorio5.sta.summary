@@ -2,16 +2,25 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+<<<<<<< HEAD
 Type  : Slow 1200mV 85C Model Setup 'Clk'
 Slack : -1.642
 TNS   : -24.533
 
 Type  : Slow 1200mV 85C Model Hold 'Clk'
+=======
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -0.239
+TNS   : -0.239
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+>>>>>>> Mochi
 Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
+<<<<<<< HEAD
 TNS   : -35.125
 
 Type  : Slow 1200mV 0C Model Setup 'Clk'
@@ -20,10 +29,21 @@ TNS   : -20.123
 
 Type  : Slow 1200mV 0C Model Hold 'Clk'
 Slack : 0.354
+=======
+TNS   : -14.565
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -0.111
+TNS   : -0.111
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.353
+>>>>>>> Mochi
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
+<<<<<<< HEAD
 TNS   : -35.125
 
 Type  : Fast 1200mV 0C Model Setup 'Clk'
@@ -32,10 +52,24 @@ TNS   : -2.669
 
 Type  : Fast 1200mV 0C Model Hold 'Clk'
 Slack : 0.182
+=======
+TNS   : -14.565
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.181
+>>>>>>> Mochi
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk'
 Slack : -3.000
+<<<<<<< HEAD
 TNS   : -29.575
+=======
+TNS   : -12.558
+>>>>>>> Mochi
 
 ------------------------------------------------------------

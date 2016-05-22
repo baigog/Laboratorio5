@@ -29,8 +29,13 @@
 
 (DELAYFILE
   (SDFVERSION "2.1")
+<<<<<<< HEAD
   (DESIGN "Mem_fsm")
   (DATE "05/21/2016 11:47:22")
+=======
+  (DESIGN "RS232_FSM")
+  (DATE "05/22/2016 15:52:02")
+>>>>>>> Mochi
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition")
@@ -39,6 +44,7 @@
 
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
+<<<<<<< HEAD
     (INSTANCE \\address\[0\]\~output\\)
     (DELAY
       (ABSOLUTE
@@ -94,46 +100,85 @@
       (ABSOLUTE
         (PORT i (294:294:294) (342:342:342))
         (IOPATH i o (1589:1589:1589) (1614:1614:1614))
+=======
+    (INSTANCE \\BUSY\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (261:261:261) (300:300:300))
+        (IOPATH i o (1612:1612:1612) (1615:1615:1615))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
+<<<<<<< HEAD
     (INSTANCE \\address\[6\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (441:441:441) (507:507:507))
         (IOPATH i o (2466:2466:2466) (2527:2527:2527))
+=======
+    (INSTANCE \\SHIFT\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (266:266:266) (306:306:306))
+        (IOPATH i o (1602:1602:1602) (1605:1605:1605))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
+<<<<<<< HEAD
     (INSTANCE \\address\[7\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (442:442:442) (510:510:510))
         (IOPATH i o (1589:1589:1589) (1614:1614:1614))
+=======
+    (INSTANCE \\SS\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (410:410:410) (363:363:363))
+        (IOPATH i o (1615:1615:1615) (1612:1612:1612))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
+<<<<<<< HEAD
     (INSTANCE \\data_ready\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (463:463:463) (541:541:541))
         (IOPATH i o (1599:1599:1599) (1624:1624:1624))
+=======
+    (INSTANCE \\SEL\[0\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (251:251:251) (290:290:290))
+        (IOPATH i o (1582:1582:1582) (1585:1585:1585))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
+<<<<<<< HEAD
     (INSTANCE \\RE\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (458:458:458) (536:536:536))
         (IOPATH i o (1599:1599:1599) (1624:1624:1624))
+=======
+    (INSTANCE \\SEL\[1\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (259:259:259) (298:298:298))
+        (IOPATH i o (1582:1582:1582) (1585:1585:1585))
+>>>>>>> Mochi
       )
     )
   )
@@ -157,6 +202,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_ibuf")
+<<<<<<< HEAD
     (INSTANCE \\BT0\~input\\)
     (DELAY
       (ABSOLUTE
@@ -179,11 +225,18 @@
     (DELAY
       (ABSOLUTE
         (IOPATH i o (328:328:328) (708:708:708))
+=======
+    (INSTANCE \\DATA_READY\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (298:298:298) (677:677:677))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_ibuf")
+<<<<<<< HEAD
     (INSTANCE \\switch\~input\\)
     (DELAY
       (ABSOLUTE
@@ -197,11 +250,18 @@
     (DELAY
       (ABSOLUTE
         (IOPATH i o (298:298:298) (678:678:678))
+=======
+    (INSTANCE \\SR_DONE\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (308:308:308) (687:687:687))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\next_state\.INIT1\~0\\)
     (DELAY
       (ABSOLUTE
@@ -209,6 +269,13 @@
         (PORT datac (1708:1708:1708) (1899:1899:1899))
         (PORT datad (146:146:146) (191:191:191))
         (IOPATH dataa combout (158:158:158) (157:157:157))
+=======
+    (INSTANCE \\NS\.START\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (1595:1595:1595) (1774:1774:1774))
+        (PORT datad (122:122:122) (161:161:161))
+>>>>>>> Mochi
         (IOPATH datac combout (119:119:119) (124:124:124))
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
@@ -234,12 +301,21 @@
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\current_state\.INIT1\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1171:1171:1171) (1184:1184:1184))
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1156:1156:1156) (1168:1168:1168))
+=======
+    (INSTANCE \\CS\.START\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -249,6 +325,7 @@
     )
   )
   (CELL
+<<<<<<< HEAD
     (CELLTYPE "cycloneive_lcell_comb")
     (INSTANCE \\Selector12\~0\\)
     (DELAY
@@ -323,12 +400,23 @@
         (PORT datac (1733:1733:1733) (1930:1930:1930))
         (PORT datad (147:147:147) (193:193:193))
         (IOPATH datac combout (119:119:119) (124:124:124))
+=======
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\Selector1\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1608:1608:1608) (1796:1796:1796))
+        (PORT datad (122:122:122) (161:161:161))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\current_state\.INIT0\\)
     (DELAY
       (ABSOLUTE
@@ -363,6 +451,14 @@
         (PORT clk (1171:1171:1171) (1184:1184:1184))
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1156:1156:1156) (1168:1168:1168))
+=======
+    (INSTANCE \\CS\.DATA\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -373,6 +469,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\Selector18\~0\\)
     (DELAY
       (ABSOLUTE
@@ -405,6 +502,14 @@
         (PORT dataa (155:155:155) (205:205:205))
         (IOPATH dataa combout (165:165:165) (173:173:173))
         (IOPATH dataa cout (226:226:226) (171:171:171))
+=======
+    (INSTANCE \\NS\.PARITY\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (1592:1592:1592) (1771:1771:1771))
+        (PORT datad (127:127:127) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
         (IOPATH cin combout (187:187:187) (204:204:204))
         (IOPATH cin cout (34:34:34) (34:34:34))
@@ -412,6 +517,7 @@
     )
   )
   (CELL
+<<<<<<< HEAD
     (CELLTYPE "cycloneive_lcell_comb")
     (INSTANCE \\Add0\~8\\)
     (DELAY
@@ -424,11 +530,23 @@
         (IOPATH datab combout (168:168:168) (167:167:167))
         (IOPATH datac combout (120:120:120) (125:125:125))
         (IOPATH datad combout (68:68:68) (63:63:63))
+=======
+    (CELLTYPE "dffeas")
+    (INSTANCE \\CS\.PARITY\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+>>>>>>> Mochi
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\direccion\~0\\)
     (DELAY
       (ABSOLUTE
@@ -483,12 +601,22 @@
         (IOPATH dataa combout (170:170:170) (163:163:163))
         (IOPATH datab combout (168:168:168) (167:167:167))
         (IOPATH datac combout (120:120:120) (124:124:124))
+=======
+    (INSTANCE \\Selector0\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1612:1612:1612) (1800:1800:1800))
+        (PORT datad (127:127:127) (169:169:169))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\direccion\[2\]\\)
     (DELAY
       (ABSOLUTE
@@ -496,6 +624,14 @@
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1157:1157:1157) (1169:1169:1169))
         (PORT ena (510:510:510) (546:546:546))
+=======
+    (INSTANCE \\CS\.IDLE\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -507,6 +643,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE WideOr16)
     (DELAY
       (ABSOLUTE
@@ -517,6 +654,12 @@
         (IOPATH dataa combout (158:158:158) (157:157:157))
         (IOPATH datab combout (160:160:160) (167:167:167))
         (IOPATH datac combout (119:119:119) (124:124:124))
+=======
+    (INSTANCE \\BUSY\~reg0feeder\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (122:122:122) (161:161:161))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
@@ -538,6 +681,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\ultimo\[0\]\\)
     (DELAY
       (ABSOLUTE
@@ -589,6 +733,14 @@
         (PORT clk (1171:1171:1171) (1184:1184:1184))
         (PORT d (37:37:37) (50:50:50))
         (PORT ena (1009:1009:1009) (1086:1086:1086))
+=======
+    (INSTANCE \\BUSY\~reg0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
       )
     )
@@ -599,6 +751,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\Selector5\~0\\)
     (DELAY
       (ABSOLUTE
@@ -654,12 +807,19 @@
         (IOPATH dataa combout (170:170:170) (163:163:163))
         (IOPATH datab combout (168:168:168) (167:167:167))
         (IOPATH datac combout (120:120:120) (125:125:125))
+=======
+    (INSTANCE \\SHIFT\~reg0feeder\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (128:128:128) (168:168:168))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\direccion\[3\]\\)
     (DELAY
       (ABSOLUTE
@@ -667,6 +827,14 @@
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1157:1157:1157) (1169:1169:1169))
         (PORT ena (510:510:510) (546:546:546))
+=======
+    (INSTANCE \\SHIFT\~reg0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -678,6 +846,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\Add0\~14\\)
     (DELAY
       (ABSOLUTE
@@ -700,18 +869,33 @@
         (PORT datad (93:93:93) (111:111:111))
         (IOPATH dataa combout (165:165:165) (163:163:163))
         (IOPATH datac combout (119:119:119) (124:124:124))
+=======
+    (INSTANCE \\SS\~reg0feeder\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (122:122:122) (161:161:161))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\direccion\[4\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1172:1172:1172) (1185:1185:1185))
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1157:1157:1157) (1169:1169:1169))
+=======
+    (INSTANCE \\SS\~reg0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -722,6 +906,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\Add0\~16\\)
     (DELAY
       (ABSOLUTE
@@ -760,18 +945,35 @@
         (PORT datad (175:175:175) (207:207:207))
         (IOPATH dataa combout (170:170:170) (163:163:163))
         (IOPATH datac combout (119:119:119) (124:124:124))
+=======
+    (INSTANCE \\SEL\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (141:141:141) (193:193:193))
+        (PORT datad (125:125:125) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\direccion\[5\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1172:1172:1172) (1185:1185:1185))
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1157:1157:1157) (1169:1169:1169))
+=======
+    (INSTANCE \\SEL\[0\]\~reg0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -782,6 +984,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
+<<<<<<< HEAD
     (INSTANCE \\Add0\~18\\)
     (DELAY
       (ABSOLUTE
@@ -806,18 +1009,33 @@
         (IOPATH dataa combout (170:170:170) (163:163:163))
         (IOPATH datab combout (168:168:168) (167:167:167))
         (IOPATH datac combout (119:119:119) (124:124:124))
+=======
+    (INSTANCE \\SEL\[1\]\~reg0feeder\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (124:124:124) (165:165:165))
+>>>>>>> Mochi
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
+<<<<<<< HEAD
     (INSTANCE \\direccion\[6\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1172:1172:1172) (1185:1185:1185))
         (PORT d (37:37:37) (50:50:50))
         (PORT clrn (1157:1157:1157) (1169:1169:1169))
+=======
+    (INSTANCE \\SEL\[1\]\~reg0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1204:1204:1204))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (1177:1177:1177) (1188:1188:1188))
+>>>>>>> Mochi
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
         (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
       )
@@ -826,6 +1044,7 @@
       (HOLD d (posedge clk) (84:84:84))
     )
   )
+<<<<<<< HEAD
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
     (INSTANCE \\Selector17\~0\\)
@@ -1312,4 +1531,6 @@
       (HOLD d (posedge clk) (84:84:84))
     )
   )
+=======
+>>>>>>> Mochi
 )

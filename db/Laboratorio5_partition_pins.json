@@ -4,6 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
+<<<<<<< HEAD
 					"name" : "address[0]",
 					"strict" : false
 				},
@@ -49,6 +50,25 @@
 				},
 				{
 					"name" : "Rst",
+=======
+					"name" : "BUSY",
+					"strict" : false
+				},
+				{
+					"name" : "SHIFT",
+					"strict" : false
+				},
+				{
+					"name" : "SS",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[1]",
+>>>>>>> Mochi
 					"strict" : false
 				},
 				{
@@ -60,6 +80,7 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "BT2",
 					"strict" : false
 				},
@@ -73,6 +94,13 @@
 				},
 				{
 					"name" : "switch",
+=======
+					"name" : "DATA_READY",
+					"strict" : false
+				},
+				{
+					"name" : "SR_DONE",
+>>>>>>> Mochi
 					"strict" : false
 				}
 			]

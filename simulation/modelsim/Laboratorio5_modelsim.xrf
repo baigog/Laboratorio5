@@ -3,17 +3,28 @@ source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.qip
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.qip
+<<<<<<< HEAD
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd
+=======
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.cmp
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.cmp
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
+>>>>>>> Mochi
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/DF_HZ.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd
+source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/timing_p.vhd
 source_file = 1, E:/Mega/Facultad/FPGA/Laboratorio5/db/Laboratorio5.cbx.xml
+<<<<<<< HEAD
 design_name = Mem_fsm
 instance = comp, \address[0]~output\, address[0]~output, Mem_fsm, 1
 instance = comp, \address[1]~output\, address[1]~output, Mem_fsm, 1
@@ -106,3 +117,35 @@ instance = comp, \Selector20~0\, Selector20~0, Mem_fsm, 1
 instance = comp, \data_ready~reg0\, data_ready~reg0, Mem_fsm, 1
 instance = comp, \Selector19~0\, Selector19~0, Mem_fsm, 1
 instance = comp, \RE~reg0\, RE~reg0, Mem_fsm, 1
+=======
+design_name = RS232_FSM
+instance = comp, \BUSY~output\, BUSY~output, RS232_FSM, 1
+instance = comp, \SHIFT~output\, SHIFT~output, RS232_FSM, 1
+instance = comp, \SS~output\, SS~output, RS232_FSM, 1
+instance = comp, \SEL[0]~output\, SEL[0]~output, RS232_FSM, 1
+instance = comp, \SEL[1]~output\, SEL[1]~output, RS232_FSM, 1
+instance = comp, \CLK~input\, CLK~input, RS232_FSM, 1
+instance = comp, \CLK~inputclkctrl\, CLK~inputclkctrl, RS232_FSM, 1
+instance = comp, \DATA_READY~input\, DATA_READY~input, RS232_FSM, 1
+instance = comp, \SR_DONE~input\, SR_DONE~input, RS232_FSM, 1
+instance = comp, \NS.START~0\, NS.START~0, RS232_FSM, 1
+instance = comp, \RST~input\, RST~input, RS232_FSM, 1
+instance = comp, \RST~inputclkctrl\, RST~inputclkctrl, RS232_FSM, 1
+instance = comp, \CS.START\, CS.START, RS232_FSM, 1
+instance = comp, \Selector1~0\, Selector1~0, RS232_FSM, 1
+instance = comp, \CS.DATA\, CS.DATA, RS232_FSM, 1
+instance = comp, \NS.PARITY~0\, NS.PARITY~0, RS232_FSM, 1
+instance = comp, \CS.PARITY\, CS.PARITY, RS232_FSM, 1
+instance = comp, \Selector0~0\, Selector0~0, RS232_FSM, 1
+instance = comp, \CS.IDLE\, CS.IDLE, RS232_FSM, 1
+instance = comp, \BUSY~reg0feeder\, BUSY~reg0feeder, RS232_FSM, 1
+instance = comp, \BUSY~reg0\, BUSY~reg0, RS232_FSM, 1
+instance = comp, \SHIFT~reg0feeder\, SHIFT~reg0feeder, RS232_FSM, 1
+instance = comp, \SHIFT~reg0\, SHIFT~reg0, RS232_FSM, 1
+instance = comp, \SS~reg0feeder\, SS~reg0feeder, RS232_FSM, 1
+instance = comp, \SS~reg0\, SS~reg0, RS232_FSM, 1
+instance = comp, \SEL~0\, SEL~0, RS232_FSM, 1
+instance = comp, \SEL[0]~reg0\, SEL[0]~reg0, RS232_FSM, 1
+instance = comp, \SEL[1]~reg0feeder\, SEL[1]~reg0feeder, RS232_FSM, 1
+instance = comp, \SEL[1]~reg0\, SEL[1]~reg0, RS232_FSM, 1
+>>>>>>> Mochi

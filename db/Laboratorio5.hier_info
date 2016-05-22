@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |Parity
 data[0] => bit_paridad.IN1
 data[1] => bit_paridad.IN1
@@ -9,5 +10,29 @@ data[6] => bit_paridad.IN0
 data[7] => bit_paridad.IN1
 Rst => bit_parity.OUTPUTSELECT
 bit_parity << bit_parity.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|RS232_FSM
+DATA_READY => NS.START.DATAB
+DATA_READY => Selector0.IN2
+SR_DONE => NS.PARITY.DATAB
+SR_DONE => Selector1.IN2
+CLK => BUSY~reg0.CLK
+CLK => SEL[0]~reg0.CLK
+CLK => SEL[1]~reg0.CLK
+CLK => SS~reg0.CLK
+CLK => SHIFT~reg0.CLK
+CLK => CS~1.DATAIN
+RST => BUSY~reg0.ACLR
+RST => SEL[0]~reg0.ACLR
+RST => SEL[1]~reg0.ACLR
+RST => SS~reg0.PRESET
+RST => SHIFT~reg0.ACLR
+RST => CS~3.DATAIN
+BUSY << BUSY~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SHIFT << SHIFT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SS << SS~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] << SEL[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEL[1] << SEL[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> Mochi
 
 

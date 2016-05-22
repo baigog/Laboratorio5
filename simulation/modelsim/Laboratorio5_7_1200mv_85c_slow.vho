@@ -17,7 +17,11 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
+<<<<<<< HEAD
 -- DATE "05/21/2016 11:47:21"
+=======
+-- DATE "05/22/2016 15:52:02"
+>>>>>>> Mochi
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -34,6 +38,7 @@ USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE CYCLONEIVE.CYCLONEIVE_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
+<<<<<<< HEAD
 ENTITY 	Mem_fsm IS
     PORT (
 	Clk : IN std_logic;
@@ -72,6 +77,34 @@ END Mem_fsm;
 
 
 ARCHITECTURE structure OF Mem_fsm IS
+=======
+ENTITY 	RS232_FSM IS
+    PORT (
+	DATA_READY : IN std_logic;
+	SR_DONE : IN std_logic;
+	CLK : IN std_logic;
+	RST : IN std_logic;
+	BUSY : BUFFER std_logic;
+	SHIFT : BUFFER std_logic;
+	SS : BUFFER std_logic;
+	SEL : BUFFER std_logic_vector(1 DOWNTO 0)
+	);
+END RS232_FSM;
+
+-- Design Ports Information
+-- BUSY	=>  Location: PIN_G7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SHIFT	=>  Location: PIN_F7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SS	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SEL[0]	=>  Location: PIN_G8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SEL[1]	=>  Location: PIN_H8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- CLK	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RST	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- DATA_READY	=>  Location: PIN_F8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SR_DONE	=>  Location: PIN_E8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+ARCHITECTURE structure OF RS232_FSM IS
+>>>>>>> Mochi
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -81,6 +114,7 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
+<<<<<<< HEAD
 SIGNAL ww_Clk : std_logic;
 SIGNAL ww_BT3 : std_logic;
 SIGNAL ww_BT2 : std_logic;
@@ -198,10 +232,65 @@ ww_RS_READY <= RS_READY;
 address <= ww_address;
 data_ready <= ww_data_ready;
 RE <= ww_RE;
+=======
+SIGNAL ww_DATA_READY : std_logic;
+SIGNAL ww_SR_DONE : std_logic;
+SIGNAL ww_CLK : std_logic;
+SIGNAL ww_RST : std_logic;
+SIGNAL ww_BUSY : std_logic;
+SIGNAL ww_SHIFT : std_logic;
+SIGNAL ww_SS : std_logic;
+SIGNAL ww_SEL : std_logic_vector(1 DOWNTO 0);
+SIGNAL \RST~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \CLK~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \BUSY~output_o\ : std_logic;
+SIGNAL \SHIFT~output_o\ : std_logic;
+SIGNAL \SS~output_o\ : std_logic;
+SIGNAL \SEL[0]~output_o\ : std_logic;
+SIGNAL \SEL[1]~output_o\ : std_logic;
+SIGNAL \CLK~input_o\ : std_logic;
+SIGNAL \CLK~inputclkctrl_outclk\ : std_logic;
+SIGNAL \DATA_READY~input_o\ : std_logic;
+SIGNAL \SR_DONE~input_o\ : std_logic;
+SIGNAL \NS.START~0_combout\ : std_logic;
+SIGNAL \RST~input_o\ : std_logic;
+SIGNAL \RST~inputclkctrl_outclk\ : std_logic;
+SIGNAL \CS.START~q\ : std_logic;
+SIGNAL \Selector1~0_combout\ : std_logic;
+SIGNAL \CS.DATA~q\ : std_logic;
+SIGNAL \NS.PARITY~0_combout\ : std_logic;
+SIGNAL \CS.PARITY~q\ : std_logic;
+SIGNAL \Selector0~0_combout\ : std_logic;
+SIGNAL \CS.IDLE~q\ : std_logic;
+SIGNAL \BUSY~reg0feeder_combout\ : std_logic;
+SIGNAL \BUSY~reg0_q\ : std_logic;
+SIGNAL \SHIFT~reg0feeder_combout\ : std_logic;
+SIGNAL \SHIFT~reg0_q\ : std_logic;
+SIGNAL \SS~reg0feeder_combout\ : std_logic;
+SIGNAL \SS~reg0_q\ : std_logic;
+SIGNAL \SEL~0_combout\ : std_logic;
+SIGNAL \SEL[0]~reg0_q\ : std_logic;
+SIGNAL \SEL[1]~reg0feeder_combout\ : std_logic;
+SIGNAL \SEL[1]~reg0_q\ : std_logic;
+SIGNAL \ALT_INV_RST~inputclkctrl_outclk\ : std_logic;
+SIGNAL \ALT_INV_SS~reg0_q\ : std_logic;
+
+BEGIN
+
+ww_DATA_READY <= DATA_READY;
+ww_SR_DONE <= SR_DONE;
+ww_CLK <= CLK;
+ww_RST <= RST;
+BUSY <= ww_BUSY;
+SHIFT <= ww_SHIFT;
+SS <= ww_SS;
+SEL <= ww_SEL;
+>>>>>>> Mochi
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
+<<<<<<< HEAD
 \Rst~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Rst~input_o\);
 
 \Clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Clk~input_o\);
@@ -270,63 +359,115 @@ PORT MAP (
 
 -- Location: IOOBUF_X0_Y48_N9
 \address[5]~output\ : cycloneive_io_obuf
+=======
+\RST~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \RST~input_o\);
+
+\CLK~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \CLK~input_o\);
+\ALT_INV_RST~inputclkctrl_outclk\ <= NOT \RST~inputclkctrl_outclk\;
+\ALT_INV_SS~reg0_q\ <= NOT \SS~reg0_q\;
+
+-- Location: IOOBUF_X9_Y73_N2
+\BUSY~output\ : cycloneive_io_obuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => direccion(5),
 	devoe => ww_devoe,
 	o => \address[5]~output_o\);
 
 -- Location: IOOBUF_X0_Y47_N2
 \address[6]~output\ : cycloneive_io_obuf
+=======
+	i => \BUSY~reg0_q\,
+	devoe => ww_devoe,
+	o => \BUSY~output_o\);
+
+-- Location: IOOBUF_X9_Y73_N9
+\SHIFT~output\ : cycloneive_io_obuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => direccion(6),
 	devoe => ww_devoe,
 	o => \address[6]~output_o\);
 
 -- Location: IOOBUF_X0_Y49_N9
 \address[7]~output\ : cycloneive_io_obuf
+=======
+	i => \SHIFT~reg0_q\,
+	devoe => ww_devoe,
+	o => \SHIFT~output_o\);
+
+-- Location: IOOBUF_X13_Y73_N2
+\SS~output\ : cycloneive_io_obuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => direccion(7),
 	devoe => ww_devoe,
 	o => \address[7]~output_o\);
 
 -- Location: IOOBUF_X0_Y52_N2
 \data_ready~output\ : cycloneive_io_obuf
+=======
+	i => \ALT_INV_SS~reg0_q\,
+	devoe => ww_devoe,
+	o => \SS~output_o\);
+
+-- Location: IOOBUF_X11_Y73_N16
+\SEL[0]~output\ : cycloneive_io_obuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => \data_ready~reg0_q\,
 	devoe => ww_devoe,
 	o => \data_ready~output_o\);
 
 -- Location: IOOBUF_X0_Y52_N23
 \RE~output\ : cycloneive_io_obuf
+=======
+	i => \SEL[0]~reg0_q\,
+	devoe => ww_devoe,
+	o => \SEL[0]~output_o\);
+
+-- Location: IOOBUF_X11_Y73_N23
+\SEL[1]~output\ : cycloneive_io_obuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => \RE~reg0_q\,
 	devoe => ww_devoe,
 	o => \RE~output_o\);
+=======
+	i => \SEL[1]~reg0_q\,
+	devoe => ww_devoe,
+	o => \SEL[1]~output_o\);
+>>>>>>> Mochi
 
 -- Location: IOIBUF_X0_Y36_N8
 \Clk~input\ : cycloneive_io_ibuf
@@ -352,6 +493,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Clk~inputclkctrl_outclk\);
 
+<<<<<<< HEAD
 -- Location: IOIBUF_X0_Y44_N22
 \BT0~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -387,23 +529,36 @@ PORT MAP (
 
 -- Location: IOIBUF_X0_Y47_N15
 \switch~input\ : cycloneive_io_ibuf
+=======
+-- Location: IOIBUF_X11_Y73_N8
+\DATA_READY~input\ : cycloneive_io_ibuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => ww_switch,
 	o => \switch~input_o\);
 
 -- Location: IOIBUF_X0_Y45_N22
 \RS_READY~input\ : cycloneive_io_ibuf
+=======
+	i => ww_DATA_READY,
+	o => \DATA_READY~input_o\);
+
+-- Location: IOIBUF_X11_Y73_N1
+\SR_DONE~input\ : cycloneive_io_ibuf
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	i => ww_RS_READY,
 	o => \RS_READY~input_o\);
 
@@ -422,6 +577,25 @@ PORT MAP (
 	datac => \BT1~input_o\,
 	datad => \current_state.IDLE~q\,
 	combout => \next_state.INIT1~0_combout\);
+=======
+	i => ww_SR_DONE,
+	o => \SR_DONE~input_o\);
+
+-- Location: LCCOMB_X11_Y72_N18
+\NS.START~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \NS.START~0_combout\ = (\DATA_READY~input_o\ & !\CS.IDLE~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \DATA_READY~input_o\,
+	datad => \CS.IDLE~q\,
+	combout => \NS.START~0_combout\);
+>>>>>>> Mochi
 
 -- Location: IOIBUF_X0_Y36_N15
 \Rst~input\ : cycloneive_io_ibuf
@@ -447,14 +621,20 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Rst~inputclkctrl_outclk\);
 
+<<<<<<< HEAD
 -- Location: FF_X4_Y48_N3
 \current_state.INIT1\ : dffeas
+=======
+-- Location: FF_X11_Y72_N19
+\CS.START\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \next_state.INIT1~0_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -523,12 +703,40 @@ PORT MAP (
 
 -- Location: FF_X4_Y48_N29
 \current_state.INIT4\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \NS.START~0_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \CS.START~q\);
+
+-- Location: LCCOMB_X11_Y72_N12
+\Selector1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Selector1~0_combout\ = (\CS.START~q\) # ((!\SR_DONE~input_o\ & \CS.DATA~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111101010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \SR_DONE~input_o\,
+	datac => \CS.DATA~q\,
+	datad => \CS.START~q\,
+	combout => \Selector1~0_combout\);
+
+-- Location: FF_X11_Y72_N13
+\CS.DATA\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \next_state.INIT4~0_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -553,12 +761,39 @@ PORT MAP (
 
 -- Location: FF_X4_Y48_N15
 \current_state.INIT0\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \Selector1~0_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \CS.DATA~q\);
+
+-- Location: LCCOMB_X11_Y72_N24
+\NS.PARITY~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \NS.PARITY~0_combout\ = (\SR_DONE~input_o\ & \CS.DATA~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \SR_DONE~input_o\,
+	datad => \CS.DATA~q\,
+	combout => \NS.PARITY~0_combout\);
+
+-- Location: FF_X11_Y72_N25
+\CS.PARITY\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \next_state.INIT0~0_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -732,12 +967,40 @@ PORT MAP (
 
 -- Location: FF_X2_Y48_N9
 \direccion[2]\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \NS.PARITY~0_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \CS.PARITY~q\);
+
+-- Location: LCCOMB_X11_Y72_N10
+\Selector0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Selector0~0_combout\ = (!\CS.PARITY~q\ & ((\DATA_READY~input_o\) # (\CS.IDLE~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \DATA_READY~input_o\,
+	datac => \CS.IDLE~q\,
+	datad => \CS.PARITY~q\,
+	combout => \Selector0~0_combout\);
+
+-- Location: FF_X11_Y72_N11
+\CS.IDLE\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \Add0~23_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -782,12 +1045,67 @@ PORT MAP (
 
 -- Location: FF_X3_Y48_N21
 \ultimo[0]\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \Selector0~0_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \CS.IDLE~q\);
+
+-- Location: LCCOMB_X11_Y72_N16
+\BUSY~reg0feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \BUSY~reg0feeder_combout\ = \CS.IDLE~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \CS.IDLE~q\,
+	combout => \BUSY~reg0feeder_combout\);
+
+-- Location: FF_X11_Y72_N17
+\BUSY~reg0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \BUSY~reg0feeder_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \BUSY~reg0_q\);
+
+-- Location: LCCOMB_X11_Y72_N30
+\SHIFT~reg0feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \SHIFT~reg0feeder_combout\ = \CS.DATA~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \CS.DATA~q\,
+	combout => \SHIFT~reg0feeder_combout\);
+
+-- Location: FF_X11_Y72_N31
+\SHIFT~reg0\ : dffeas
+>>>>>>> Mochi
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \Selector18~1_combout\,
 	ena => \ALT_INV_Rst~input_o\,
@@ -830,12 +1148,38 @@ PORT MAP (
 
 -- Location: FF_X3_Y48_N31
 \ultimo[6]\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \SHIFT~reg0feeder_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \SHIFT~reg0_q\);
+
+-- Location: LCCOMB_X11_Y72_N8
+\SS~reg0feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \SS~reg0feeder_combout\ = \CS.START~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \CS.START~q\,
+	combout => \SS~reg0feeder_combout\);
+
+-- Location: FF_X11_Y72_N9
+\SS~reg0\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \Selector12~2_combout\,
 	ena => \ALT_INV_Rst~input_o\,
@@ -914,12 +1258,39 @@ PORT MAP (
 
 -- Location: FF_X2_Y48_N31
 \direccion[3]\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \SS~reg0feeder_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \SS~reg0_q\);
+
+-- Location: LCCOMB_X11_Y72_N6
+\SEL~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \SEL~0_combout\ = (\CS.PARITY~q\) # (\CS.DATA~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \CS.PARITY~q\,
+	datad => \CS.DATA~q\,
+	combout => \SEL~0_combout\);
+
+-- Location: FF_X11_Y72_N7
+\SEL[0]~reg0\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \Add0~13_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -964,12 +1335,38 @@ PORT MAP (
 
 -- Location: FF_X2_Y48_N1
 \direccion[4]\ : dffeas
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \SEL~0_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \SEL[0]~reg0_q\);
+
+-- Location: LCCOMB_X11_Y72_N28
+\SEL[1]~reg0feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \SEL[1]~reg0feeder_combout\ = \CS.PARITY~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \CS.PARITY~q\,
+	combout => \SEL[1]~reg0feeder_combout\);
+
+-- Location: FF_X11_Y72_N29
+\SEL[1]~reg0\ : dffeas
+>>>>>>> Mochi
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
+<<<<<<< HEAD
 	clk => \Clk~inputclkctrl_outclk\,
 	d => \Selector7~1_combout\,
 	clrn => \ALT_INV_Rst~inputclkctrl_outclk\,
@@ -1604,9 +2001,18 @@ PORT MAP (
 	q => \RE~reg0_q\);
 
 ww_address(0) <= \address[0]~output_o\;
+=======
+	clk => \CLK~inputclkctrl_outclk\,
+	d => \SEL[1]~reg0feeder_combout\,
+	clrn => \ALT_INV_RST~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \SEL[1]~reg0_q\);
+>>>>>>> Mochi
 
 ww_address(1) <= \address[1]~output_o\;
 
+<<<<<<< HEAD
 ww_address(2) <= \address[2]~output_o\;
 
 ww_address(3) <= \address[3]~output_o\;
@@ -1622,6 +2028,15 @@ ww_address(7) <= \address[7]~output_o\;
 ww_data_ready <= \data_ready~output_o\;
 
 ww_RE <= \RE~output_o\;
+=======
+ww_SHIFT <= \SHIFT~output_o\;
+
+ww_SS <= \SS~output_o\;
+
+ww_SEL(0) <= \SEL[0]~output_o\;
+
+ww_SEL(1) <= \SEL[1]~output_o\;
+>>>>>>> Mochi
 END structure;
 
 
