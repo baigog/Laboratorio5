@@ -6,10 +6,7 @@ use work.PAKETE.all;
 entity Mem_fsm is
 	port(
 		Clk			:	in std_logic;
-		BT3			:	in	std_logic;	-- boton que envia mensaje 4
-		BT2			:	in std_logic;  -- boton que envia mensaje 3
-		BT1			:	in std_logic;  -- boton que envia mensaje 2
-		BT0			:	in	std_logic;  -- boton que envia mensaje 1
+		botones		:	in	std_logic_vector(3 downto 0);
 		switch		:	in std_logic;  -- Llave que envia todos los mensajes
 		Rst			:	in std_logic;
 		RS_READY		:	in std_logic;	-- Entrada que indica que el RS esta disponible
@@ -22,7 +19,6 @@ entity Mem_fsm is
 end Mem_fsm;
 
 architecture beh of Mem_fsm is
-signal botones: std_logic_vector(3 downto 0);
 signal direccion: std_logic_vector(7 downto 0);
 signal ultimo: std_logic_vector(7 downto 0);
 
@@ -30,7 +26,6 @@ type FSM_states is (IDLE, INIT0, INIT1, INIT2, INIT3, INIT4, ACTUAL, NEXT_DATA, 
 signal current_state,next_state:FSM_states;
 
 begin
-botones <= (BT3,BT2,BT1,BT0);
 address <= direccion;
 PROXIMO_ESTADO: process(current_state, botones, switch, direccion, ultimo, RS_READY)
 begin
