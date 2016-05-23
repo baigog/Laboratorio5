@@ -1,5 +1,5 @@
 Flow report for Laboratorio5
-Mon May 23 00:02:09 2016
+Mon May 23 11:21:15 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 23 00:02:09 2016       ;
+; Flow Status                        ; Successful - Mon May 23 11:21:15 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
-; Top-level Entity Name              ; Mem_fsm                                     ;
+; Top-level Entity Name              ; LABORATORIO5                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2016 00:01:54 ;
+; Start date & time ; 05/23/2016 11:20:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio5        ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146397251443740        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146401325828452        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Mem_FSM_TB     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; RS1                                   ; --            ; --          ; RS232_FSM_TB   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Parity_TB      ;
@@ -106,13 +106,12 @@ agreement for further details.
 ; MISC_FILE                            ; PLL/PLL1.cmp                          ; --            ; --          ; --             ;
 ; MISC_FILE                            ; PLL/PLL1.ppf                          ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; Mem_FSM     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; Mem_FSM     ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; Mem_FSM     ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; Mem_FSM                               ; Laboratorio5  ; --          ; --             ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -121,8 +120,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 841 MB              ; 00:00:40                           ;
-; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 865 MB              ; 00:00:39                           ;
+; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:39                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -52,7 +52,7 @@ next_state <= ACTUAL;
 		when ACTUAL		=> next_state <= NEXT_DATA;
 		when NEXT_DATA	=> next_state <= ESPERA;
 		when ESPERA		=> 
-			if (RS_READY = '0') then
+			if (RS_READY = '1') then
 				next_state <= ESPERA;
 			elsif (direccion/=ultimo) then
 				next_state <= ACTUAL;

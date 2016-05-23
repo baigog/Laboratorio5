@@ -1,26 +1,77 @@
-# do Laboratorio5_run_msim_gate_vhdl.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
+# do Laboratorio5_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
 # }
-<<<<<<< HEAD
+# Error 133: Unable to remove directory "E:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim/rtl_work".
 # vlib rtl_work
+# ** Error: (vlib-35) Failed to create directory "rtl_work".
+# 
+# File exists. (errno = EEXIST)
 # vmap work rtl_work
-=======
-# vlib gate_work
-# vmap work gate_work
->>>>>>> Mochi
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
-# vmap -modelsim_quiet work gate_work 
+# vmap -modelsim_quiet work rtl_work 
 # Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-<<<<<<< HEAD
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd}
+# vlog -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db {E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:36 on May 23,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db" E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v 
+# -- Compiling module PLL1_altpll
+# 
+# Top level modules:
+# 	PLL1_altpll
+# End time: 11:27:36 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db {E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:36 on May 23,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db" E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v 
+# -- Compiling module PLL2_altpll
+# 
+# Top level modules:
+# 	PLL2_altpll
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 21:37:48 on May 21,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd 
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX_4_1
+# -- Compiling architecture flujo of MUX_4_1
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PLL2
+# -- Compiling architecture SYN of pll2
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PLL1
+# -- Compiling architecture SYN of pll1
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -28,12 +79,60 @@
 # -- Compiling package PAKETE
 # -- Compiling package body PAKETE
 # -- Loading package PAKETE
-# End time: 21:37:49 on May 21,2016, Elapsed time: 0:00:01
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 21:37:49 on May 21,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd 
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RS232_FSM
+# -- Compiling architecture BEH of RS232_FSM
+# End time: 11:27:37 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:37 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DATA_BUFFER
+# -- Compiling architecture BEH of DATA_BUFFER
+# End time: 11:27:38 on May 23,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:38 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SHIFT_REGISTER
+# -- Compiling architecture BEH of SHIFT_REGISTER
+# End time: 11:27:38 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:38 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package PAKETE
+# -- Compiling entity ROM
+# -- Compiling architecture beh of ROM
+# End time: 11:27:38 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:38 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -41,99 +140,80 @@
 # -- Loading package PAKETE
 # -- Compiling entity Parity
 # -- Compiling architecture beh of Parity
-# End time: 21:37:49 on May 21,2016, Elapsed time: 0:00:00
+# End time: 11:27:38 on May 23,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 21:37:49 on May 21,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd 
-=======
-# vcom -93 -work work {Laboratorio5_7_1200mv_85c_slow.vho}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 15:54:20 on May 22,2016
-# vcom -reportprogress 300 -93 -work work Laboratorio5_7_1200mv_85c_slow.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading package cycloneive_atom_pack
-# -- Loading package cycloneive_components
-# -- Compiling entity RS232_FSM
-# -- Compiling architecture structure of RS232_FSM
-# End time: 15:54:21 on May 22,2016, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 15:54:21 on May 22,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd 
->>>>>>> Mochi
+# Start time: 11:27:38 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-<<<<<<< HEAD
-# -- Compiling entity Parity_TB
-# -- Compiling architecture tb of Parity_TB
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(41): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 21:37:49 on May 21,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 7
+# -- Loading package PAKETE
+# -- Compiling entity LABORATORIO5
+# -- Compiling architecture BEH of LABORATORIO5
+# End time: 11:27:38 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:38 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package PAKETE
+# -- Compiling entity Mem_fsm
+# -- Compiling architecture beh of Mem_fsm
+# End time: 11:27:39 on May 23,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Parity_TB
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" Parity_TB 
-# Start time: 21:37:50 on May 21,2016
-=======
-# -- Compiling entity RS232_FSM_TB
-# -- Compiling architecture TB of RS232_FSM_TB
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 15:54:21 on May 22,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 11:27:39 on May 23,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package PAKETE
+# -- Compiling entity Laboratorio5_TB
+# -- Compiling architecture tb of Laboratorio5_TB
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd(32): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:27:39 on May 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # 
-# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /RS1=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  RS232_FSM_TB
-# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /RS1=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" RS232_FSM_TB 
-# Start time: 15:54:21 on May 22,2016
->>>>>>> Mochi
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Laboratorio5_TB
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" Laboratorio5_TB 
+# Start time: 11:27:39 on May 23,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-<<<<<<< HEAD
-# Loading work.parity_tb(tb)
 # Loading work.pakete(body)
-# Loading work.parity(beh)
-=======
-# Loading work.rs232_fsm_tb(tb)
-# SDF 10.4b Compiler 2015.05 May 27 2015
-# 
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
-# Loading cycloneive.cycloneive_atom_pack(body)
-# Loading cycloneive.cycloneive_components
-# Loading work.rs232_fsm(structure)
+# Loading work.laboratorio5_tb(tb)
+# Loading work.laboratorio5(beh)
+# Loading work.pll1(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
 # Loading ieee.std_logic_arith(body)
-# Loading cycloneive.cycloneive_io_obuf(arch)
-# Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
-# Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# Loading instances from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
-# Loading timing data from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /rs232_fsm_tb File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
->>>>>>> Mochi
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.pll2(syn)
+# Loading work.mux_4_1(flujo)
+# Loading work.rom(beh)
+# Loading work.parity(beh)
+# Loading work.mem_fsm(beh)
+# Loading work.rs232_fsm(beh)
+# Loading work.data_buffer(beh)
+# Loading work.shift_register(beh)
+# ** Warning: Design size of 10891 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -141,14 +221,21 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /laboratorio5_tb/Practica/SR
+# ** Note: Cyclone IV E PLL was reset
+#    Time: 0 ps  Iteration: 2  Instance: /laboratorio5_tb/Practica/PLL96_48/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Cyclone IV E PLL was reset
+#    Time: 0 ps  Iteration: 2  Instance: /laboratorio5_tb/Practica/PLL_115_384/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 70 ns  Iteration: 3  Instance: /laboratorio5_tb/Practica/PLL_115_384/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 70 ns  Iteration: 3  Instance: /laboratorio5_tb/Practica/PLL96_48/altpll_component/CYCLONEIII_ALTPLL/M5
+# Break key hit
+# Simulation stop requested.
+run -continue
 # ** Failure: FIN
-<<<<<<< HEAD
-#    Time: 70 ns  Iteration: 0  Process: /parity_tb/Calcular_Paridad File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd
-# Break in Process Calcular_Paridad at C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd line 44
-# End time: 21:44:21 on May 21,2016, Elapsed time: 0:06:31
-=======
-#    Time: 256770 ps  Iteration: 2  Process: /rs232_fsm_tb/APLICA_ENTRADAS File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
-# Break in Process APLICA_ENTRADAS at E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd line 44
-# End time: 15:55:39 on May 22,2016, Elapsed time: 0:01:18
->>>>>>> Mochi
-# Errors: 0, Warnings: 0
+#    Time: 1500030 ns  Iteration: 0  Process: /laboratorio5_tb/aplica_botones File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
+# Break in Process aplica_botones at E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd line 41
+# End time: 11:34:30 on May 23,2016, Elapsed time: 0:06:51
+# Errors: 0, Warnings: 2

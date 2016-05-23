@@ -7,123 +7,283 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-<<<<<<< HEAD
-Z0 dC:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/simulation/modelsim
-Ppakete
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z0 dE:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim
+Edata_buffer
+Z1 w1463944403
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 w1463876972
 R0
-Z5 8C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd
-Z6 FC:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd
+Z4 8E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd
+Z5 FE:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd
 l0
-L5
-VLMhIDZ7WQd?8nUekaTIm=3
-!s100 czjao@MKTnIiQd>?@?1bD2
-Z7 OV;C;10.4b;61
+L4
+VOQm1DNU]1WIR[LF[cE@OI3
+!s100 63[U]BmVNM6LjMbkF]PgG0
+Z6 OV;C;10.4b;61
 31
-b1
-Z8 !s110 1463877469
+Z7 !s110 1464013658
 !i10b 1
-Z9 !s108 1463877468.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd|
-Z11 !s107 C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd|
-=======
-Z0 dE:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim
-Ers232_fsm
-Z1 w1463902449
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
-Z6 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
-l0
-L5
-VhnHmS`^^=Ve^7OKL3Aoc?0
-!s100 3LPkENdiTh=`YjCmXe6:G2
-Z7 OV;C;10.4b;61
-31
-Z8 !s110 1463902705
-!i10b 1
-Z9 !s108 1463902705.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
-Z11 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
->>>>>>> Mochi
+Z8 !s108 1464013657.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd|
+Z10 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd|
 !i113 1
-Z12 o-93 -work work
-Z13 tExplicit 1
-Bbody
-Z14 DPx4 work 6 pakete 0 22 LMhIDZ7WQd?8nUekaTIm=3
-R1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abeh
 R2
 R3
-<<<<<<< HEAD
-l0
-L42
-VibQob;eSS@AG`QI=`@BMd3
-!s100 GAA`D3a8=0ZdS2VIJLY2M1
-=======
-R4
-DEx4 work 9 rs232_fsm 0 22 hnHmS`^^=Ve^7OKL3Aoc?0
-l24
-L20
-VP8MDZmgP4^bcSJj_JQ8>;3
-!s100 nAkMC96U;h66d1AZ74Ud91
->>>>>>> Mochi
-R7
+DEx4 work 11 data_buffer 0 22 OQm1DNU]1WIR[LF[cE@OI3
+l16
+L14
+V`5[5gGfP1ahBFOVg@l?Y[0
+!s100 fTQ8[^;7`1VOb=ei75^`Y3
+R6
 31
-R8
+R7
 !i10b 1
+R8
 R9
 R10
-R11
 !i113 1
+R11
 R12
-R13
-<<<<<<< HEAD
-nbody
-Eparity
-Z15 w1463876373
-R14
-R1
-=======
-Ers232_fsm_tb
-Z14 w1463902682
->>>>>>> Mochi
+Elaboratorio5
+Z13 w1464011802
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z15 DPx4 work 6 pakete 0 22 UGiJA9PlV^5QGE[[gXk1c1
 R2
 R3
 R0
-<<<<<<< HEAD
-Z16 8C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd
-Z17 FC:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd
+Z16 8E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd
+Z17 FE:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd
+l0
+L5
+V?9G6EB<UTB2zVaJYmT7cO2
+!s100 131fg9fkN0`HY5I`XcKXj1
+R6
+31
+R7
+!i10b 1
+Z18 !s108 1464013658.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd|
+Z20 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd|
+!i113 1
+R11
+R12
+Abeh
+R14
+R15
+R2
+R3
+DEx4 work 12 laboratorio5 0 22 ?9G6EB<UTB2zVaJYmT7cO2
+l27
+L17
+VJnO?dgMBN@KI^9@dXEIli0
+!s100 Z]Nk80H5<1T:Dh2O1V96B0
+R6
+31
+R7
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Elaboratorio5_tb
+Z21 w1464013637
+R14
+R15
+R2
+R3
+R0
+Z22 8E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
+Z23 FE:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
+l0
+L5
+VaPIo;G17Sb9BjNDMkVH`_1
+!s100 ^?ej7iJlkIY<LiLKFZF0h2
+R6
+31
+Z24 !s110 1464013659
+!i10b 1
+Z25 !s108 1464013659.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
+Z27 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
+!i113 1
+R11
+R12
+Atb
+R14
+R15
+R2
+R3
+DEx4 work 15 laboratorio5_tb 0 22 aPIo;G17Sb9BjNDMkVH`_1
+l28
+L8
+V^oeETzJOaSlSN`zVYQP_;2
+!s100 2B;fU[DRk6@<>PzF>E?K=1
+R6
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Emem_fsm
+Z28 w1464010521
+R15
+R14
+R2
+R3
+R0
+Z29 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd
+Z30 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd
+l0
+L6
+V@bLb<R`[Y:hg@@`mj6<5l2
+!s100 ^GT9lAE3^7IUMYSV;g>Ro2
+R6
+31
+R24
+!i10b 1
+R18
+Z31 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd|
+Z32 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd|
+!i113 1
+R11
+R12
+Abeh
+R15
+R14
+R2
+R3
+DEx4 work 7 mem_fsm 0 22 @bLb<R`[Y:hg@@`mj6<5l2
+l28
+L21
+Vc79HkP<bFzOX?6Jk?o0a?1
+!s100 ngA]PhZG>ozjEgY>l1oo>3
+R6
+31
+R24
+!i10b 1
+R18
+R31
+R32
+!i113 1
+R11
+R12
+Emux_4_1
+R1
+R2
+R3
+R0
+Z33 8E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd
+Z34 FE:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd
+l0
+L4
+VmQEh5EgEMgQYbGXWlTYPJ0
+!s100 YGUXlD[lK9g_Io90V?LYJ1
+R6
+31
+Z35 !s110 1464013657
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd|
+Z37 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd|
+!i113 1
+R11
+R12
+Aflujo
+R2
+R3
+DEx4 work 7 mux_4_1 0 22 mQEh5EgEMgQYbGXWlTYPJ0
+l14
+L13
+Vhni8jXB=zIO<HUXWgZ=1F1
+!s100 I]6DjM;j?@ecCzF<U`=;I3
+R6
+31
+R35
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12
+Ppakete
+R14
+R2
+R3
+Z38 w1464011015
+R0
+Z39 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
+Z40 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
+l0
+L5
+VUGiJA9PlV^5QGE[[gXk1c1
+!s100 mGI[<2kEI1G`KHe7>;W>l3
+R6
+31
+b1
+R35
+!i10b 1
+R8
+Z41 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
+Z42 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
+!i113 1
+R11
+R12
+Bbody
+R15
+R14
+R2
+R3
+l0
+L148
+VZCRGMF5m;NbN`BzJ`Z]e=3
+!s100 BV>OPV8MG6AcUmH7ToJmD1
+R6
+31
+R35
+!i10b 1
+R8
+R41
+R42
+!i113 1
+R11
+R12
+nbody
+Eparity
+Z43 w1463947340
+R15
+R14
+R2
+R3
+R0
+Z44 8E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd
+Z45 FE:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd
 l0
 L6
 V^5m0k3;[1jMmiF@lP^LB^0
 !s100 o[jf>CFdh^K>LOZ]^X`lC0
-=======
-Z15 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
-Z16 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd
-l0
-L5
-V5eONf@aez6KJMbmA7C]BX1
-!s100 <?_;=R[eiXJGRLa9UhM3o3
->>>>>>> Mochi
-R7
+R6
 31
-Z17 !s110 1463902706
+R7
 !i10b 1
-<<<<<<< HEAD
-Z18 !s108 1463877469.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd|
-Z20 !s107 C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd|
+R18
+Z46 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd|
+Z47 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd|
 !i113 1
+R11
 R12
-R13
 Abeh
+R15
 R14
-R1
 R2
 R3
 DEx4 work 6 parity 0 22 ^5m0k3;[1jMmiF@lP^LB^0
@@ -131,77 +291,260 @@ l17
 L15
 VjoCYdCAPhc_jTZdEAnVFH2
 !s100 KgWARH9g`g<zcY_1H5HeC0
-R7
+R6
 31
-R8
+R7
 !i10b 1
 R18
-R19
-R20
+R46
+R47
 !i113 1
+R11
 R12
-R13
-Eparity_tb
-Z21 w1463877454
-R1
+Epll1
+Z48 w1463943716
 R2
 R3
 R0
-Z22 8C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd
-Z23 FC:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd
+Z49 8E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd
+Z50 FE:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd
+l0
+L43
+Vh:f8:16AN^dJfH[R81gG_0
+!s100 b8imcindh_lkS2261<LJH0
+R6
+31
+R35
+!i10b 1
+R8
+Z51 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd|
+Z52 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 4 pll1 0 22 h:f8:16AN^dJfH[R81gG_0
+l138
+L55
+VKej9AMU`T4_nIgcYU1=8W2
+!s100 hzS68[^E[<`P6[ENU<_?j1
+R6
+31
+R35
+!i10b 1
+R8
+R51
+R52
+!i113 1
+R11
+R12
+vPLL1_altpll
+Z53 !s110 1464013656
+!i10b 1
+!s100 H=oB2B_n;M6b@US4EnEFZ0
+Ih5;>NG0iVP2FXC`o4Z<380
+Z54 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1464011036
+8E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v
+FE:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v
+Z55 L0 31
+Z56 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z57 !s108 1464013656.000000
+!s107 E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db|E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v|
+!i113 1
+Z58 o-vlog01compat -work work
+Z59 !s92 -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db
+n@p@l@l1_altpll
+Epll2
+R48
+R2
+R3
+R0
+Z60 8E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd
+Z61 FE:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd
+l0
+L43
+VhN_1FckJRlMQlV0<nKcW11
+!s100 hQmZ2k15FKcJSAATd:W@U0
+R6
+31
+R35
+!i10b 1
+R8
+Z62 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd|
+Z63 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 4 pll2 0 22 hN_1FckJRlMQlV0<nKcW11
+l138
+L55
+VGCMP656:f6Z0fE0jHB`k63
+!s100 GA=HIXDBHC6dKmhPI3@1N3
+R6
+31
+R35
+!i10b 1
+R8
+R62
+R63
+!i113 1
+R11
+R12
+vPLL2_altpll
+R53
+!i10b 1
+!s100 ES?<z`Z;CDPPf?f>NdE;z2
+I_QYXBm4KkMZ_5b8lL4DQ33
+R54
+R0
+w1464011037
+8E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v
+FE:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v
+R55
+R56
+r1
+!s85 0
+31
+R57
+!s107 E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db|E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v|
+!i113 1
+R58
+R59
+n@p@l@l2_altpll
+Erom
+Z64 w1464011276
+R15
+R14
+R2
+R3
+R0
+Z65 8E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
+Z66 FE:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
+l0
+L6
+V:Go1TVZR81;OP8>LNR7;c3
+!s100 Yj1Wb9=jA9@`e^9B>YZ:o3
+R6
+31
+R7
+!i10b 1
+R18
+Z67 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd|
+Z68 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd|
+!i113 1
+R11
+R12
+Abeh
+R15
+R14
+R2
+R3
+DEx4 work 3 rom 0 22 :Go1TVZR81;OP8>LNR7;c3
+l15
+L14
+V5_j_SRN_V3<nH02fZ<C]30
+!s100 ?CfS0k7gd`5LJVNRh=09g3
+R6
+31
+R7
+!i10b 1
+R18
+R67
+R68
+!i113 1
+R11
+R12
+Ers232_fsm
+Z69 w1464011265
+R14
+R2
+R3
+R0
+Z70 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
+Z71 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd
 l0
 L5
-VkTP>DGc2[iTJFSciWaMI`0
-!s100 ]mON6JS4i8S]23>WFSQ[`1
-R7
+VdXChfMG5<lR_lG351Ui[M0
+!s100 _Nf@BMcMIR6jA``jCVNIn2
+R6
 31
-R8
+R35
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd|
-Z25 !s107 C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd|
-=======
-Z18 !s108 1463902706.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd|
-Z20 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd|
->>>>>>> Mochi
+R8
+Z72 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
+Z73 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd|
 !i113 1
+R11
 R12
-R13
-Atb
-<<<<<<< HEAD
-R1
+Abeh
+R14
 R2
 R3
-DEx4 work 9 parity_tb 0 22 kTP>DGc2[iTJFSciWaMI`0
+DEx4 work 9 rs232_fsm 0 22 dXChfMG5<lR_lG351Ui[M0
 l23
-L8
-V^864942BH`>c4=oL^nCOL1
-!s100 na?afb[hAOCED?GciR`3=3
-R7
+L19
+VaLBCY4J]5:?ePZzj7b3oK1
+!s100 oYkLg9dhzZe[dQn:2J3=G2
+R6
 31
-R8
+R35
 !i10b 1
-R18
-R24
-R25
-=======
+R8
+R72
+R73
+!i113 1
+R11
+R12
+Eshift_register
+R1
+R14
 R2
 R3
-R4
-DEx4 work 12 rs232_fsm_tb 0 22 5eONf@aez6KJMbmA7C]BX1
-l33
-L8
-VG_@G`jYS^WWRPJHAMa9n@1
-!s100 aW10WV_oRSm?CS=8d>lc41
-R7
+R0
+Z74 8E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd
+Z75 FE:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd
+l0
+L4
+VciOoaiN^lIgIMl1@f]9Q71
+!s100 iWSl_LdiZk`039834Y9dT1
+R6
 31
-R17
+R7
 !i10b 1
 R18
-R19
-R20
->>>>>>> Mochi
+Z76 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd|
+Z77 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd|
 !i113 1
+R11
 R12
-R13
+Abeh
+R14
+R2
+R3
+DEx4 work 14 shift_register 0 22 ciOoaiN^lIgIMl1@f]9Q71
+l18
+L15
+Vfm@H69N@l7gFHaYQ5NL@80
+!s100 e3YCPHOSZ?Oi?B69o:F;S2
+R6
+31
+R7
+!i10b 1
+R18
+R76
+R77
+!i113 1
+R11
+R12

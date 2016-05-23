@@ -13,7 +13,7 @@ entity ROM is
 end ROM;
 architecture beh of ROM is
 	begin
-	rom_proc : process (clk)
+	rom_proc : process (clk, oe)
 	begin
 		if (rising_edge(clk) and (oe='1')) then
 		data_out <= mem(to_integer(unsigned(address)));

@@ -24,8 +24,8 @@ end component;
 
 signal clk,BT3,BT2,BT1,BT0,switch,Rst,RS_READY : std_logic :='0';
 signal data_ready,RE,busy : std_logic;
-signal address : std_logic_vector(7 downto 0);
-
+signal address	: std_logic_vector(7 downto 0);
+signal botones	:	std_logic_vector(3 downto 0);
 begin
 
 memo: Mem_FSM port map(clk=>clk,botones=>botones,switch=>switch,Rst=>Rst,

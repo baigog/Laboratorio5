@@ -83,7 +83,6 @@ component Mem_FSM is
 	port(
 		Clk			:	in std_logic;
 		botones		:	in	std_logic_vector(3 downto 0);
-		BT0			:	in	std_logic;
 		switch		:	in std_logic;
 		Rst			:	in std_logic;
 		RS_READY		:	in std_logic;

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon May 23 00:02:09 2016
+Analysis & Elaboration Status : Successful - Mon May 23 11:21:15 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : Laboratorio5
-Top-level Entity Name : Mem_fsm
+Top-level Entity Name : LABORATORIO5
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge
