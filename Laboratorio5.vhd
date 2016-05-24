@@ -43,7 +43,7 @@ FREQ_SEL: MUX_4_1	PORT MAP(in0		=>	CLK115,
 									sel		=>	FSEL,
 									out1		=>	CLKBAUD);
 MEMORIA:	ROM	PORT MAP(		clk		=>	CLK,
-										oe			=>	MEM_EN,
+										--oe			=>	MEM_EN,
 										address	=>	ADDR_BUS,
 										data_out	=>	DATA_BUS1);
 
@@ -51,7 +51,7 @@ PARIDAD:	PARITY	PORT MAP(	data			=>	DATA_BUS2,
 										Rst			=>	RESET,
 										bit_parity	=>	BIT_PAR);
 
-MEM_SM:	MEM_FSM	PORT MAP(	CLK			=>	CLK,
+MEM_SM:	MEM_FSM	PORT MAP(	CLK			=>	CLKBAUD,
 										botones		=>	BOTONES,
 										switch		=>	SWITCH,
 										Rst			=>	RESET,
@@ -69,9 +69,10 @@ RS_232:	RS232_FSM	PORT MAP(	DATA_READY	=>	DATA_READY,
 												SHIFT		=>	SHIFT,
 												SS			=>	STARTSTOP,
 												SEL		=>	OUTSEL);
+												
 DBUFFER:	DATA_BUFFER	PORT MAP(	DATAIN	=>	DATA_BUS1,
 											EN			=>	DATA_READY,
-											CLK		=>	CLK,
+											CLK		=>	CLKBAUD,
 											DATAOUT	=>	DATA_BUS2);
 								
 SR:	SHIFT_REGISTER	PORT MAP(	CLK			=>	CLKBAUD,

@@ -1,5 +1,5 @@
 Flow report for Laboratorio5
-Mon May 23 11:21:15 2016
+Tue May 24 17:34:28 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 23 11:21:15 2016       ;
+; Flow Status                        ; Successful - Tue May 24 17:34:27 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
 ; Top-level Entity Name              ; LABORATORIO5                                ;
@@ -65,54 +65,58 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2016 11:20:58 ;
+; Start date & time ; 05/24/2016 17:34:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio5        ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146401325828452        ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Mem_FSM_TB     ;
-; EDA_DESIGN_INSTANCE_NAME             ; RS1                                   ; --            ; --          ; RS232_FSM_TB   ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Parity_TB      ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LCD_CONTR_TB   ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RS232_FSM_TB                          ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; Mem_FSM_TB.vhd                        ; --            ; --          ; Mem_FSM_TB     ;
-; EDA_TEST_BENCH_FILE                  ; RS232_FSM_TB.vhd                      ; --            ; --          ; RS232_FSM_TB   ;
-; EDA_TEST_BENCH_FILE                  ; Parity_TB.vhd                         ; --            ; --          ; Parity_TB      ;
-; EDA_TEST_BENCH_FILE                  ; LCD_CONTR_TB.vhd                      ; --            ; --          ; LCD_CONTR_TB   ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Mem_FSM_TB                            ; --            ; --          ; Mem_FSM_TB     ;
-; EDA_TEST_BENCH_MODULE_NAME           ; RS232_FSM_TB                          ; --            ; --          ; RS232_FSM_TB   ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Parity_TB                             ; --            ; --          ; Parity_TB      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; LCD_CONTR_TB                          ; --            ; --          ; LCD_CONTR_TB   ;
-; EDA_TEST_BENCH_NAME                  ; LCD_CONTR_TB                          ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; RS232_FSM_TB                          ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; Mem_FSM_TB                            ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; Parity_TB                             ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL2_inst.vhd                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL2.cmp                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL2.ppf                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL1_inst.vhd                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL1.cmp                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; PLL/PLL1.ppf                          ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
+; COMPILER_SIGNATURE_ID                ; 269322049746858.146412204904144       ; --            ; --          ; --              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Mem_FSM_TB      ;
+; EDA_DESIGN_INSTANCE_NAME             ; RS1                                   ; --            ; --          ; RS232_FSM_TB    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Parity_TB       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LCD_CONTR_TB    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Laboratorio5_TB ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Laboratorio5_TB                       ; --            ; --          ; eda_simulation  ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation  ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --              ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_FILE                  ; Mem_FSM_TB.vhd                        ; --            ; --          ; Mem_FSM_TB      ;
+; EDA_TEST_BENCH_FILE                  ; RS232_FSM_TB.vhd                      ; --            ; --          ; RS232_FSM_TB    ;
+; EDA_TEST_BENCH_FILE                  ; Parity_TB.vhd                         ; --            ; --          ; Parity_TB       ;
+; EDA_TEST_BENCH_FILE                  ; LCD_CONTR_TB.vhd                      ; --            ; --          ; LCD_CONTR_TB    ;
+; EDA_TEST_BENCH_FILE                  ; Laboratorio5_TB.vhd                   ; --            ; --          ; Laboratorio5_TB ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Mem_FSM_TB                            ; --            ; --          ; Mem_FSM_TB      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; RS232_FSM_TB                          ; --            ; --          ; RS232_FSM_TB    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Parity_TB                             ; --            ; --          ; Parity_TB       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; LCD_CONTR_TB                          ; --            ; --          ; LCD_CONTR_TB    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Laboratorio5_TB                       ; --            ; --          ; Laboratorio5_TB ;
+; EDA_TEST_BENCH_NAME                  ; LCD_CONTR_TB                          ; --            ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; RS232_FSM_TB                          ; --            ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; Mem_FSM_TB                            ; --            ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; Parity_TB                             ; --            ; --          ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; Laboratorio5_TB                       ; --            ; --          ; eda_simulation  ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --              ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2_inst.vhd                     ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2.cmp                          ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2.ppf                          ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL1_inst.vhd                     ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL1.cmp                          ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL1.ppf                          ; --            ; --          ; --              ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --              ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top             ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top             ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --              ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --              ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --              ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -120,8 +124,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 865 MB              ; 00:00:39                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:39                           ;
+; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 817 MB              ; 00:00:40                           ;
+; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:40                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,7 +134,7 @@ agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; Analysis & Elaboration ; Daniela-NB       ; Windows 7 ; 6.1        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 

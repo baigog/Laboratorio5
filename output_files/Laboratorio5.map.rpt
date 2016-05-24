@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio5
-Mon May 23 11:21:15 2016
+Tue May 24 17:34:28 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon May 23 11:21:15 2016       ;
+; Analysis & Elaboration Status      ; Successful - Tue May 24 17:34:27 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
 ; Top-level Entity Name              ; LABORATORIO5                                ;
@@ -67,7 +67,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -947,6 +947,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+; re   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -975,65 +976,60 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Mon May 23 11:20:57 2016
+    Info: Processing started: Tue May 24 17:34:09 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file mux_4_1.vhd
-    Info (12022): Found design unit 1: MUX_4_1-flujo File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 13
-    Info (12023): Found entity 1: MUX_4_1 File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 4
+    Info (12022): Found design unit 1: MUX_4_1-flujo File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/MUX_4_1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_4_1 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/MUX_4_1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
-    Info (12022): Found design unit 1: pll2-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
-    Info (12023): Found entity 1: PLL2 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
+    Info (12022): Found design unit 1: pll2-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
+    Info (12023): Found entity 1: PLL2 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file pll/pll1.vhd
-    Info (12022): Found design unit 1: pll1-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
-    Info (12023): Found entity 1: PLL1 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
+    Info (12022): Found design unit 1: pll1-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
+    Info (12023): Found entity 1: PLL1 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: ROM-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 14
-    Info (12023): Found entity 1: ROM File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 6
+    Info (12022): Found design unit 1: ROM-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd Line: 6
 Info (12021): Found 2 design units, including 0 entities, in source file mem.vhd
-    Info (12022): Found design unit 1: PAKETE File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd Line: 5
-    Info (12022): Found design unit 2: PAKETE-body File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd Line: 148
-Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr.vhd
-    Info (12022): Found design unit 1: LCD_CONTR-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 36
-    Info (12023): Found entity 1: LCD_CONTR File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr_tb.vhd
-    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
-    Info (12023): Found entity 1: LCD_CONTR_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
+    Info (12022): Found design unit 1: PAKETE File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 5
+    Info (12022): Found design unit 2: PAKETE-body File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd Line: 121
 Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm_tb.vhd
-    Info (12022): Found design unit 1: Mem_FSM_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 8
-    Info (12023): Found entity 1: Mem_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 5
+    Info (12022): Found design unit 1: Mem_FSM_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 8
+    Info (12023): Found entity 1: Mem_FSM_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file parity.vhd
-    Info (12022): Found design unit 1: Parity-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd Line: 15
-    Info (12023): Found entity 1: Parity File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd Line: 6
+    Info (12022): Found design unit 1: Parity-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd Line: 15
+    Info (12023): Found entity 1: Parity File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file parity_tb.vhd
-    Info (12022): Found design unit 1: Parity_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 8
-    Info (12023): Found entity 1: Parity_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 5
+    Info (12022): Found design unit 1: Parity_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd Line: 8
+    Info (12023): Found entity 1: Parity_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity_TB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rs232_fsm.vhd
-    Info (12022): Found design unit 1: RS232_FSM-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd Line: 19
-    Info (12023): Found entity 1: RS232_FSM File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd Line: 5
+    Info (12022): Found design unit 1: RS232_FSM-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/RS232_FSM.vhd Line: 19
+    Info (12023): Found entity 1: RS232_FSM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/RS232_FSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file data_buffer.vhd
-    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 14
-    Info (12023): Found entity 1: DATA_BUFFER File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 4
+    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 14
+    Info (12023): Found entity 1: DATA_BUFFER File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file shift_register.vhd
-    Info (12022): Found design unit 1: SHIFT_REGISTER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 15
-    Info (12023): Found entity 1: SHIFT_REGISTER File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 4
+    Info (12022): Found design unit 1: SHIFT_REGISTER-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 15
+    Info (12023): Found entity 1: SHIFT_REGISTER File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rs232_fsm_tb.vhd
-    Info (12022): Found design unit 1: RS232_FSM_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 8
-    Info (12023): Found entity 1: RS232_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 5
+    Info (12022): Found design unit 1: RS232_FSM_TB-TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 8
+    Info (12023): Found entity 1: RS232_FSM_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5.vhd
-    Info (12022): Found design unit 1: LABORATORIO5-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 17
-    Info (12023): Found entity 1: LABORATORIO5 File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 5
+    Info (12022): Found design unit 1: LABORATORIO5-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 17
+    Info (12023): Found entity 1: LABORATORIO5 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm.vhd
-    Info (12022): Found design unit 1: Mem_fsm-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 21
-    Info (12023): Found entity 1: Mem_fsm File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
+    Info (12022): Found design unit 1: Mem_fsm-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 21
+    Info (12023): Found entity 1: Mem_fsm File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5_tb.vhd
-    Info (12022): Found design unit 1: Laboratorio5_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 8
-    Info (12023): Found entity 1: Laboratorio5_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 5
+    Info (12022): Found design unit 1: Laboratorio5_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 8
+    Info (12023): Found entity 1: Laboratorio5_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 5
 Info (12127): Elaborating entity "Laboratorio5" for the top level hierarchy
-Info (12128): Elaborating entity "PLL1" for hierarchy "PLL1:PLL_115_384" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 29
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL1:PLL_115_384|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
-Info (12130): Elaborated megafunction instantiation "PLL1:PLL_115_384|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
-Info (12133): Instantiated megafunction "PLL1:PLL_115_384|altpll:altpll_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
+Warning (10036): Verilog HDL or VHDL warning at Laboratorio5.vhd(20): object "MEM_EN" assigned a value but never read File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 20
+Info (12128): Elaborating entity "PLL1" for hierarchy "PLL1:PLL_115_384" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 29
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL1:PLL_115_384|altpll:altpll_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
+Info (12130): Elaborated megafunction instantiation "PLL1:PLL_115_384|altpll:altpll_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
+Info (12133): Instantiated megafunction "PLL1:PLL_115_384|altpll:altpll_component" with the following parameter: File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "15625"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1094,12 +1090,12 @@ Info (12133): Instantiated megafunction "PLL1:PLL_115_384|altpll:altpll_componen
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll1_altpll.v
-    Info (12023): Found entity 1: PLL1_altpll File: E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v Line: 31
+    Info (12023): Found entity 1: PLL1_altpll File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/db/pll1_altpll.v Line: 31
 Info (12128): Elaborating entity "PLL1_altpll" for hierarchy "PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "PLL2" for hierarchy "PLL2:PLL96_48" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 34
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL2:PLL96_48|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
-Info (12130): Elaborated megafunction instantiation "PLL2:PLL96_48|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
-Info (12133): Instantiated megafunction "PLL2:PLL96_48|altpll:altpll_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
+Info (12128): Elaborating entity "PLL2" for hierarchy "PLL2:PLL96_48" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 34
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL2:PLL96_48|altpll:altpll_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
+Info (12130): Elaborated megafunction instantiation "PLL2:PLL96_48|altpll:altpll_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
+Info (12133): Instantiated megafunction "PLL2:PLL96_48|altpll:altpll_component" with the following parameter: File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "15625"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1160,19 +1156,40 @@ Info (12133): Instantiated megafunction "PLL2:PLL96_48|altpll:altpll_component" 
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll2_altpll.v
-    Info (12023): Found entity 1: PLL2_altpll File: E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v Line: 31
+    Info (12023): Found entity 1: PLL2_altpll File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/db/pll2_altpll.v Line: 31
 Info (12128): Elaborating entity "PLL2_altpll" for hierarchy "PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_4_1:FREQ_SEL" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 39
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MEMORIA" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 45
-Info (12128): Elaborating entity "Parity" for hierarchy "Parity:PARIDAD" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 50
-Info (12128): Elaborating entity "Mem_fsm" for hierarchy "Mem_fsm:MEM_SM" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 54
-Info (12128): Elaborating entity "RS232_FSM" for hierarchy "RS232_FSM:RS_232" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 64
-Info (12128): Elaborating entity "DATA_BUFFER" for hierarchy "DATA_BUFFER:DBUFFER" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 72
-Info (12128): Elaborating entity "SHIFT_REGISTER" for hierarchy "SHIFT_REGISTER:SR" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 77
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 865 megabytes
-    Info: Processing ended: Mon May 23 11:21:15 2016
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:39
+Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_4_1:FREQ_SEL" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 39
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MEMORIA" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 45
+Info (12128): Elaborating entity "Parity" for hierarchy "Parity:PARIDAD" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 50
+Info (12128): Elaborating entity "Mem_fsm" for hierarchy "Mem_fsm:MEM_SM" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at Mem_FSM.vhd(131): signal "direccion" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 131
+Warning (10631): VHDL Process Statement warning at Mem_FSM.vhd(85): inferring latch(es) for signal or variable "direccion", which holds its previous value in one or more paths through the process File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Warning (10631): VHDL Process Statement warning at Mem_FSM.vhd(85): inferring latch(es) for signal or variable "busy", which holds its previous value in one or more paths through the process File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Warning (10631): VHDL Process Statement warning at Mem_FSM.vhd(85): inferring latch(es) for signal or variable "ultimo", which holds its previous value in one or more paths through the process File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[0]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[1]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[2]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[3]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[4]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[5]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[6]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "ultimo[7]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "busy" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[0]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[1]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[2]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[3]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[4]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[5]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[6]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (10041): Inferred latch for "direccion[7]" at Mem_FSM.vhd(85) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd Line: 85
+Info (12128): Elaborating entity "RS232_FSM" for hierarchy "RS232_FSM:RS_232" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 64
+Info (12128): Elaborating entity "DATA_BUFFER" for hierarchy "DATA_BUFFER:DBUFFER" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 73
+Info (12128): Elaborating entity "SHIFT_REGISTER" for hierarchy "SHIFT_REGISTER:SR" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd Line: 78
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 817 megabytes
+    Info: Processing ended: Tue May 24 17:34:28 2016
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
 
 

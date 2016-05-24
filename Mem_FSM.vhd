@@ -19,6 +19,12 @@ entity Mem_fsm is
 end Mem_fsm;
 
 architecture beh of Mem_fsm is
+
+constant Inicial0 : std_logic_vector(7 downto 0) := x"00";
+constant Inicial1 : std_logic_vector(7 downto 0):= x"2F";
+constant Inicial2 : std_logic_vector(7 downto 0) := x"45";
+constant Inicial3 : std_logic_vector(7 downto 0) := x"5A";
+constant Final3	: std_logic_vector(7 downto 0) := x"65";
 signal direccion: std_logic_vector(7 downto 0);
 signal ultimo: std_logic_vector(7 downto 0);
 
@@ -76,13 +82,16 @@ begin
 	end if;
 end process;
 
-Output: process(Clk, Rst)
+Output: process(Rst,Current_state)
 begin
 	if (Rst='1') then
 		direccion <= Inicial0;
 		data_ready <= '0';
 		RE <= '0';
-	elsif(rising_edge(Clk)) then
+	else
+		data_ready <= '0';
+		RE <= '0';
+		busy <= '1';		
 		case current_state is
 			when IDLE =>
 				direccion <= Inicial0;
@@ -119,7 +128,7 @@ begin
 				data_ready <= '1';
 				busy <= '1';
 			when NEXT_DATA =>
-				direccion <= std_logic_vector(unsigned(direccion)+1);
+				direccion <= std_logic_vector(unsigned(direccion)+"1");
 				RE <= '1';
 				busy <= '1';
 			when ESPERA =>

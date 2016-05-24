@@ -37,7 +37,9 @@ begin
 	Reset <= '0';
 	wait until rising_edge(clk);
 	Botones <= "1000";
-	wait for 1500us;
+	wait for 500us;
+	Botones <= "0000";
+	wait for 1000us;
 	assert(false) report "FIN" severity failure;
 end process;
 end tb;

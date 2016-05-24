@@ -26,6 +26,13 @@ signal clk,BT3,BT2,BT1,BT0,switch,Rst,RS_READY : std_logic :='0';
 signal data_ready,RE,busy : std_logic;
 signal address	: std_logic_vector(7 downto 0);
 signal botones	:	std_logic_vector(3 downto 0);
+
+constant Inicial0 : std_logic_vector(7 downto 0) := x"00";
+constant Inicial1 : std_logic_vector(7 downto 0):= x"2F";
+constant Inicial2 : std_logic_vector(7 downto 0) := x"45";
+constant Inicial3 : std_logic_vector(7 downto 0) := x"5A";
+constant Final3	: std_logic_vector(7 downto 0) := x"65";
+
 begin
 
 memo: Mem_FSM port map(clk=>clk,botones=>botones,switch=>switch,Rst=>Rst,
