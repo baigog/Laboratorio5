@@ -13,12 +13,12 @@ entity ROM is
 end ROM;
 architecture beh of ROM is
 
-constant data_length : natural := 8;
+	constant data_length : natural := 8;
 	constant addr_length : natural := 8;
 	constant mem_size : natural := 2**addr_length;
 	subtype rom_word is std_logic_vector(data_length-1 downto 0);
 	type mem_type is array (mem_size-1 downto 0) of rom_word;
-	signal mem : mem_type :=
+	constant mem : mem_type :=
 		(000 => x"4C", 001 => x"61", 002 => x"62", 003 => x"6F", 004 => x"72", 005 => x"61", 006 => x"74", 007 => x"6F", 
 		008 => x"72", 009 => x"69", 010 => x"6F", 011 => x"3A", 012 => x"20", 013 => x"63", 014 => x"6F", 015 => x"6D", 
 		016 => x"70", 017 => x"6C", 018 => x"65", 019 => x"74", 020 => x"61", 021 => x"64", 022 => x"6F", 023 => x"20", 
@@ -35,7 +35,7 @@ constant data_length : natural := 8;
  		
 		
 	attribute romstyle : string;
-	attribute romstyle of mem: signal is "M512";
+	attribute romstyle of mem: constant is "M512";
 
 begin
 	

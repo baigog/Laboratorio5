@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-use work.PAKETE.all;
+--use work.PAKETE.all;
 
 entity Mem_FSM_TB is
 end Mem_FSM_TB;
@@ -25,7 +25,7 @@ end component;
 signal clk,BT3,BT2,BT1,BT0,switch,Rst,RS_READY : std_logic :='0';
 signal data_ready,RE,busy : std_logic;
 signal address	: std_logic_vector(7 downto 0);
-signal botones	:	std_logic_vector(3 downto 0);
+signal botones	:	std_logic_vector(3 downto 0):= (others => '0');
 
 constant Inicial0 : std_logic_vector(7 downto 0) := x"00";
 constant Inicial1 : std_logic_vector(7 downto 0):= x"2F";
@@ -38,7 +38,7 @@ begin
 memo: Mem_FSM port map(clk=>clk,botones=>botones,switch=>switch,Rst=>Rst,
 								RS_READY=>RS_READY,address=>address,data_ready=>data_ready,RE=>RE,busy=>busy);
 
-clk	<=	not(clk) after 10ns;
+clk	<=	not(clk) after 52us;
 
 Aplica_entradas: process
 begin
@@ -46,10 +46,10 @@ begin
 	wait until rising_edge(clk);
 	RST<='0';
 	wait until rising_edge(clk);
-	botones<="100";
+	botones<="1000";
 	wait until rising_edge(clk);
 	RS_READY<='1';
-	botones<="000";
+	botones<="0000";
 	wait until (address=Final3);
 --	RS_READY<='0';
 	wait until falling_edge(busy);

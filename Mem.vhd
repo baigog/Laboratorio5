@@ -5,9 +5,9 @@ use ieee.numeric_std.all;
 package PAKETE is
 	
 	function Paridad (input:std_logic_vector(7 downto 0)) return std_logic;
+	function Paridad_Check (input:std_logic_vector(7 downto 0); checkbit: std_logic) return std_logic;
+	
 
-	
-	
 	
 -------------------------------------------------------------------------------------------------------------
 ------------------------------------------DECLARACIONES DE COMPONENTES---------------------------------------
@@ -112,10 +112,40 @@ PORT(
 );
 END COMPONENT;
 
+COMPONENT RS232_RX_FSM IS
+	PORT(
+		CLK:			IN	STD_LOGIC;
+		RST:			IN	STD_LOGIC;
+		TX:			IN	STD_LOGIC;
+		PARITY_ERR:	IN	STD_LOGIC;
+		
+		SHIFT:			OUT	STD_LOGIC;
+		DATA_OK:			OUT	STD_LOGIC
+		);
+END COMPONENT;
+
+COMPONENT SHIFT_REGISTER_RX IS
+PORT(
+	CLK:				IN		STD_LOGIC;
+	RST:				IN		STD_LOGIC;
+	DATAIN:			IN		STD_LOGIC;
+	SHIFT:			IN		STD_LOGIC;
+	PARITY_OUT:		OUT		STD_LOGIC;
+	DATAOUT:			OUT	STD_LOGIC_VECTOR(7 DOWNTO 0)
+);
+END COMPONENT;
+
+component Parity_checker is
+	port(
+		data:			in std_logic_vector(7 downto 0);
+		checkbit:	in std_logic;
+		Rst:			in std_logic;
+		
+		err:			out	std_logic
+	);
+end component;
+
 end package PAKETE;
-
-
-
 -------------------------------------------------------------------------------------------------------------
 
 package body PAKETE is
@@ -130,4 +160,17 @@ package body PAKETE is
 		
 	end function;
 
+		function Paridad_Check (input:std_logic_vector(7 downto 0); checkbit: std_logic) return std_logic is
+		
+		variable check: std_logic;
+		
+		begin
+			if(Paridad(input)=checkbit) then
+				check := '1';
+			else
+				check := '0';
+			end if;
+		return check;
+		
+	end function;
 end PAKETE;

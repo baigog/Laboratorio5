@@ -38,18 +38,21 @@ begin
 next_state <= ACTUAL;
 	case current_state is
 		when IDLE		=> 
-			if (botones(0)='1') then
-				next_state <= INIT0;
-			elsif (botones(1)='1') then
-				next_state <= INIT1;
-			elsif (botones(2)='1') then
-				next_state <= INIT2;
-			elsif (botones(3)='1') then
-				next_state <= INIT3;
-			elsif (switch = '1') then
-				next_state <= iniT4; 
-			else next_state <= IDLE;
-			end if;
+			case botones is
+				when "0001" =>
+					next_state <= INIT0;
+				when "0010" =>
+					next_state <= INIT1;
+				when "0100" =>
+					next_state <= INIT2;
+				when "1000" =>
+					next_state <= INIT3;
+				when others =>
+					if (switch = '1') then
+						next_state <= iniT4; 
+					else next_state <= IDLE;
+					end if;
+			end case;
 		when INIT0		=> null;
 		when INIT1		=> null;
 		when INIT2		=> null;
@@ -88,57 +91,44 @@ begin
 		direccion <= Inicial0;
 		data_ready <= '0';
 		RE <= '0';
+		busy<='0';
 	else
 		data_ready <= '0';
 		RE <= '0';
 		busy <= '1';		
 		case current_state is
 			when IDLE =>
-				direccion <= Inicial0;
-				data_ready <= '0';
-				RE <= '0';
 				busy <= '0';
 			when INIT0 =>
 				direccion <= Inicial0;
 				ultimo <= Inicial1;
 				RE <= '1';
-				busy <= '1';
 			when INIT1 =>
 				direccion <= Inicial1;
 				ultimo <= Inicial2;
 				RE <= '1';
-				busy <= '1';
 			when INIT2 =>
 				direccion <= Inicial2;
 				ultimo <= Inicial3;
 				RE <= '1';
-				busy <= '1';
 			when INIT3 =>
 				direccion <= Inicial3;
 				ultimo <= Final3;
 				RE <= '1';
-				busy <= '1';
 			when INIT4 =>
 				direccion <= Inicial0;
 				ultimo <= Final3;
 				RE <= '1';
-				busy <= '1';
 			when ACTUAL =>
 				RE <= '1';
 				data_ready <= '1';
-				busy <= '1';
 			when NEXT_DATA =>
-				direccion <= std_logic_vector(unsigned(direccion)+"1");
+				direccion <= std_logic_vector(unsigned(direccion)+1);
 				RE <= '1';
-				busy <= '1';
 			when ESPERA =>
 				RE <= '1';
-				busy <= '1';
 			when others =>
 				direccion <= Inicial0;
-				data_ready <= '0';
-				RE <= '0';
-				busy <= '1';
 			end case;
 	end if;
 end process;

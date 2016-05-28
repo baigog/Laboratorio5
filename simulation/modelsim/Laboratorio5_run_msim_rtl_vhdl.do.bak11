@@ -5,23 +5,23 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre\ 9/FPGA/Laboratorio5/db {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/db/pll1_altpll.v}
-vlog -vlog01compat -work work +incdir+C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre\ 9/FPGA/Laboratorio5/db {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/db/pll2_altpll.v}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/MUX_4_1.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL2.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/PLL/PLL1.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/RS232_FSM.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/DATA_BUFFER.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/SHIFT_REGISTER.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/ROM.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Parity.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5.vhd}
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Mem_FSM.vhd}
+vlog -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db {E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v}
+vlog -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db {E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd}
 
-vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio5/Laboratorio5_TB.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX_TB.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Laboratorio5_TB
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  RS232_TX
 
 add wave *
 view structure
