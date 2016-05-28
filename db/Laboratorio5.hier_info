@@ -1,5 +1,324 @@
-|Mem_FSM
-Clk => current_state~1.DATAIN
+|Laboratorio5
+CLK => RS232_TX:Practica_TX.CLK
+CLK => RS232_RX:Practica_RX.CLK
+RESET => RS232_TX:Practica_TX.RESET
+RESET => RS232_RX:Practica_RX.RST
+SWITCH => RS232_TX:Practica_TX.SWITCH
+BOTONES[0] => RS232_TX:Practica_TX.BOTONES[0]
+BOTONES[1] => RS232_TX:Practica_TX.BOTONES[1]
+BOTONES[2] => RS232_TX:Practica_TX.BOTONES[2]
+BOTONES[3] => RS232_TX:Practica_TX.BOTONES[3]
+FSEL[0] => RS232_TX:Practica_TX.FSEL[0]
+FSEL[0] => RS232_RX:Practica_RX.FSEL[0]
+FSEL[1] => RS232_TX:Practica_TX.FSEL[1]
+FSEL[1] => RS232_RX:Practica_RX.FSEL[1]
+RX_OUT[0] << RS232_RX:Practica_RX.DATAOUT[0]
+RX_OUT[1] << RS232_RX:Practica_RX.DATAOUT[1]
+RX_OUT[2] << RS232_RX:Practica_RX.DATAOUT[2]
+RX_OUT[3] << RS232_RX:Practica_RX.DATAOUT[3]
+RX_OUT[4] << RS232_RX:Practica_RX.DATAOUT[4]
+RX_OUT[5] << RS232_RX:Practica_RX.DATAOUT[5]
+RX_OUT[6] << RS232_RX:Practica_RX.DATAOUT[6]
+RX_OUT[7] << RS232_RX:Practica_RX.DATAOUT[7]
+
+
+|Laboratorio5|RS232_TX:Practica_TX
+CLK => PLL1:PLL_115_384.inclk0
+CLK => PLL2:PLL96_48.inclk0
+CLK => ROM:MEMORIA.clk
+RESET => PLL1:PLL_115_384.areset
+RESET => PLL2:PLL96_48.areset
+RESET => Parity:PARIDAD.Rst
+RESET => MEM_RS232:FSM.Rst
+RESET => SHIFT_REGISTER:SR.RST
+SWITCH => MEM_RS232:FSM.switch
+BOTONES[0] => MEM_RS232:FSM.botones[0]
+BOTONES[1] => MEM_RS232:FSM.botones[1]
+BOTONES[2] => MEM_RS232:FSM.botones[2]
+BOTONES[3] => MEM_RS232:FSM.botones[3]
+FSEL[0] => MUX_4_1:FREQ_SEL.sel[0]
+FSEL[1] => MUX_4_1:FREQ_SEL.sel[1]
+TX_OUT <= MUX_4_1:OUT_MUX.out1
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL1:PLL_115_384
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+c1 <= altpll:altpll_component.clk[1]
+locked <= altpll:altpll_component.locked
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component
+inclk[0] => PLL1_altpll:auto_generated.inclk[0]
+inclk[1] => PLL1_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => PLL1_altpll:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= PLL1_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated
+areset => pll_lock_sync.ACLR
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL2:PLL96_48
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+c1 <= altpll:altpll_component.clk[1]
+locked <= altpll:altpll_component.locked
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component
+inclk[0] => PLL2_altpll:auto_generated.inclk[0]
+inclk[1] => PLL2_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => PLL2_altpll:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= PLL2_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Laboratorio5|RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated
+areset => pll_lock_sync.ACLR
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MUX_4_1:FREQ_SEL
+in0 => Mux0.IN0
+in1 => Mux0.IN1
+in2 => Mux0.IN2
+in3 => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+out1 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|ROM:MEMORIA
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+address[0] => Mux0.IN263
+address[0] => Mux1.IN263
+address[0] => Mux2.IN263
+address[0] => Mux3.IN263
+address[0] => Mux4.IN263
+address[0] => Mux5.IN263
+address[0] => Mux6.IN263
+address[1] => Mux0.IN262
+address[1] => Mux1.IN262
+address[1] => Mux2.IN262
+address[1] => Mux3.IN262
+address[1] => Mux4.IN262
+address[1] => Mux5.IN262
+address[1] => Mux6.IN262
+address[2] => Mux0.IN261
+address[2] => Mux1.IN261
+address[2] => Mux2.IN261
+address[2] => Mux3.IN261
+address[2] => Mux4.IN261
+address[2] => Mux5.IN261
+address[2] => Mux6.IN261
+address[3] => Mux0.IN260
+address[3] => Mux1.IN260
+address[3] => Mux2.IN260
+address[3] => Mux3.IN260
+address[3] => Mux4.IN260
+address[3] => Mux5.IN260
+address[3] => Mux6.IN260
+address[4] => Mux0.IN259
+address[4] => Mux1.IN259
+address[4] => Mux2.IN259
+address[4] => Mux3.IN259
+address[4] => Mux4.IN259
+address[4] => Mux5.IN259
+address[4] => Mux6.IN259
+address[5] => Mux0.IN258
+address[5] => Mux1.IN258
+address[5] => Mux2.IN258
+address[5] => Mux3.IN258
+address[5] => Mux4.IN258
+address[5] => Mux5.IN258
+address[5] => Mux6.IN258
+address[6] => Mux0.IN257
+address[6] => Mux1.IN257
+address[6] => Mux2.IN257
+address[6] => Mux3.IN257
+address[6] => Mux4.IN257
+address[6] => Mux5.IN257
+address[6] => Mux6.IN257
+address[7] => Mux0.IN256
+address[7] => Mux1.IN256
+address[7] => Mux2.IN256
+address[7] => Mux3.IN256
+address[7] => Mux4.IN256
+address[7] => Mux5.IN256
+address[7] => Mux6.IN256
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|Parity:PARIDAD
+data[0] => bit_paridad.IN1
+data[1] => bit_paridad.IN1
+data[2] => bit_paridad.IN1
+data[3] => bit_paridad.IN1
+data[4] => bit_paridad.IN1
+data[5] => bit_paridad.IN1
+data[6] => bit_paridad.IN0
+data[7] => bit_paridad.IN1
+Rst => bit_parity.OUTPUTSELECT
+bit_parity <= bit_parity.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MEM_RS232:FSM
+Clk => ULTIMO[0].CLK
+Clk => ULTIMO[1].CLK
+Clk => ULTIMO[2].CLK
+Clk => ULTIMO[3].CLK
+Clk => ULTIMO[4].CLK
+Clk => ULTIMO[5].CLK
+Clk => ULTIMO[6].CLK
+Clk => ULTIMO[7].CLK
+Clk => ADDRESS[0].CLK
+Clk => ADDRESS[1].CLK
+Clk => ADDRESS[2].CLK
+Clk => ADDRESS[3].CLK
+Clk => ADDRESS[4].CLK
+Clk => ADDRESS[5].CLK
+Clk => ADDRESS[6].CLK
+Clk => ADDRESS[7].CLK
+Clk => CS~1.DATAIN
 botones[0] => Mux0.IN19
 botones[0] => Mux1.IN19
 botones[0] => Mux2.IN19
@@ -36,7 +355,7 @@ switch => Mux5.IN16
 switch => Mux5.IN17
 switch => Mux5.IN18
 switch => Mux5.IN19
-switch => Selector7.IN3
+switch => NS.LLAVE.DATAB
 switch => Mux0.IN4
 switch => Mux0.IN5
 switch => Mux0.IN6
@@ -49,36 +368,422 @@ switch => Mux0.IN12
 switch => Mux0.IN13
 switch => Mux0.IN14
 switch => Mux0.IN15
-switch => Selector3.IN1
-Rst => data_ready.OUTPUTSELECT
-Rst => RE.OUTPUTSELECT
+switch => Selector0.IN1
+Rst => SEL.OUTPUTSELECT
+Rst => SEL.OUTPUTSELECT
+Rst => SS.OUTPUTSELECT
 Rst => busy.OUTPUTSELECT
-Rst => direccion[0].ACLR
-Rst => direccion[1].ACLR
-Rst => direccion[2].ACLR
-Rst => direccion[3].ACLR
-Rst => direccion[4].ACLR
-Rst => direccion[5].ACLR
-Rst => direccion[6].ACLR
-Rst => direccion[7].ACLR
-Rst => current_state~3.DATAIN
-Rst => ultimo[2].IN1
-Rst => ultimo[1].IN1
-Rst => ultimo[5].IN1
-Rst => ultimo[6].IN1
-RS_READY => next_state.OUTPUTSELECT
-RS_READY => next_state.OUTPUTSELECT
-RS_READY => Selector6.IN3
-address[0] << direccion[0].DB_MAX_OUTPUT_PORT_TYPE
-address[1] << direccion[1].DB_MAX_OUTPUT_PORT_TYPE
-address[2] << direccion[2].DB_MAX_OUTPUT_PORT_TYPE
-address[3] << direccion[3].DB_MAX_OUTPUT_PORT_TYPE
-address[4] << direccion[4].DB_MAX_OUTPUT_PORT_TYPE
-address[5] << direccion[5].DB_MAX_OUTPUT_PORT_TYPE
-address[6] << direccion[6].DB_MAX_OUTPUT_PORT_TYPE
-address[7] << direccion[7].DB_MAX_OUTPUT_PORT_TYPE
-data_ready << data_ready.DB_MAX_OUTPUT_PORT_TYPE
-RE << RE.DB_MAX_OUTPUT_PORT_TYPE
-busy << busy.DB_MAX_OUTPUT_PORT_TYPE
+Rst => SHIFT_LOAD.OUTPUTSELECT
+Rst => SHIFT_LOAD.OUTPUTSELECT
+Rst => ADDRESS[0].ACLR
+Rst => ADDRESS[1].ACLR
+Rst => ADDRESS[2].ACLR
+Rst => ADDRESS[3].ACLR
+Rst => ADDRESS[4].ACLR
+Rst => ADDRESS[5].ACLR
+Rst => ADDRESS[6].ACLR
+Rst => ADDRESS[7].ACLR
+Rst => CS~3.DATAIN
+Rst => ULTIMO[0].ENA
+Rst => ULTIMO[7].ENA
+Rst => ULTIMO[6].ENA
+Rst => ULTIMO[5].ENA
+Rst => ULTIMO[4].ENA
+Rst => ULTIMO[3].ENA
+Rst => ULTIMO[2].ENA
+Rst => ULTIMO[1].ENA
+ADDR_OUT[0] <= ADDRESS[0].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[1] <= ADDRESS[1].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[2] <= ADDRESS[2].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[3] <= ADDRESS[3].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[4] <= ADDRESS[4].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[5] <= ADDRESS[5].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[6] <= ADDRESS[6].DB_MAX_OUTPUT_PORT_TYPE
+ADDR_OUT[7] <= ADDRESS[7].DB_MAX_OUTPUT_PORT_TYPE
+busy <= busy.DB_MAX_OUTPUT_PORT_TYPE
+SR_READY => NS.PARITY.DATAB
+SR_READY => Selector2.IN2
+SHIFT_LOAD[0] <= SHIFT_LOAD.DB_MAX_OUTPUT_PORT_TYPE
+SHIFT_LOAD[1] <= SHIFT_LOAD.DB_MAX_OUTPUT_PORT_TYPE
+SS <= SS.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+SEL[1] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|SHIFT_REGISTER:SR
+CLK => CONT[0].CLK
+CLK => CONT[1].CLK
+CLK => CONT[2].CLK
+CLK => DATA[0].CLK
+CLK => DATA[1].CLK
+CLK => DATA[2].CLK
+CLK => DATA[3].CLK
+CLK => DATA[4].CLK
+CLK => DATA[5].CLK
+CLK => DATA[6].CLK
+CLK => DATA[7].CLK
+RST => CONT[0].ACLR
+RST => CONT[1].ACLR
+RST => CONT[2].ACLR
+RST => DATA[0].ACLR
+RST => DATA[1].ACLR
+RST => DATA[2].ACLR
+RST => DATA[3].ACLR
+RST => DATA[4].ACLR
+RST => DATA[5].ACLR
+RST => DATA[6].ACLR
+RST => DATA[7].ACLR
+DATAIN[0] => Mux7.IN0
+DATAIN[0] => Mux7.IN1
+DATAIN[1] => Mux6.IN0
+DATAIN[1] => Mux6.IN1
+DATAIN[2] => Mux5.IN0
+DATAIN[2] => Mux5.IN1
+DATAIN[3] => Mux4.IN0
+DATAIN[3] => Mux4.IN1
+DATAIN[4] => Mux3.IN0
+DATAIN[4] => Mux3.IN1
+DATAIN[5] => Mux2.IN0
+DATAIN[5] => Mux2.IN1
+DATAIN[6] => Mux1.IN0
+DATAIN[6] => Mux1.IN1
+DATAIN[7] => Mux0.IN1
+DATAIN[7] => Mux0.IN2
+SHIFT_LOAD[0] => Mux0.IN4
+SHIFT_LOAD[0] => Mux1.IN3
+SHIFT_LOAD[0] => Mux2.IN3
+SHIFT_LOAD[0] => Mux3.IN3
+SHIFT_LOAD[0] => Mux4.IN3
+SHIFT_LOAD[0] => Mux5.IN3
+SHIFT_LOAD[0] => Mux6.IN3
+SHIFT_LOAD[0] => Mux7.IN3
+SHIFT_LOAD[0] => Mux8.IN4
+SHIFT_LOAD[0] => Mux9.IN4
+SHIFT_LOAD[0] => Mux10.IN4
+SHIFT_LOAD[1] => Mux0.IN3
+SHIFT_LOAD[1] => Mux1.IN2
+SHIFT_LOAD[1] => Mux2.IN2
+SHIFT_LOAD[1] => Mux3.IN2
+SHIFT_LOAD[1] => Mux4.IN2
+SHIFT_LOAD[1] => Mux5.IN2
+SHIFT_LOAD[1] => Mux6.IN2
+SHIFT_LOAD[1] => Mux7.IN2
+SHIFT_LOAD[1] => Mux8.IN3
+SHIFT_LOAD[1] => Mux9.IN3
+SHIFT_LOAD[1] => Mux10.IN3
+DATAOUT <= DATA[0].DB_MAX_OUTPUT_PORT_TYPE
+READY <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MUX_4_1:OUT_MUX
+in0 => Mux0.IN0
+in1 => Mux0.IN1
+in2 => Mux0.IN2
+in3 => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+out1 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX
+CLK => PLL1:PLL_115_384.inclk0
+CLK => PLL2:PLL96_48.inclk0
+RST => PLL1:PLL_115_384.areset
+RST => PLL2:PLL96_48.areset
+RST => RS232_RX_FSM:RX_FSM1.RST
+RST => SHIFT_REGISTER_RX:SR1.RST
+RST => Parity_checker:PCHECKER1.Rst
+TX => RS232_RX_FSM:RX_FSM1.TX
+TX => SHIFT_REGISTER_RX:SR1.DATAIN
+FSEL[0] => MUX_4_1:FREQ_SEL.sel[0]
+FSEL[1] => MUX_4_1:FREQ_SEL.sel[1]
+DATAOUT[0] <= DATA_BUFFER:DBUFFER.DATAOUT[0]
+DATAOUT[1] <= DATA_BUFFER:DBUFFER.DATAOUT[1]
+DATAOUT[2] <= DATA_BUFFER:DBUFFER.DATAOUT[2]
+DATAOUT[3] <= DATA_BUFFER:DBUFFER.DATAOUT[3]
+DATAOUT[4] <= DATA_BUFFER:DBUFFER.DATAOUT[4]
+DATAOUT[5] <= DATA_BUFFER:DBUFFER.DATAOUT[5]
+DATAOUT[6] <= DATA_BUFFER:DBUFFER.DATAOUT[6]
+DATAOUT[7] <= DATA_BUFFER:DBUFFER.DATAOUT[7]
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL1:PLL_115_384
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+c1 <= altpll:altpll_component.clk[1]
+locked <= altpll:altpll_component.locked
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL1:PLL_115_384|altpll:altpll_component
+inclk[0] => PLL1_altpll:auto_generated.inclk[0]
+inclk[1] => PLL1_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => PLL1_altpll:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= PLL1_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated
+areset => pll_lock_sync.ACLR
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL2:PLL96_48
+areset => altpll:altpll_component.areset
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+c1 <= altpll:altpll_component.clk[1]
+locked <= altpll:altpll_component.locked
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL2:PLL96_48|altpll:altpll_component
+inclk[0] => PLL2_altpll:auto_generated.inclk[0]
+inclk[1] => PLL2_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => PLL2_altpll:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= PLL2_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|Laboratorio5|RS232_RX:Practica_RX|PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated
+areset => pll_lock_sync.ACLR
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|MUX_4_1:FREQ_SEL
+in0 => Mux0.IN0
+in1 => Mux0.IN1
+in2 => Mux0.IN2
+in3 => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+out1 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1
+CLK => CONT[0].CLK
+CLK => CONT[1].CLK
+CLK => CONT[2].CLK
+CLK => CS~1.DATAIN
+RST => SHIFT.OUTPUTSELECT
+RST => DATA_OK.OUTPUTSELECT
+RST => CONTCTRL[1].OUTPUTSELECT
+RST => CONTCTRL[0].OUTPUTSELECT
+RST => CS~3.DATAIN
+TX => NS.IDLE.DATAB
+TX => OUTPUTS.IN0
+TX => Selector0.IN2
+TX => Selector1.IN2
+PARITY_ERR => OUTPUTS.IN1
+SHIFT <= SHIFT.DB_MAX_OUTPUT_PORT_TYPE
+DATA_OK <= DATA_OK.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|SHIFT_REGISTER_RX:SR1
+CLK => DATA[0].CLK
+CLK => DATA[1].CLK
+CLK => DATA[2].CLK
+CLK => DATA[3].CLK
+CLK => DATA[4].CLK
+CLK => DATA[5].CLK
+CLK => DATA[6].CLK
+CLK => DATA[7].CLK
+CLK => DATA[8].CLK
+RST => DATA[0].ACLR
+RST => DATA[1].ACLR
+RST => DATA[2].ACLR
+RST => DATA[3].ACLR
+RST => DATA[4].ACLR
+RST => DATA[5].ACLR
+RST => DATA[6].ACLR
+RST => DATA[7].ACLR
+RST => DATA[8].ACLR
+DATAIN => DATA[8].DATAIN
+SHIFT => DATA[8].ENA
+SHIFT => DATA[7].ENA
+SHIFT => DATA[6].ENA
+SHIFT => DATA[5].ENA
+SHIFT => DATA[4].ENA
+SHIFT => DATA[3].ENA
+SHIFT => DATA[2].ENA
+SHIFT => DATA[1].ENA
+SHIFT => DATA[0].ENA
+PARITY_OUT <= DATA[8].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[0] <= DATA[0].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[1] <= DATA[1].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[2] <= DATA[2].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[3] <= DATA[3].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[4] <= DATA[4].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[5] <= DATA[5].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[6] <= DATA[6].DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[7] <= DATA[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|Parity_checker:PCHECKER1
+data[0] => bit_paridad.IN1
+data[1] => bit_paridad.IN1
+data[2] => bit_paridad.IN1
+data[3] => bit_paridad.IN1
+data[4] => bit_paridad.IN1
+data[5] => bit_paridad.IN1
+data[6] => bit_paridad.IN0
+data[7] => bit_paridad.IN1
+checkbit => Paridad_Check.IN1
+Rst => err.OUTPUTSELECT
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_RX:Practica_RX|DATA_BUFFER:DBUFFER
+DATAIN[0] => DATAOUT[0]~reg0.DATAIN
+DATAIN[1] => DATAOUT[1]~reg0.DATAIN
+DATAIN[2] => DATAOUT[2]~reg0.DATAIN
+DATAIN[3] => DATAOUT[3]~reg0.DATAIN
+DATAIN[4] => DATAOUT[4]~reg0.DATAIN
+DATAIN[5] => DATAOUT[5]~reg0.DATAIN
+DATAIN[6] => DATAOUT[6]~reg0.DATAIN
+DATAIN[7] => DATAOUT[7]~reg0.DATAIN
+EN => DATAOUT[0]~reg0.ENA
+EN => DATAOUT[1]~reg0.ENA
+EN => DATAOUT[2]~reg0.ENA
+EN => DATAOUT[3]~reg0.ENA
+EN => DATAOUT[4]~reg0.ENA
+EN => DATAOUT[5]~reg0.ENA
+EN => DATAOUT[6]~reg0.ENA
+EN => DATAOUT[7]~reg0.ENA
+CLK => DATAOUT[0]~reg0.CLK
+CLK => DATAOUT[1]~reg0.CLK
+CLK => DATAOUT[2]~reg0.CLK
+CLK => DATAOUT[3]~reg0.CLK
+CLK => DATAOUT[4]~reg0.CLK
+CLK => DATAOUT[5]~reg0.CLK
+CLK => DATAOUT[6]~reg0.CLK
+CLK => DATAOUT[7]~reg0.CLK
+DATAOUT[0] <= DATAOUT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[1] <= DATAOUT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[2] <= DATAOUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[3] <= DATAOUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[4] <= DATAOUT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[5] <= DATAOUT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[6] <= DATAOUT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATAOUT[7] <= DATAOUT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -18,14 +18,13 @@ ARCHITECTURE BEH OF RS232_TX IS
 
 SIGNAL CLK115,CLK384,CLK96,CLK48,CLKBAUD:	STD_LOGIC;
 SIGNAL MEM_EN:	STD_LOGIC;
-SIGNAL ADDR_BUS, DATA_BUS1, DATA_BUS2:	STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL ADDR_BUS, DATA_BUS:	STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL BIT_PAR:	STD_LOGIC;
 SIGNAL BUSY_RS, DATA_READY, STARTSTOP:	STD_LOGIC;
 SIGNAL SR_READY, SHIFT, DATAOUT: STD_LOGIC;
 SIGNAL SR_OP,OUTSEL:	STD_LOGIC_VECTOR(1 DOWNTO 0);
 
 BEGIN
-SR_OP<=(DATA_READY, SHIFT);
 PLL_115_384: PLL1	PORT MAP(	areset	=>	RESET,
 										inclk0	=>	CLK,
 										c0			=>	CLK115,
@@ -44,39 +43,50 @@ FREQ_SEL: MUX_4_1	PORT MAP(in0		=>	CLK115,
 									out1		=>	CLKBAUD);
 MEMORIA:	ROM	PORT MAP(		clk		=>	CLK,
 										address	=>	ADDR_BUS,
-										data_out	=>	DATA_BUS1);
+										data_out	=>	DATA_BUS);
 
-PARIDAD:	PARITY	PORT MAP(	data			=>	DATA_BUS2,
+PARIDAD:	PARITY	PORT MAP(	data			=>	DATA_BUS,
 										Rst			=>	RESET,
 										bit_parity	=>	BIT_PAR);
 
-MEM_SM:	MEM_FSM	PORT MAP(	CLK			=>	CLKBAUD,
+FSM:	MEM_RS232 PORT MAP(		CLK			=>	CLKBAUD,
 										botones		=>	BOTONES,
 										switch		=>	SWITCH,
 										Rst			=>	RESET,
-										RS_READY		=>	BUSY_RS,
-										address		=>	ADDR_BUS,
-										data_ready	=>	DATA_READY,
-										RE				=>	MEM_EN,
-										busy			=>	OPEN);
-						
-RS_232:	RS232_FSM	PORT MAP(	DATA_READY	=>	DATA_READY,
-												SR_DONE	=>	SR_READY,
-												CLK		=>	CLKBAUD,
-												RST		=>	RESET,
-												BUSY		=>	BUSY_RS,
-												SHIFT		=>	SHIFT,
-												SS			=>	STARTSTOP,
-												SEL		=>	OUTSEL);
+										ADDR_OUT		=> ADDR_BUS,
+										busy			=>	OPEN,
+										SR_READY		=>	SR_READY,
+										SHIFT_LOAD	=>	SR_OP,
+										SS				=>	STARTSTOP,
+										SEL			=>	OUTSEL);
+								
+--MEM_SM:	MEM_FSM	PORT MAP(	CLK			=>	CLKBAUD,
+--										botones		=>	BOTONES,
+--										switch		=>	SWITCH,
+--										Rst			=>	RESET,
+--										RS_READY		=>	BUSY_RS,
+--										address		=>	ADDR_BUS,
+--										data_ready	=>	DATA_READY,
+--										RE				=>	MEM_EN,
+--										busy			=>	OPEN);
+--						
+--RS_232:	RS232_FSM	PORT MAP(	DATA_READY	=>	DATA_READY,
+--												SR_DONE	=>	SR_READY,
+--												CLK		=>	CLKBAUD,
+--												RST		=>	RESET,
+--												BUSY		=>	BUSY_RS,
+--												SHIFT		=>	SHIFT,
+--												SS			=>	STARTSTOP,
+--												SEL		=>	OUTSEL);
 												
-DBUFFER:	DATA_BUFFER	PORT MAP(	DATAIN	=>	DATA_BUS1,
-											EN			=>	DATA_READY,
-											CLK		=>	CLKBAUD,
-											DATAOUT	=>	DATA_BUS2);
+--DBUFFER:	DATA_BUFFER	PORT MAP(	DATAIN	=>	DATA_BUS1,
+--											EN			=>	DATA_READY,
+--											CLK		=>	CLKBAUD,
+--											DATAOUT	=>	DATA_BUS2);
 								
 SR:	SHIFT_REGISTER	PORT MAP(	CLK			=>	CLKBAUD,
 											RST			=>	RESET,
-											DATAIN		=>	DATA_BUS1,
+											DATAIN		=>	DATA_BUS,
 											SHIFT_LOAD	=>	SR_OP,
 											DATAOUT		=>	DATAOUT,
 											READY			=>	SR_READY);

@@ -4,79 +4,71 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "address[0]",
+					"name" : "RX_OUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "address[1]",
+					"name" : "RX_OUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "address[2]",
+					"name" : "RX_OUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "address[3]",
+					"name" : "RX_OUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "address[4]",
+					"name" : "RX_OUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "address[5]",
+					"name" : "RX_OUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "address[6]",
+					"name" : "RX_OUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "address[7]",
+					"name" : "RX_OUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "data_ready",
+					"name" : "RESET",
 					"strict" : false
 				},
 				{
-					"name" : "RE",
+					"name" : "FSEL[0]",
 					"strict" : false
 				},
 				{
-					"name" : "busy",
+					"name" : "FSEL[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Rst",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "RS_READY",
+					"name" : "BOTONES[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "BOTONES[2]",
 					"strict" : false
 				},
 				{
-					"name" : "botones[0]",
+					"name" : "BOTONES[1]",
 					"strict" : false
 				},
 				{
-					"name" : "botones[1]",
+					"name" : "BOTONES[3]",
 					"strict" : false
 				},
 				{
-					"name" : "botones[2]",
-					"strict" : false
-				},
-				{
-					"name" : "botones[3]",
-					"strict" : false
-				},
-				{
-					"name" : "switch",
+					"name" : "SWITCH",
 					"strict" : false
 				}
 			]

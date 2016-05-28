@@ -52,20 +52,21 @@ component ROM is
 	);
 end component;
 
-component Mem_FSM is
+COMPONENT MEM_RS232 IS
 	port(
 		Clk			:	in std_logic;
 		botones		:	in	std_logic_vector(3 downto 0);
-		switch		:	in std_logic;
+		switch		:	in std_logic;  -- Llave que envia todos los mensajes
 		Rst			:	in std_logic;
-		RS_READY		:	in std_logic;
+		SR_READY		:	IN		STD_LOGIC;
 		
-		address		:	out	std_logic_vector(7 downto 0) ;
-		data_ready	:	out	std_logic;
-		RE				:	out	std_logic;
-		busy			:	out	std_logic
-	);
-end component;
+		ADDR_OUT		:	out	std_logic_vector(7 downto 0) ;-- direccion de memoria apuntada
+		busy			:	out	std_logic;	-- Salida que indica si se esta en estado inicial
+		SHIFT_LOAD	:	OUT	STD_LOGIC_VECTOR(1 DOWNTO 0);
+		SS				:	OUT	STD_LOGIC;
+		SEL			:	OUT	STD_LOGIC_VECTOR(1 DOWNTO 0)
+		);
+END COMPONENT;
 
 	component Parity is
 		port(
@@ -76,20 +77,6 @@ end component;
 		);
 	end component;
 
-COMPONENT RS232_FSM IS
-	PORT(
-	DATA_READY: IN STD_LOGIC;
-	SR_DONE:		IN	STD_LOGIC;
-	CLK:			IN STD_LOGIC;
-	RST:			IN	STD_LOGIC;
-	
-	BUSY:			OUT	STD_LOGIC;
-	
-	SHIFT:		OUT	STD_LOGIC;
-	SS:			OUT	STD_LOGIC;
-	SEL:			OUT	STD_LOGIC_VECTOR(1 DOWNTO 0)
-	);
-END COMPONENT;
 
 COMPONENT DATA_BUFFER IS
 PORT(

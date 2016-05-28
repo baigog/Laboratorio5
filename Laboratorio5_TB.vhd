@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-use work.PAKETE.all;
+--use work.PAKETE.all;
 
 entity Laboratorio5_TB is
 end Laboratorio5_TB;

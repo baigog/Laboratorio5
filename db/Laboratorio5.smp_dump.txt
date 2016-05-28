@@ -1,13 +1,22 @@
 
-State Machine - |Mem_fsm|current_state
-Name current_state.LLAVE current_state.ESPERA current_state.NEXT_DATA current_state.ACTUAL current_state.INIT4 current_state.INIT3 current_state.INIT2 current_state.INIT1 current_state.INIT0 current_state.IDLE 
-current_state.IDLE 0 0 0 0 0 0 0 0 0 0 
-current_state.INIT0 0 0 0 0 0 0 0 0 1 1 
-current_state.INIT1 0 0 0 0 0 0 0 1 0 1 
-current_state.INIT2 0 0 0 0 0 0 1 0 0 1 
-current_state.INIT3 0 0 0 0 0 1 0 0 0 1 
-current_state.INIT4 0 0 0 0 1 0 0 0 0 1 
-current_state.ACTUAL 0 0 0 1 0 0 0 0 0 1 
-current_state.NEXT_DATA 0 0 1 0 0 0 0 0 0 1 
-current_state.ESPERA 0 1 0 0 0 0 0 0 0 1 
-current_state.LLAVE 1 0 0 0 0 0 0 0 0 1 
+State Machine - |LABORATORIO5|RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1|CS
+Name CS.STOP CS.PARITY CS.DATA CS.START CS.IDLE 
+CS.IDLE 0 0 0 0 0 
+CS.START 0 0 0 1 1 
+CS.DATA 0 0 1 0 1 
+CS.PARITY 0 1 0 0 1 
+CS.STOP 1 0 0 0 1 
+
+State Machine - |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|CS
+Name CS.LLAVE CS.STOP CS.PARITY CS.DATA CS.START CS.INIT4 CS.INIT3 CS.INIT2 CS.INIT1 CS.INIT0 CS.IDLE 
+CS.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+CS.INIT0 0 0 0 0 0 0 0 0 0 1 1 
+CS.INIT1 0 0 0 0 0 0 0 0 1 0 1 
+CS.INIT2 0 0 0 0 0 0 0 1 0 0 1 
+CS.INIT3 0 0 0 0 0 0 1 0 0 0 1 
+CS.INIT4 0 0 0 0 0 1 0 0 0 0 1 
+CS.START 0 0 0 0 1 0 0 0 0 0 1 
+CS.DATA 0 0 0 1 0 0 0 0 0 0 1 
+CS.PARITY 0 0 1 0 0 0 0 0 0 0 1 
+CS.STOP 0 1 0 0 0 0 0 0 0 0 1 
+CS.LLAVE 1 0 0 0 0 0 0 0 0 0 1 

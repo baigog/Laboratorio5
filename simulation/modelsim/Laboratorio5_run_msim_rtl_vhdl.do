@@ -11,17 +11,21 @@ vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd}
-vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd}
-vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd}
 
-vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX_TB.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  RS232_TX_TB
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Laboratorio5_TB
 
 add wave *
 view structure

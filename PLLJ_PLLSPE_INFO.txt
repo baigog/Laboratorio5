@@ -1,9 +1,9 @@
-PLL_Name	PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated|pll1
+PLL_Name	RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated|pll1
 PLLJITTER	49
 PLLSPEmax	84
 PLLSPEmin	-53
 
-PLL_Name	PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated|pll1
+PLL_Name	RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated|pll1
 PLLJITTER	30
 PLLSPEmax	84
 PLLSPEmin	-53

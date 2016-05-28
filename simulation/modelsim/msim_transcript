@@ -19,7 +19,7 @@
 # 
 # vcom -93 -work work {Laboratorio5_7_1200mv_85c_slow.vho}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 11:19:02 on May 27,2016
+# Start time: 13:01:44 on May 28,2016
 # vcom -reportprogress 300 -93 -work work Laboratorio5_7_1200mv_85c_slow.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -30,31 +30,33 @@
 # -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-# -- Compiling entity Mem_fsm
-# -- Compiling architecture structure of Mem_fsm
-# End time: 11:19:03 on May 27,2016, Elapsed time: 0:00:01
+# -- Compiling entity LABORATORIO5
+# -- Compiling architecture structure of LABORATORIO5
+# End time: 13:01:45 on May 28,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 11:19:03 on May 27,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd 
+# Start time: 13:01:45 on May 28,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Mem_FSM_TB
-# -- Compiling architecture tb of Mem_FSM_TB
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd(41): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 11:19:03 on May 27,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# -- Compiling entity Laboratorio5_TB
+# -- Compiling architecture tb of Laboratorio5_TB
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:01:45 on May 28,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
 # 
-# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /memo=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  Mem_FSM_TB
-# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /memo=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" Mem_FSM_TB 
-# Start time: 11:19:03 on May 27,2016
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /LAB5=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  Laboratorio5_TB
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /LAB5=Laboratorio5_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" Laboratorio5_TB 
+# Start time: 13:01:45 on May 28,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.mem_fsm_tb(tb)
+# Loading work.laboratorio5_tb(tb)
 # SDF 10.4b Compiler 2015.05 May 27 2015
 # 
 # Loading ieee.vital_timing(body)
@@ -63,20 +65,28 @@
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.mem_fsm(structure)
+# Loading work.laboratorio5(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_pllpack(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading cycloneive.cycloneive_pll(vital_pll)
+# Loading cycloneive.cycloneive_mn_cntr(behave)
+# Loading cycloneive.cycloneive_scale_cntr(behave)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
 # Loading instances from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
 # Loading timing data from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
-# ** Warning: Design size of 10497 statements exceeds ModelSim Altera Starter recommended capacity.
+# ** Warning: Design size of 29444 statements exceeds ModelSim Altera Starter recommended capacity.
 # Expect performance to be adversely affected.
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /mem_fsm_tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd
+#    Time: 0 ps  Iteration: 0  Instance: /laboratorio5_tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
 # Bookmark "bookmark0" already exists with that definition in window "Wave", ignoring
 # A bookmarks file was found in the current directory with 1 bookmark
 # 
@@ -86,11 +96,36 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Note: Cycloneive PLL was reset
+#    Time: 7410 ps  Iteration: 0  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL_115_384|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL was reset
+#    Time: 7690 ps  Iteration: 0  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL96_48|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL locked to incoming clock
+#    Time: 93684 ps  Iteration: 3  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL96_48|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL locked to incoming clock
+#    Time: 432941 ps  Iteration: 3  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL_115_384|altpll_component|auto_generated|pll1\
+# Break key hit
+# Simulation stop requested.
+restart -f
+# Loading instances from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
+# Loading timing data from Laboratorio5_7_1200mv_85c_vhd_slow.sdo
+# ** Warning: Design size of 15482 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /laboratorio5_tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
+run -all
+# ** Note: Cycloneive PLL was reset
+#    Time: 7410 ps  Iteration: 0  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL_115_384|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL was reset
+#    Time: 7690 ps  Iteration: 0  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL96_48|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL locked to incoming clock
+#    Time: 93684 ps  Iteration: 3  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL96_48|altpll_component|auto_generated|pll1\
+# ** Note: Cycloneive PLL locked to incoming clock
+#    Time: 432941 ps  Iteration: 3  Instance: /laboratorio5_tb/LAB5/\Practica_TX|PLL_115_384|altpll_component|auto_generated|pll1\
 # Break key hit
 # Simulation stop requested.
 run -continue
-# WARNING: No extended dataflow license exists
 # Break key hit
-# Simulation stop requested.
-# End time: 11:20:18 on May 27,2016, Elapsed time: 0:01:15
+# Break in ForLoop loop at C:/altera_lite/15.1/modelsim_ase/win32aloem/../altera/vhdl/src/cycloneive/cycloneive_atoms.vhd line 4308
+# End time: 13:04:40 on May 28,2016, Elapsed time: 0:02:55
 # Errors: 0, Warnings: 2

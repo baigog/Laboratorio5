@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim
-Emem_fsm
-Z1 w1464358668
+Elaboratorio5
+Z1 w1464451260
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 9L7WOjalBLjVlJ:R>F9:13
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 zHe@=:>9cbU;4Xj]jOJ^60
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,18 +23,18 @@ Z10 8Laboratorio5_7_1200mv_85c_slow.vho
 Z11 FLaboratorio5_7_1200mv_85c_slow.vho
 l0
 L37
-VT:Kezo0N=;g3WMh9=TCAh0
-!s100 _l]n8j0W]Q;??CC;KoF^n3
+VDba;YA0FYmnEoG9H:@YH72
+!s100 ^<Q;<<ED?<EJU_d`gEk^l3
 Z12 OV;C;10.4b;61
 31
-!s110 1464358742
+Z13 !s110 1464451304
 !i10b 1
-Z13 !s108 1464358742.000000
-Z14 !s90 -reportprogress|300|-93|-work|work|Laboratorio5_7_1200mv_85c_slow.vho|
-Z15 !s107 Laboratorio5_7_1200mv_85c_slow.vho|
+Z14 !s108 1464451304.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|Laboratorio5_7_1200mv_85c_slow.vho|
+Z16 !s107 Laboratorio5_7_1200mv_85c_slow.vho|
 !i113 1
-Z16 o-93 -work work
-Z17 tExplicit 1
+Z17 o-93 -work work
+Z18 tExplicit 1
 Astructure
 R2
 R3
@@ -44,57 +44,57 @@ R6
 R7
 R8
 R9
-DEx4 work 7 mem_fsm 0 22 T:Kezo0N=;g3WMh9=TCAh0
-l184
-L73
-V8PZcKoa^IBH;[?<]^T^ZI2
-!s100 4o=[UVB^Kg<VPJ]mZGhM70
+DEx4 work 12 laboratorio5 0 22 Dba;YA0FYmnEoG9H:@YH72
+l257
+L68
+V5Y_A73IkQ`hmlAn=e59Pk2
+!s100 R43LCXU9_R9Q=RoeoB2I<1
 R12
 31
-Z18 !s110 1464358743
-!i10b 1
 R13
+!i10b 1
 R14
 R15
-!i113 1
 R16
+!i113 1
 R17
-Emem_fsm_tb
-Z19 w1464356343
+R18
+Elaboratorio5_tb
+Z19 w1464450987
 R7
 R8
 R0
-Z20 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd
-Z21 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd
+Z20 8E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
+Z21 FE:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
 l0
 L5
-VPV28=WLUIE0adX9TnE=Rc2
-!s100 l?fJ<dAaH48@Zh4PWc7<@0
+VY1>G:zJhTMgk:4O_mDcom0
+!s100 ^X^lGEBgXS_5ONIGi24FY1
 R12
 31
-R18
+Z22 !s110 1464451305
 !i10b 1
-Z22 !s108 1464358743.000000
-Z23 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd|
-Z24 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd|
+Z23 !s108 1464451305.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
+Z25 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
 !i113 1
-R16
 R17
+R18
 Atb
 R7
 R8
-DEx4 work 10 mem_fsm_tb 0 22 PV28=WLUIE0adX9TnE=Rc2
-l36
+DEx4 work 15 laboratorio5_tb 0 22 Y1>G:zJhTMgk:4O_mDcom0
+l28
 L8
-VUHEOBZL7[:jfTdo4YKa]l1
-!s100 Mg:o5Y<ZbLlX0XEDl2UMC2
+VAI^^?i[?aB63Mfh6^4?C@3
+!s100 oD^XM[S9e[0Zah`CbA2iS3
 R12
 31
-R18
-!i10b 1
 R22
+!i10b 1
 R23
 R24
+R25
 !i113 1
-R16
 R17
+R18

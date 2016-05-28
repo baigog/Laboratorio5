@@ -1,5 +1,5 @@
 Flow report for Laboratorio5
-Fri May 27 11:17:48 2016
+Sat May 28 13:01:00 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 27 11:17:48 2016       ;
+; Flow Status                        ; Successful - Sat May 28 13:01:00 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
-; Top-level Entity Name              ; Mem_fsm                                     ;
+; Top-level Entity Name              ; LABORATORIO5                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 57 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 55 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 10 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 10                                          ;
-; Total pins                         ; 19 / 529 ( 4 % )                            ;
+; Total logic elements               ; 101 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 81 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 57 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 57                                          ;
+; Total pins                         ; 17 / 529 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Total memory bits                  ; 1,792 / 3,981,312 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2016 11:16:42 ;
+; Start date & time ; 05/28/2016 12:59:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio5        ;
 +-------------------+---------------------+
@@ -76,14 +76,14 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146435860256024        ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146445118744652        ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; memo                                  ; --            ; --          ; Mem_FSM_TB      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; RS1                                   ; --            ; --          ; RS232_FSM_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Parity_TB       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LCD_CONTR_TB    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Laboratorio5_TB ;
+; EDA_DESIGN_INSTANCE_NAME             ; LAB5                                  ; --            ; --          ; Laboratorio5_TB ;
 ; EDA_DESIGN_INSTANCE_NAME             ; Practica_TX                           ; --            ; --          ; RS232_TX_TB     ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Mem_FSM_TB                            ; --            ; --          ; eda_simulation  ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Laboratorio5_TB                       ; --            ; --          ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation  ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --              ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation  ;
@@ -114,13 +114,12 @@ agreement for further details.
 ; MISC_FILE                            ; PLL/PLL1.cmp                          ; --            ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL1.ppf                          ; --            ; --          ; --              ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --              ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; Mem_FSM     ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; Mem_FSM     ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; Mem_FSM     ; Top             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top             ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top             ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --              ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --              ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --              ;
-; TOP_LEVEL_ENTITY                     ; Mem_FSM                               ; Laboratorio5  ; --          ; --              ;
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 
 
@@ -129,12 +128,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 865 MB              ; 00:00:37                           ;
-; Fitter                    ; 00:00:22     ; 1.0                     ; 1323 MB             ; 00:00:25                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 740 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 869 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 705 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:47     ; --                      ; --                  ; 00:01:12                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 874 MB              ; 00:00:39                           ;
+; Fitter                    ; 00:00:24     ; 1.0                     ; 1323 MB             ; 00:00:26                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 743 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 875 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 708 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
