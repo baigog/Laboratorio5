@@ -11,7 +11,7 @@ entity FF_D is
 		Set	: in	std_logic;		--Seteo asincrónico
 
 		-- Output ports
-		Q	: out std_logic
+		Q		: out std_logic
 	);
 end FF_D;
 
@@ -20,9 +20,9 @@ begin
 	ff_d_clk: process (Clk, Set)
 	begin
 		if (Set='1') then				
-				Q<='1';
-			elsif (rising_edge(Clk)) then
-				Q<=D;
+				Q	<=	'1';
+			elsif (falling_edge(Clk)) then
+				Q	<=	D;
 		end if;
 	end process;
 end flow;

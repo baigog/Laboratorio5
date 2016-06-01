@@ -12,14 +12,14 @@ FSEL[0] => RS232_TX:Practica_TX.FSEL[0]
 FSEL[0] => RS232_RX:Practica_RX.FSEL[0]
 FSEL[1] => RS232_TX:Practica_TX.FSEL[1]
 FSEL[1] => RS232_RX:Practica_RX.FSEL[1]
-RX_OUT[0] << RS232_RX:Practica_RX.DATAOUT[0]
-RX_OUT[1] << RS232_RX:Practica_RX.DATAOUT[1]
-RX_OUT[2] << RS232_RX:Practica_RX.DATAOUT[2]
-RX_OUT[3] << RS232_RX:Practica_RX.DATAOUT[3]
-RX_OUT[4] << RS232_RX:Practica_RX.DATAOUT[4]
-RX_OUT[5] << RS232_RX:Practica_RX.DATAOUT[5]
-RX_OUT[6] << RS232_RX:Practica_RX.DATAOUT[6]
-RX_OUT[7] << RS232_RX:Practica_RX.DATAOUT[7]
+RX_OUT[0] <= RS232_RX:Practica_RX.DATAOUT[0]
+RX_OUT[1] <= RS232_RX:Practica_RX.DATAOUT[1]
+RX_OUT[2] <= RS232_RX:Practica_RX.DATAOUT[2]
+RX_OUT[3] <= RS232_RX:Practica_RX.DATAOUT[3]
+RX_OUT[4] <= RS232_RX:Practica_RX.DATAOUT[4]
+RX_OUT[5] <= RS232_RX:Practica_RX.DATAOUT[5]
+RX_OUT[6] <= RS232_RX:Practica_RX.DATAOUT[6]
+RX_OUT[7] <= RS232_RX:Practica_RX.DATAOUT[7]
 
 
 |Laboratorio5|RS232_TX:Practica_TX
@@ -319,30 +319,14 @@ Clk => ADDRESS[5].CLK
 Clk => ADDRESS[6].CLK
 Clk => ADDRESS[7].CLK
 Clk => CS~1.DATAIN
-botones[0] => Mux0.IN19
-botones[0] => Mux1.IN19
-botones[0] => Mux2.IN19
-botones[0] => Mux3.IN19
-botones[0] => Mux4.IN19
-botones[0] => Mux5.IN7
-botones[1] => Mux0.IN18
-botones[1] => Mux1.IN18
-botones[1] => Mux2.IN18
-botones[1] => Mux3.IN18
-botones[1] => Mux4.IN18
-botones[1] => Mux5.IN6
-botones[2] => Mux0.IN17
-botones[2] => Mux1.IN17
-botones[2] => Mux2.IN17
-botones[2] => Mux3.IN17
-botones[2] => Mux4.IN17
-botones[2] => Mux5.IN5
-botones[3] => Mux0.IN16
-botones[3] => Mux1.IN16
-botones[3] => Mux2.IN16
-botones[3] => Mux3.IN16
-botones[3] => Mux4.IN16
-botones[3] => Mux5.IN4
+botones[0] => FF_D:FD:0:FFD.Clk
+botones[1] => FF_D:FD:1:FFD.Clk
+botones[2] => FF_D:FD:2:FFD.Clk
+botones[3] => FF_D:FD:3:FFD.Clk
+switch => Mux5.IN4
+switch => Mux5.IN5
+switch => Mux5.IN6
+switch => Mux5.IN7
 switch => Mux5.IN8
 switch => Mux5.IN9
 switch => Mux5.IN10
@@ -351,11 +335,7 @@ switch => Mux5.IN12
 switch => Mux5.IN13
 switch => Mux5.IN14
 switch => Mux5.IN15
-switch => Mux5.IN16
-switch => Mux5.IN17
-switch => Mux5.IN18
-switch => Mux5.IN19
-switch => NS.LLAVE.DATAB
+switch => Selector3.IN3
 switch => Mux0.IN4
 switch => Mux0.IN5
 switch => Mux0.IN6
@@ -375,6 +355,7 @@ Rst => SS.OUTPUTSELECT
 Rst => busy.OUTPUTSELECT
 Rst => SHIFT_LOAD.OUTPUTSELECT
 Rst => SHIFT_LOAD.OUTPUTSELECT
+Rst => FF_SET.OUTPUTSELECT
 Rst => ADDRESS[0].ACLR
 Rst => ADDRESS[1].ACLR
 Rst => ADDRESS[2].ACLR
@@ -408,6 +389,34 @@ SHIFT_LOAD[1] <= SHIFT_LOAD.DB_MAX_OUTPUT_PORT_TYPE
 SS <= SS.DB_MAX_OUTPUT_PORT_TYPE
 SEL[0] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
 SEL[1] <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:1:FFD
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:2:FFD
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Laboratorio5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:3:FFD
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Laboratorio5|RS232_TX:Practica_TX|SHIFT_REGISTER:SR

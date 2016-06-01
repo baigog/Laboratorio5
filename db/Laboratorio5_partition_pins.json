@@ -52,6 +52,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SWITCH",
+					"strict" : false
+				},
+				{
 					"name" : "BOTONES[0]",
 					"strict" : false
 				},
@@ -65,10 +69,6 @@
 				},
 				{
 					"name" : "BOTONES[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SWITCH",
 					"strict" : false
 				}
 			]
