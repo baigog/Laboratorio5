@@ -1,5 +1,5 @@
 Flow report for Laboratorio5
-Sat May 28 13:01:00 2016
+Tue May 31 23:15:36 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May 28 13:01:00 2016       ;
+; Flow Status                        ; Successful - Tue May 31 23:15:36 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
 ; Top-level Entity Name              ; LABORATORIO5                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 101 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 81 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 57 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 57                                          ;
+; Total logic elements               ; 110 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 87 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 62 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 62                                          ;
 ; Total pins                         ; 17 / 529 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,792 / 3,981,312 ( < 1 % )                 ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/28/2016 12:59:47 ;
+; Start date & time ; 05/31/2016 23:14:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio5        ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146445118744652        ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146474725813396        ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; memo                                  ; --            ; --          ; Mem_FSM_TB      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; RS1                                   ; --            ; --          ; RS232_FSM_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Parity_TB       ;
@@ -107,12 +107,12 @@ agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; RS232_TX_TB                           ; --            ; --          ; eda_simulation  ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --              ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --              ;
-; MISC_FILE                            ; PLL/PLL2_inst.vhd                     ; --            ; --          ; --              ;
-; MISC_FILE                            ; PLL/PLL2.cmp                          ; --            ; --          ; --              ;
-; MISC_FILE                            ; PLL/PLL2.ppf                          ; --            ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL1_inst.vhd                     ; --            ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL1.cmp                          ; --            ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL1.ppf                          ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2_inst.vhd                     ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2.cmp                          ; --            ; --          ; --              ;
+; MISC_FILE                            ; PLL/PLL2.ppf                          ; --            ; --          ; --              ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --              ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top             ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top             ;
@@ -128,12 +128,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 874 MB              ; 00:00:39                           ;
-; Fitter                    ; 00:00:24     ; 1.0                     ; 1323 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 743 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 875 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 708 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:16                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 875 MB              ; 00:00:39                           ;
+; Fitter                    ; 00:00:25     ; 1.0                     ; 1323 MB             ; 00:00:27                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 739 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 873 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 706 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:59     ; --                      ; --                  ; 00:01:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

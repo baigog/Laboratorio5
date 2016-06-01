@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
---use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 entity Laboratorio5_TB is
 end Laboratorio5_TB;
@@ -15,15 +15,15 @@ architecture tb of Laboratorio5_TB is
 		BOTONES		:	IN	STD_LOGIC_VECTOR(3 DOWNTO 0);
 		FSEL			:	IN	STD_LOGIC_VECTOR(1 DOWNTO 0);
 		
-		RX_OUT		:	OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		RX_OUT		:	OUT STD_LOGIC_VECTOR(data_width-1 DOWNTO 0)
 	);
 	end component;
 	
-signal Clk, Switch	:	std_logic := '0';
-signal Reset : std_logic := '1';
-signal Botones : std_logic_vector(3 downto 0) := (others=> '0');
-signal Fsel : std_logic_vector(1 downto 0) := (others=> '0');
-signal Rx_out : std_logic_vector(7 downto 0);
+signal Clk, Switch	:	std_logic 							:= '0';
+signal Reset 			:	std_logic 							:= '1';
+signal Botones 		:	std_logic_vector(3 downto 0)	:= (others=> '0');
+signal Fsel				:	std_logic_vector(1 downto 0)	:= (others=> '0');
+signal Rx_out 			:	std_logic_vector(data_width-1 downto 0);
 
 begin
 	

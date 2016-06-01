@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.Lab5_Pack.all;
+use work.PAKETE.all;
 
 ENTITY MEM_RS232 IS
 	port(
@@ -10,7 +10,7 @@ ENTITY MEM_RS232 IS
 		switch		:	in std_logic;  -- Llave que envia todos los mensajes
 		Rst			:	in std_logic;
 		
-		ADDR_OUT		:	out	std_logic_vector(addr_width-1 downto 0) ;-- direccion de memoria apuntada
+		ADDR_OUT		:	out	std_logic_vector(7 downto 0) ;-- direccion de memoria apuntada
 		busy			:	out	std_logic;	-- Salida que indica si se esta en estado inicial
 		SR_READY		:	IN		STD_LOGIC;
 		SHIFT_LOAD	:	OUT	STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -21,11 +21,15 @@ END ENTITY;
 
 ARCHITECTURE BEH OF MEM_RS232 IS
 
-
+constant Inicial0 : unsigned(7 downto 0) := x"00";
+constant Inicial1 : unsigned(7 downto 0) := x"2F";
+constant Inicial2 : unsigned(7 downto 0) := x"45";
+constant Inicial3 : unsigned(7 downto 0) := x"5A";
+constant Final3	: unsigned(7 downto 0) := x"65";
 
 TYPE STATES IS (IDLE, INIT0, INIT1, INIT2, INIT3, INIT4, START, DATA, PARITY, STOP, LLAVE);
 SIGNAL CS, NS: STATES;
-SIGNAL ADDRESS, ULTIMO: UNSIGNED(addr_width-1 downto 0);
+SIGNAL ADDRESS, ULTIMO: UNSIGNED(7 downto 0);
 SIGNAL FF_SET: STD_LOGIC;
 SIGNAL BT:	STD_LOGIC_VECTOR(3 DOWNTO 0);
 BEGIN
@@ -35,7 +39,7 @@ FD: FOR I IN 0 TO 3 GENERATE
 END GENERATE FD; 
 
 ADDR_OUT<=STD_LOGIC_VECTOR(ADDRESS);
-NEXT_STATE: PROCESS (CS,BT, SR_READY, ADDRESS, switch, ULTIMO)
+NEXT_STATE: PROCESS (CS,botones, SR_READY, ADDRESS, switch)
 BEGIN
 	NS <= START;
 	CASE CS IS
@@ -125,7 +129,7 @@ BEGIN
 	end if;
 end process;
 
-synch_outputs: process(clk,CS, rst)
+synch_outputs: process(clk,CS)
 begin
 	if(rst='1') then
 		ADDRESS <=	X"00";

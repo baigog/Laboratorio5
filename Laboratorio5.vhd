@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 ENTITY LABORATORIO5 IS
 	PORT(
@@ -39,8 +39,7 @@ ARCHITECTURE BEH OF LABORATORIO5 IS
 		);
 END COMPONENT;
 
-signal canal : std_logic;
-
+SIGNAL CANAL:	STD_LOGIC;
 begin
 	
 Practica_TX : RS232_TX port map(Clk=>Clk,
@@ -48,11 +47,11 @@ Practica_TX : RS232_TX port map(Clk=>Clk,
 											Switch=>Switch,
 											Botones=>Botones,
 											Fsel=>Fsel,
-											TX_Out=>canal);
+											TX_Out=>CANAL);
 
 Practica_RX	:	RS232_RX 	PORT MAP(	CLK=>CLK,
 											RST=>Reset,
-											TX=>canal,
+											TX=>CANAL,
 											FSEL=>Fsel,
 											DATAOUT=>Rx_out);
 

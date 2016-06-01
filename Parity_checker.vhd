@@ -1,13 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 entity Parity_checker is
 	port(
-		data:			in std_logic_vector(7 downto 0);
-		checkbit:	in std_logic;
-		Rst:			in std_logic;
+		data:			in		std_logic_vector(7 downto 0);
+		checkbit:	in		std_logic;
+		Rst:			in		std_logic;
 		
 		err:			out	std_logic
 	);

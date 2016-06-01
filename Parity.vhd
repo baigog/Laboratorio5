@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 entity Parity is
 	port(
-		data	:	in std_logic_vector(7 downto 0);
-		Rst	:	in std_logic;
+		data			:	in std_logic_vector(data_width-1 downto 0);
+		Rst			:	in std_logic;
 		
 		bit_parity	:	out	std_logic
 	);

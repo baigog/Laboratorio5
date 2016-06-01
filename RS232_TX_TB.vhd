@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
---use work.PAKETE.all;
+--use work.Lab5_Pack.all;
 
 entity RS232_TX_TB is
 end RS232_TX_TB;
@@ -19,11 +19,11 @@ architecture tb of RS232_TX_TB is
 	);
 	end component;
 	
-signal Clk, Switch	:	std_logic := '0';
-signal Reset : std_logic := '1';
-signal Botones : std_logic_vector(3 downto 0) := (others=> '0');
-signal Fsel : std_logic_vector(1 downto 0) := (others=> '0');
-signal Tx_out : std_logic;
+signal Clk, Switch	:	std_logic 							:= '0';
+signal Reset 			:	std_logic 							:= '1';
+signal Botones 		:	std_logic_vector(3 downto 0)	:= (others=> '0');
+signal Fsel 			:	std_logic_vector(1 downto 0)	:= (others=> '0');
+signal Tx_out 			:	std_logic;
 
 begin
 	

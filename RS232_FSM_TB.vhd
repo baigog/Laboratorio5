@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
---use work.PAKETE.all;
+--use work.Lab5_Pack.all;
 
 ENTITY RS232_FSM_TB IS
 END RS232_FSM_TB;

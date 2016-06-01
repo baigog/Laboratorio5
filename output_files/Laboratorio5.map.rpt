@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Laboratorio5
-Sat May 28 13:00:05 2016
+Tue May 31 23:14:35 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -20,24 +20,29 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
  12. Registers Removed During Synthesis
  13. Removed Registers Triggering Further Register Optimizations
  14. General Register Statistics
- 15. Registers Packed Into Inferred Megafunctions
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for RS232_TX:Practica_TX|ROM:MEMORIA|altsyncram:Mux6_rtl_0|altsyncram_sh01:auto_generated
- 18. Parameter Settings for User Entity Instance: RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component
- 19. Parameter Settings for User Entity Instance: RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component
- 20. Parameter Settings for User Entity Instance: RS232_RX:Practica_RX|PLL1:PLL_115_384|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: RS232_RX:Practica_RX|PLL2:PLL96_48|altpll:altpll_component
- 22. Parameter Settings for Inferred Entity Instance: RS232_TX:Practica_TX|ROM:MEMORIA|altsyncram:Mux6_rtl_0
- 23. altpll Parameter Settings by Entity Instance
- 24. altsyncram Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "RS232_RX:Practica_RX|PLL2:PLL96_48"
- 26. Port Connectivity Checks: "RS232_RX:Practica_RX|PLL1:PLL_115_384"
- 27. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM"
- 28. Port Connectivity Checks: "RS232_TX:Practica_TX|PLL2:PLL96_48"
- 29. Port Connectivity Checks: "RS232_TX:Practica_TX|PLL1:PLL_115_384"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 15. Inverted Register Statistics
+ 16. Registers Packed Into Inferred Megafunctions
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for RS232_TX:Practica_TX|ROM:MEMORIA|altsyncram:Mux6_rtl_0|altsyncram_sh01:auto_generated
+ 19. Parameter Settings for User Entity Instance: RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component
+ 21. Parameter Settings for User Entity Instance: RS232_RX:Practica_RX|PLL1:PLL_115_384|altpll:altpll_component
+ 22. Parameter Settings for User Entity Instance: RS232_RX:Practica_RX|PLL2:PLL96_48|altpll:altpll_component
+ 23. Parameter Settings for Inferred Entity Instance: RS232_TX:Practica_TX|ROM:MEMORIA|altsyncram:Mux6_rtl_0
+ 24. altpll Parameter Settings by Entity Instance
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "RS232_RX:Practica_RX|PLL2:PLL96_48"
+ 27. Port Connectivity Checks: "RS232_RX:Practica_RX|PLL1:PLL_115_384"
+ 28. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:3:FFD"
+ 29. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:2:FFD"
+ 30. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:1:FFD"
+ 31. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD"
+ 32. Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM"
+ 33. Port Connectivity Checks: "RS232_TX:Practica_TX|PLL2:PLL96_48"
+ 34. Port Connectivity Checks: "RS232_TX:Practica_TX|PLL1:PLL_115_384"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -64,15 +69,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 28 13:00:05 2016       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 31 23:14:35 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio5                                ;
 ; Top-level Entity Name              ; LABORATORIO5                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 98                                          ;
-;     Total combinational functions  ; 81                                          ;
-;     Dedicated logic registers      ; 57                                          ;
-; Total registers                    ; 57                                          ;
+; Total logic elements               ; 104                                         ;
+;     Total combinational functions  ; 83                                          ;
+;     Dedicated logic registers      ; 62                                          ;
+; Total registers                    ; 62                                          ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,792                                       ;
@@ -179,44 +184,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                              ; Library ;
-+------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------+---------+
-; MUX_4_1.vhd                        ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd                            ;         ;
-; PLL/PLL2.vhd                       ; yes             ; User Wizard-Generated File                            ; E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd                           ;         ;
-; PLL/PLL1.vhd                       ; yes             ; User Wizard-Generated File                            ; E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd                           ;         ;
-; ROM.vhd                            ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd                                ;         ;
-; Mem.vhd                            ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd                                ;         ;
-; Parity.vhd                         ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd                             ;         ;
-; DATA_BUFFER.vhd                    ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd                        ;         ;
-; SHIFT_REGISTER.vhd                 ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd                     ;         ;
-; Laboratorio5.vhd                   ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd                       ;         ;
-; RS232_RX_FSM.vhd                   ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd                       ;         ;
-; SHIFT_REGISTER_RX.vhd              ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd                  ;         ;
-; Parity_checker.vhd                 ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd                     ;         ;
-; RS232_RX.vhd                       ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd                           ;         ;
-; RS232_TX.vhd                       ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd                           ;         ;
-; MEM_RS232.vhd                      ; yes             ; User VHDL File                                        ; E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd                          ;         ;
-; altpll.tdf                         ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal151.inc                     ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/aglobal151.inc        ;         ;
-; stratix_pll.inc                    ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                  ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                  ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll1_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v                       ;         ;
-; db/pll2_altpll.v                   ; yes             ; Auto-Generated Megafunction                           ; E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v                       ;         ;
-; altsyncram.tdf                     ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc              ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                        ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                     ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                      ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                         ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                         ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                       ; yes             ; Megafunction                                          ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_sh01.tdf             ; yes             ; Auto-Generated Megafunction                           ; E:/Mega/Facultad/FPGA/Laboratorio5/db/altsyncram_sh01.tdf                 ;         ;
-; Laboratorio5.LABORATORIO50.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/Mega/Facultad/FPGA/Laboratorio5/db/Laboratorio5.LABORATORIO50.rtl.mif  ;         ;
-+------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; Lab5_Package.vhd                 ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/Lab5_Package.vhd                       ;         ;
+; Laboratorio5.vhd                 ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd                       ;         ;
+; RS232_TX.vhd                     ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd                           ;         ;
+; RS232_RX.vhd                     ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd                           ;         ;
+; RS232_RX_FSM.vhd                 ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd                       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd                                ;         ;
+; Parity.vhd                       ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd                             ;         ;
+; Parity_checker.vhd               ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd                     ;         ;
+; DATA_BUFFER.vhd                  ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd                        ;         ;
+; SHIFT_REGISTER.vhd               ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd                     ;         ;
+; SHIFT_REGISTER_RX.vhd            ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd                  ;         ;
+; MEM_RS232.vhd                    ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd                          ;         ;
+; MUX_4_1.vhd                      ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd                            ;         ;
+; FF_D.vhd                         ; yes             ; User VHDL File               ; E:/Mega/Facultad/FPGA/Laboratorio5/FF_D.vhd                               ;         ;
+; PLL/PLL1.vhd                     ; yes             ; User Wizard-Generated File   ; E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd                           ;         ;
+; PLL/PLL2.vhd                     ; yes             ; User Wizard-Generated File   ; E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd                           ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal151.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/aglobal151.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/pll1_altpll.v                 ; yes             ; Auto-Generated Megafunction  ; E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v                       ;         ;
+; db/pll2_altpll.v                 ; yes             ; Auto-Generated Megafunction  ; E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v                       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/15.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_sh01.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Mega/Facultad/FPGA/Laboratorio5/db/altsyncram_sh01.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -224,20 +229,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 98          ;
+; Estimated Total logic elements              ; 104         ;
 ;                                             ;             ;
-; Total combinational functions               ; 81          ;
+; Total combinational functions               ; 83          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 44          ;
-;     -- 3 input functions                    ; 25          ;
-;     -- <=2 input functions                  ; 12          ;
+;     -- 4 input functions                    ; 48          ;
+;     -- 3 input functions                    ; 24          ;
+;     -- <=2 input functions                  ; 11          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 74          ;
+;     -- normal mode                          ; 76          ;
 ;     -- arithmetic mode                      ; 7           ;
 ;                                             ;             ;
-; Total registers                             ; 57          ;
-;     -- Dedicated logic registers            ; 57          ;
+; Total registers                             ; 62          ;
+;     -- Dedicated logic registers            ; 62          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 17          ;
@@ -249,8 +254,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 4           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; RESET~input ;
-; Maximum fan-out                             ; 66          ;
-; Total fan-out                               ; 563         ;
+; Maximum fan-out                             ; 68          ;
+; Total fan-out                               ; 585         ;
 ; Average fan-out                             ; 3.08        ;
 +---------------------------------------------+-------------+
 
@@ -260,7 +265,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
-; |LABORATORIO5                                ; 81 (0)            ; 57 (0)       ; 1792        ; 0            ; 0       ; 0         ; 17   ; 0            ; |LABORATORIO5                                                                                          ; work         ;
+; |LABORATORIO5                                ; 83 (0)            ; 62 (0)       ; 1792        ; 0            ; 0       ; 0         ; 17   ; 0            ; |LABORATORIO5                                                                                          ; work         ;
 ;    |RS232_RX:Practica_RX|                    ; 17 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX                                                                     ; work         ;
 ;       |DATA_BUFFER:DBUFFER|                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX|DATA_BUFFER:DBUFFER                                                 ; work         ;
 ;       |MUX_4_1:FREQ_SEL|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX|MUX_4_1:FREQ_SEL                                                    ; work         ;
@@ -273,8 +278,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |Parity_checker:PCHECKER1|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX|Parity_checker:PCHECKER1                                            ; work         ;
 ;       |RS232_RX_FSM:RX_FSM1|                 ; 12 (12)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1                                                ; work         ;
 ;       |SHIFT_REGISTER_RX:SR1|                ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_RX:Practica_RX|SHIFT_REGISTER_RX:SR1                                               ; work         ;
-;    |RS232_TX:Practica_TX|                    ; 64 (0)            ; 33 (0)       ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX                                                                     ; work         ;
-;       |MEM_RS232:FSM|                        ; 47 (47)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM                                                       ; work         ;
+;    |RS232_TX:Practica_TX|                    ; 66 (0)            ; 38 (0)       ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX                                                                     ; work         ;
+;       |MEM_RS232:FSM|                        ; 49 (49)           ; 28 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM                                                       ; work         ;
+;          |FF_D:\FD:0:FFD|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD                                        ; work         ;
+;          |FF_D:\FD:1:FFD|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:1:FFD                                        ; work         ;
+;          |FF_D:\FD:2:FFD|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:2:FFD                                        ; work         ;
+;          |FF_D:\FD:3:FFD|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:3:FFD                                        ; work         ;
 ;       |MUX_4_1:FREQ_SEL|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MUX_4_1:FREQ_SEL                                                    ; work         ;
 ;       |MUX_4_1:OUT_MUX|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|MUX_4_1:OUT_MUX                                                     ; work         ;
 ;       |PLL1:PLL_115_384|                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LABORATORIO5|RS232_TX:Practica_TX|PLL1:PLL_115_384                                                    ; work         ;
@@ -358,8 +367,7 @@ Encoding Type:  One-Hot
 ; RS232_TX:Practica_TX|MEM_RS232:FSM|ULTIMO[2]       ; Merged with RS232_TX:Practica_TX|MEM_RS232:FSM|ULTIMO[0] ;
 ; RS232_TX:Practica_TX|SHIFT_REGISTER:SR|DATA[7]     ; Stuck at GND due to stuck port data_in                   ;
 ; RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1|CS.START ; Stuck at GND due to stuck port data_in                   ;
-; RS232_TX:Practica_TX|MEM_RS232:FSM|CS.LLAVE        ; Stuck at GND due to stuck port data_in                   ;
-; Total Number of Removed Registers = 7              ;                                                          ;
+; Total Number of Removed Registers = 6              ;                                                          ;
 +----------------------------------------------------+----------------------------------------------------------+
 
 
@@ -378,14 +386,27 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 57    ;
+; Total registers                              ; 62    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 41    ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 38    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD|Q ; 4       ;
+; RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:2:FFD|Q ; 4       ;
+; RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:1:FFD|Q ; 4       ;
+; RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:3:FFD|Q ; 4       ;
+; Total number of inverted registers = 4              ;         ;
++-----------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -402,7 +423,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |LABORATORIO5|RS232_TX:Practica_TX|SHIFT_REGISTER:SR|CONT[2]    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |LABORATORIO5|RS232_TX:Practica_TX|SHIFT_REGISTER:SR|CONT[0]    ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |LABORATORIO5|RS232_TX:Practica_TX|SHIFT_REGISTER:SR|DATA[0]    ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |LABORATORIO5|RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1|CONT[2] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |LABORATORIO5|RS232_TX:Practica_TX|MEM_RS232:FSM|ADDRESS[1]     ;
@@ -2055,6 +2076,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:3:FFD" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:2:FFD" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:1:FFD" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "RS232_TX:Practica_TX|MEM_RS232:FSM"                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2088,23 +2145,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 57                          ;
-;     CLR               ; 19                          ;
+; cycloneiii_ff         ; 62                          ;
+;     CLR               ; 24                          ;
 ;     ENA               ; 16                          ;
 ;     ENA CLR           ; 22                          ;
-; cycloneiii_lcell_comb ; 81                          ;
+; cycloneiii_lcell_comb ; 83                          ;
 ;     arith             ; 7                           ;
 ;         2 data inputs ; 7                           ;
-;     normal            ; 74                          ;
+;     normal            ; 76                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 44                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 48                          ;
 ; cycloneiii_pll        ; 4                           ;
 ; cycloneiii_ram_block  ; 7                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.34                        ;
+; Average LUT depth     ; 2.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2113,7 +2170,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -2123,78 +2180,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat May 28 12:59:46 2016
+    Info: Processing started: Tue May 31 23:14:17 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio5 -c Laboratorio5
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 0 entities, in source file lab5_package.vhd
+    Info (12022): Found design unit 1: Lab5_Pack File: E:/Mega/Facultad/FPGA/Laboratorio5/Lab5_Package.vhd Line: 5
+    Info (12022): Found design unit 2: Lab5_Pack-body File: E:/Mega/Facultad/FPGA/Laboratorio5/Lab5_Package.vhd Line: 183
+Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5.vhd
+    Info (12022): Found design unit 1: LABORATORIO5-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 17
+    Info (12023): Found entity 1: LABORATORIO5 File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5_tb.vhd
+    Info (12022): Found design unit 1: Laboratorio5_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 8
+    Info (12023): Found entity 1: Laboratorio5_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file rs232_tx.vhd
+    Info (12022): Found design unit 1: RS232_TX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 17
+    Info (12023): Found entity 1: RS232_TX File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rs232_tx_tb.vhd
     Info (12022): Found design unit 1: RS232_TX_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX_TB.vhd Line: 8
     Info (12023): Found entity 1: RS232_TX_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX_TB.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file mux_4_1.vhd
-    Info (12022): Found design unit 1: MUX_4_1-flujo File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 13
-    Info (12023): Found entity 1: MUX_4_1 File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
-    Info (12022): Found design unit 1: pll2-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
-    Info (12023): Found entity 1: PLL2 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
-Info (12021): Found 2 design units, including 1 entities, in source file pll/pll1.vhd
-    Info (12022): Found design unit 1: pll1-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
-    Info (12023): Found entity 1: PLL1 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file rs232_rx.vhd
+    Info (12022): Found design unit 1: RS232_RX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 17
+    Info (12023): Found entity 1: RS232_RX File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file rs232_rx_fsm.vhd
+    Info (12022): Found design unit 1: RS232_RX_FSM-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd Line: 17
+    Info (12023): Found entity 1: RS232_RX_FSM File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: ROM-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 14
+    Info (12022): Found design unit 1: ROM-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 13
     Info (12023): Found entity 1: ROM File: E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd Line: 6
-Info (12021): Found 2 design units, including 0 entities, in source file mem.vhd
-    Info (12022): Found design unit 1: PAKETE File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd Line: 5
-    Info (12022): Found design unit 2: PAKETE-body File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd Line: 138
-Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm_tb.vhd
-    Info (12022): Found design unit 1: Mem_FSM_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 8
-    Info (12023): Found entity 1: Mem_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file parity.vhd
     Info (12022): Found design unit 1: Parity-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd Line: 15
     Info (12023): Found entity 1: Parity File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file parity_tb.vhd
-    Info (12022): Found design unit 1: Parity_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 8
-    Info (12023): Found entity 1: Parity_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file rs232_fsm.vhd
-    Info (12022): Found design unit 1: RS232_FSM-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd Line: 19
-    Info (12023): Found entity 1: RS232_FSM File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file data_buffer.vhd
-    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 14
-    Info (12023): Found entity 1: DATA_BUFFER File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file shift_register.vhd
-    Info (12022): Found design unit 1: SHIFT_REGISTER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 15
-    Info (12023): Found entity 1: SHIFT_REGISTER File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file rs232_fsm_tb.vhd
-    Info (12022): Found design unit 1: RS232_FSM_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 9
-    Info (12023): Found entity 1: RS232_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_FSM_TB.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5.vhd
-    Info (12022): Found design unit 1: LABORATORIO5-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 17
-    Info (12023): Found entity 1: LABORATORIO5 File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file mem_fsm.vhd
-    Info (12022): Found design unit 1: Mem_fsm-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 21
-    Info (12023): Found entity 1: Mem_fsm File: E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file rs232_rx_fsm.vhd
-    Info (12022): Found design unit 1: RS232_RX_FSM-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd Line: 17
-    Info (12023): Found entity 1: RS232_RX_FSM File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file shift_register_rx.vhd
-    Info (12022): Found design unit 1: SHIFT_REGISTER_RX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd Line: 16
-    Info (12023): Found entity 1: SHIFT_REGISTER_RX File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd Line: 5
+    Info (12022): Found design unit 1: Parity_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 9
+    Info (12023): Found entity 1: Parity_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_TB.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file parity_checker.vhd
     Info (12022): Found design unit 1: Parity_checker-beh File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd Line: 16
     Info (12023): Found entity 1: Parity_checker File: E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file rs232_rx.vhd
-    Info (12022): Found design unit 1: RS232_RX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 17
-    Info (12023): Found entity 1: RS232_RX File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file rs232_tx.vhd
-    Info (12022): Found design unit 1: RS232_TX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 17
-    Info (12023): Found entity 1: RS232_TX File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file laboratorio5_tb.vhd
-    Info (12022): Found design unit 1: Laboratorio5_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 8
-    Info (12023): Found entity 1: Laboratorio5_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file data_buffer.vhd
+    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 15
+    Info (12023): Found entity 1: DATA_BUFFER File: E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file shift_register.vhd
+    Info (12022): Found design unit 1: SHIFT_REGISTER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 15
+    Info (12023): Found entity 1: SHIFT_REGISTER File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shift_register_rx.vhd
+    Info (12022): Found design unit 1: SHIFT_REGISTER_RX-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd Line: 16
+    Info (12023): Found entity 1: SHIFT_REGISTER_RX File: E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mem_rs232.vhd
     Info (12022): Found design unit 1: MEM_RS232-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd Line: 22
     Info (12023): Found entity 1: MEM_RS232 File: E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr.vhd
+    Info (12022): Found design unit 1: LCD_CONTR-BEH File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 67
+    Info (12023): Found entity 1: LCD_CONTR File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR.vhd Line: 44
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_contr_tb.vhd
+    Info (12022): Found design unit 1: LCD_CONTR_TB-TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 7
+    Info (12023): Found entity 1: LCD_CONTR_TB File: E:/Mega/Facultad/FPGA/Laboratorio5/LCD_CONTR_TB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_4_1.vhd
+    Info (12022): Found design unit 1: MUX_4_1-flujo File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_4_1 File: E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ff_d.vhd
+    Info (12022): Found design unit 1: FF_D-flow File: E:/Mega/Facultad/FPGA/Laboratorio5/FF_D.vhd Line: 18
+    Info (12023): Found entity 1: FF_D File: E:/Mega/Facultad/FPGA/Laboratorio5/FF_D.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pll/pll1.vhd
+    Info (12022): Found design unit 1: pll1-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 55
+    Info (12023): Found entity 1: PLL1 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file pll/pll2.vhd
+    Info (12022): Found design unit 1: pll2-SYN File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 55
+    Info (12023): Found entity 1: PLL2 File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 43
 Info (12127): Elaborating entity "Laboratorio5" for the top level hierarchy
-Info (12128): Elaborating entity "RS232_TX" for hierarchy "RS232_TX:Practica_TX" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 46
-Info (12128): Elaborating entity "PLL1" for hierarchy "RS232_TX:Practica_TX|PLL1:PLL_115_384" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 28
+Info (12128): Elaborating entity "RS232_TX" for hierarchy "RS232_TX:Practica_TX" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 45
+Info (12128): Elaborating entity "PLL1" for hierarchy "RS232_TX:Practica_TX|PLL1:PLL_115_384" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 29
 Info (12128): Elaborating entity "altpll" for hierarchy "RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
 Info (12130): Elaborated megafunction instantiation "RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
 Info (12133): Instantiated megafunction "RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd Line: 149
@@ -2260,7 +2314,7 @@ Info (12133): Instantiated megafunction "RS232_TX:Practica_TX|PLL1:PLL_115_384|a
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll1_altpll.v
     Info (12023): Found entity 1: PLL1_altpll File: E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v Line: 31
 Info (12128): Elaborating entity "PLL1_altpll" for hierarchy "RS232_TX:Practica_TX|PLL1:PLL_115_384|altpll:altpll_component|PLL1_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "PLL2" for hierarchy "RS232_TX:Practica_TX|PLL2:PLL96_48" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 33
+Info (12128): Elaborating entity "PLL2" for hierarchy "RS232_TX:Practica_TX|PLL2:PLL96_48" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 34
 Info (12128): Elaborating entity "altpll" for hierarchy "RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
 Info (12130): Elaborated megafunction instantiation "RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
 Info (12133): Instantiated megafunction "RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd Line: 149
@@ -2326,14 +2380,13 @@ Info (12133): Instantiated megafunction "RS232_TX:Practica_TX|PLL2:PLL96_48|altp
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll2_altpll.v
     Info (12023): Found entity 1: PLL2_altpll File: E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v Line: 31
 Info (12128): Elaborating entity "PLL2_altpll" for hierarchy "RS232_TX:Practica_TX|PLL2:PLL96_48|altpll:altpll_component|PLL2_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "MUX_4_1" for hierarchy "RS232_TX:Practica_TX|MUX_4_1:FREQ_SEL" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 38
-Info (12128): Elaborating entity "ROM" for hierarchy "RS232_TX:Practica_TX|ROM:MEMORIA" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 44
-Info (12128): Elaborating entity "Parity" for hierarchy "RS232_TX:Practica_TX|Parity:PARIDAD" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 48
-Info (12128): Elaborating entity "MEM_RS232" for hierarchy "RS232_TX:Practica_TX|MEM_RS232:FSM" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 52
-Warning (10492): VHDL Process Statement warning at MEM_RS232.vhd(66): signal "ULTIMO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at MEM_RS232.vhd(126): signal "Rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd Line: 126
-Info (12128): Elaborating entity "SHIFT_REGISTER" for hierarchy "RS232_TX:Practica_TX|SHIFT_REGISTER:SR" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 87
-Info (12128): Elaborating entity "RS232_RX" for hierarchy "RS232_RX:Practica_RX" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 53
+Info (12128): Elaborating entity "MUX_4_1" for hierarchy "RS232_TX:Practica_TX|MUX_4_1:FREQ_SEL" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 39
+Info (12128): Elaborating entity "ROM" for hierarchy "RS232_TX:Practica_TX|ROM:MEMORIA" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 45
+Info (12128): Elaborating entity "Parity" for hierarchy "RS232_TX:Practica_TX|Parity:PARIDAD" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 49
+Info (12128): Elaborating entity "MEM_RS232" for hierarchy "RS232_TX:Practica_TX|MEM_RS232:FSM" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 53
+Info (12128): Elaborating entity "FF_D" for hierarchy "RS232_TX:Practica_TX|MEM_RS232:FSM|FF_D:\FD:0:FFD" File: E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd Line: 34
+Info (12128): Elaborating entity "SHIFT_REGISTER" for hierarchy "RS232_TX:Practica_TX|SHIFT_REGISTER:SR" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd Line: 65
+Info (12128): Elaborating entity "RS232_RX" for hierarchy "RS232_RX:Practica_RX" File: E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd Line: 52
 Info (12128): Elaborating entity "RS232_RX_FSM" for hierarchy "RS232_RX:Practica_RX|RS232_RX_FSM:RX_FSM1" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 42
 Info (12128): Elaborating entity "SHIFT_REGISTER_RX" for hierarchy "RS232_RX:Practica_RX|SHIFT_REGISTER_RX:SR1" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 49
 Info (12128): Elaborating entity "Parity_checker" for hierarchy "RS232_RX:Practica_RX|Parity_checker:PCHECKER1" File: E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd Line: 57
@@ -2361,19 +2414,21 @@ Info (12133): Instantiated megafunction "RS232_TX:Practica_TX|ROM:MEMORIA|altsyn
     Info (12134): Parameter "INIT_FILE" = "Laboratorio5.LABORATORIO50.rtl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sh01.tdf
     Info (12023): Found entity 1: altsyncram_sh01 File: E:/Mega/Facultad/FPGA/Laboratorio5/db/altsyncram_sh01.tdf Line: 28
+Info (13000): Registers with preset signals will power-up high File: E:/Mega/Facultad/FPGA/Laboratorio5/FF_D.vhd Line: 14
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 4 node(s), including 0 DDIO, 4 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 99 logic cells
+    Info (21061): Implemented 105 logic cells
     Info (21064): Implemented 7 RAM segments
     Info (21065): Implemented 4 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 874 megabytes
-    Info: Processing ended: Sat May 28 13:00:05 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:40
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 875 megabytes
+    Info: Processing ended: Tue May 31 23:14:35 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:39
 
 

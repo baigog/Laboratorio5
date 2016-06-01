@@ -82,40 +82,52 @@ set_location_assignment PIN_AC28 -to FSEL[1]
 set_location_assignment PIN_AC27 -to FSEL[0]
 set_location_assignment PIN_AD27 -to RESET
 set_location_assignment PIN_G9 -to TX_OUT
-set_global_assignment -name VHDL_FILE RS232_TX_TB.vhd
-set_global_assignment -name VHDL_FILE MUX_4_1.vhd
-set_global_assignment -name VHDL_FILE PLL/PLL2.vhd
-set_global_assignment -name VHDL_FILE PLL/PLL1.vhd
-set_global_assignment -name QIP_FILE PLL/PLL2.qip
-set_global_assignment -name QIP_FILE PLL/PLL1.qip
-set_global_assignment -name VHDL_FILE ROM.vhd
-set_global_assignment -name VHDL_FILE Mem.vhd
-set_global_assignment -name VHDL_FILE Mem_FSM_TB.vhd
-set_global_assignment -name VHDL_FILE Parity.vhd
-set_global_assignment -name VHDL_FILE Parity_TB.vhd
-set_global_assignment -name VHDL_FILE RS232_FSM.vhd
-set_global_assignment -name VHDL_FILE DATA_BUFFER.vhd
-set_global_assignment -name VHDL_FILE SHIFT_REGISTER.vhd
-set_global_assignment -name VHDL_FILE RS232_FSM_TB.vhd
-set_global_assignment -name VHDL_FILE Laboratorio5.vhd
-set_global_assignment -name VHDL_FILE Mem_FSM.vhd
-set_global_assignment -name VHDL_FILE RS232_RX_FSM.vhd
-set_global_assignment -name VHDL_FILE SHIFT_REGISTER_RX.vhd
-set_global_assignment -name VHDL_FILE Parity_checker.vhd
-set_global_assignment -name VHDL_FILE RS232_RX.vhd
-set_global_assignment -name VHDL_FILE RS232_TX.vhd
-set_global_assignment -name VHDL_FILE Laboratorio5_TB.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME RS232_TX_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME Practica_TX -section_id RS232_TX_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME RS232_TX_TB -section_id RS232_TX_TB
-set_global_assignment -name VHDL_FILE MEM_RS232.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M5 -to LCD_DATA[7]
+set_location_assignment PIN_M3 -to LCD_DATA[6]
+set_location_assignment PIN_K2 -to LCD_DATA[5]
+set_location_assignment PIN_K1 -to LCD_DATA[4]
+set_location_assignment PIN_K7 -to LCD_DATA[3]
+set_location_assignment PIN_L2 -to LCD_DATA[2]
+set_location_assignment PIN_L1 -to LCD_DATA[1]
+set_location_assignment PIN_L3 -to LCD_DATA[0]
+set_location_assignment PIN_L4 -to LCD_EN
+set_location_assignment PIN_L5 -to LCD_ON
+set_location_assignment PIN_M2 -to LCD_RS
+set_location_assignment PIN_M1 -to LCD_RWOUT
+set_location_assignment PIN_G19 -to BUSY_LED
 set_global_assignment -name EDA_TEST_BENCH_FILE LCD_CONTR_TB.vhd -section_id LCD_CONTR_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE RS232_FSM_TB.vhd -section_id RS232_FSM_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE Mem_FSM_TB.vhd -section_id Mem_FSM_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE Parity_TB.vhd -section_id Parity_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE Laboratorio5_TB.vhd -section_id Laboratorio5_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE RS232_TX_TB.vhd -section_id RS232_TX_TB
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE Lab5_Package.vhd
+set_global_assignment -name VHDL_FILE Laboratorio5.vhd
+set_global_assignment -name VHDL_FILE Laboratorio5_TB.vhd
+set_global_assignment -name VHDL_FILE RS232_TX.vhd
+set_global_assignment -name VHDL_FILE RS232_TX_TB.vhd
+set_global_assignment -name VHDL_FILE RS232_RX.vhd
+set_global_assignment -name VHDL_FILE RS232_RX_FSM.vhd
+set_global_assignment -name VHDL_FILE ROM.vhd
+set_global_assignment -name VHDL_FILE Parity.vhd
+set_global_assignment -name VHDL_FILE Parity_TB.vhd
+set_global_assignment -name VHDL_FILE Parity_checker.vhd
+set_global_assignment -name VHDL_FILE DATA_BUFFER.vhd
+set_global_assignment -name VHDL_FILE SHIFT_REGISTER.vhd
+set_global_assignment -name VHDL_FILE SHIFT_REGISTER_RX.vhd
+set_global_assignment -name VHDL_FILE MEM_RS232.vhd
+set_global_assignment -name VHDL_FILE LCD_CONTR.vhd
+set_global_assignment -name VHDL_FILE LCD_CONTR_TB.vhd
+set_global_assignment -name VHDL_FILE MUX_4_1.vhd
+set_global_assignment -name VHDL_FILE FF_D.vhd
+set_global_assignment -name VHDL_FILE PLL/PLL1.vhd
+set_global_assignment -name VHDL_FILE PLL/PLL2.vhd
+set_global_assignment -name QIP_FILE PLL/PLL1.qip
+set_global_assignment -name QIP_FILE PLL/PLL2.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

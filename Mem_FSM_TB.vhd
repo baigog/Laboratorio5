@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
---use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 entity Mem_FSM_TB is
 end Mem_FSM_TB;
@@ -15,7 +15,7 @@ component Mem_FSM is
 		Rst			:	in std_logic;
 		RS_READY		:	in std_logic;	-- Entrada que indica que el RS esta disponible
 		
-		address		:	out	std_logic_vector(7 downto 0) ;-- direccion de memoria apuntada
+		address		:	out	std_logic_vector(addr_width-1 downto 0) ;-- direccion de memoria apuntada
 		data_ready	:	out	std_logic;	-- Salida que indica que el dato esta listo
 		RE				:	out	std_logic;	-- Read Enable
 		busy			:	out	std_logic
@@ -24,14 +24,8 @@ end component;
 
 signal clk,BT3,BT2,BT1,BT0,switch,Rst,RS_READY : std_logic :='0';
 signal data_ready,RE,busy : std_logic;
-signal address	: std_logic_vector(7 downto 0);
+signal address	: std_logic_vector(addr_width-1 downto 0);
 signal botones	:	std_logic_vector(3 downto 0):= (others => '0');
-
-constant Inicial0 : std_logic_vector(7 downto 0) := x"00";
-constant Inicial1 : std_logic_vector(7 downto 0):= x"2F";
-constant Inicial2 : std_logic_vector(7 downto 0) := x"45";
-constant Inicial3 : std_logic_vector(7 downto 0) := x"5A";
-constant Final3	: std_logic_vector(7 downto 0) := x"65";
 
 begin
 
@@ -48,7 +42,7 @@ begin
 	wait until rising_edge(clk);
 	botones<="1000";
 	wait until rising_edge(clk);
-	RS_READY<='1';
+	RS_READY<='0';
 	botones<="0000";
 	wait until (address=Final3);
 --	RS_READY<='0';

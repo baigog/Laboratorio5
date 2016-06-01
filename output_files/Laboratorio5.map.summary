@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat May 28 13:00:05 2016
+Analysis & Synthesis Status : Successful - Tue May 31 23:14:35 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : Laboratorio5
 Top-level Entity Name : LABORATORIO5
 Family : Cyclone IV E
-Total logic elements : 98
-    Total combinational functions : 81
-    Dedicated logic registers : 57
-Total registers : 57
+Total logic elements : 104
+    Total combinational functions : 83
+    Dedicated logic registers : 62
+Total registers : 62
 Total pins : 17
 Total virtual pins : 0
 Total memory bits : 1,792

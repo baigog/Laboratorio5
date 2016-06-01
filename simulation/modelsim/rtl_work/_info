@@ -8,713 +8,128 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/Mega/Facultad/FPGA/Laboratorio5/simulation/modelsim
-Edata_buffer
-Z1 w1463944403
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Emem_fsm
+Z1 w1464486721
+Z2 DPx4 work 6 pakete 0 22 K^1:oUke705df5g6F^n]P3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd
-Z5 FE:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd
+Z6 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd
+Z7 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd
 l0
-L4
-VOQm1DNU]1WIR[LF[cE@OI3
-!s100 63[U]BmVNM6LjMbkF]PgG0
-Z6 OV;C;10.4b;61
+L6
+V@bLb<R`[Y:hg@@`mj6<5l2
+!s100 ^GT9lAE3^7IUMYSV;g>Ro2
+Z8 OV;C;10.4b;61
 31
-Z7 !s110 1464450845
+Z9 !s110 1464487391
 !i10b 1
-Z8 !s108 1464450845.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd|
-Z10 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/DATA_BUFFER.vhd|
+Z10 !s108 1464487391.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd|
+Z12 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM.vhd|
 !i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1
+Z13 o-93 -work work
+Z14 tExplicit 1
 Abeh
 R2
 R3
-DEx4 work 11 data_buffer 0 22 OQm1DNU]1WIR[LF[cE@OI3
-l16
-L14
-V`5[5gGfP1ahBFOVg@l?Y[0
-!s100 fTQ8[^;7`1VOb=ei75^`Y3
-R6
-31
-R7
-!i10b 1
+R4
+R5
+DEx4 work 7 mem_fsm 0 22 @bLb<R`[Y:hg@@`mj6<5l2
+l34
+L21
+V7HFTAYQHD1YHiDbXZ7XRn3
+!s100 hih@TDQHkH8Z6]da`RDK80
 R8
+31
 R9
+!i10b 1
 R10
-!i113 1
 R11
 R12
-Elaboratorio5
-Z13 w1464148238
-Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z15 DPx4 work 6 pakete 0 22 K^1:oUke705df5g6F^n]P3
-R2
-R3
+!i113 1
+R13
+R14
+Emem_fsm_tb
+Z15 w1464358850
+R4
+R5
 R0
-Z16 8E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd
-Z17 FE:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd
+Z16 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd
+Z17 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd
 l0
 L5
-V7JF@o][E4GBe:2<kU9m>12
-!s100 @=_WU4gQ]a3HLg5ab5oE:1
-R6
-31
-Z18 !s110 1464450846
-!i10b 1
+VPV28=WLUIE0adX9TnE=Rc2
+!s100 l?fJ<dAaH48@Zh4PWc7<@0
 R8
-Z19 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd|
-Z20 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5.vhd|
-!i113 1
-R11
-R12
-Abeh
-R14
-R15
-R2
-R3
-DEx4 work 12 laboratorio5 0 22 7JF@o][E4GBe:2<kU9m>12
-l44
-L17
-V[kDoh4bEgHS8ECjJ7m:9<0
-!s100 8lRVz]Wd@bJNZ7ebUXS0X3
-R6
 31
-R18
+R9
 !i10b 1
-R8
-R19
-R20
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd|
+Z19 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem_FSM_TB.vhd|
 !i113 1
-R11
-R12
-Elaboratorio5_tb
-Z21 w1464152364
+R13
 R14
-R15
-R2
-R3
-R0
-Z22 8E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
-Z23 FE:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd
-l0
-L5
-VaPIo;G17Sb9BjNDMkVH`_1
-!s100 ^?ej7iJlkIY<LiLKFZF0h2
-R6
-31
-R18
-!i10b 1
-Z24 !s108 1464450846.000000
-Z25 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
-Z26 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Laboratorio5_TB.vhd|
-!i113 1
-R11
-R12
 Atb
+R4
+R5
+DEx4 work 10 mem_fsm_tb 0 22 PV28=WLUIE0adX9TnE=Rc2
+l36
+L8
+V>E79S6TD5LnVTO5@DQffS1
+!s100 H^g0]>TF`cT_e<7IUPjIH2
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
 R14
-R15
+Ppakete
+R3
+R4
+R5
+Z20 w1464449558
+R0
+Z21 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
+Z22 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
+l0
+L5
+VK^1:oUke705df5g6F^n]P3
+!s100 Q[Z^PEB4ei89C7IY?eR4Y1
+R8
+31
+b1
+Z23 !s110 1464487390
+!i10b 1
+Z24 !s108 1464487390.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
+Z26 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
+!i113 1
+R13
+R14
+Bbody
 R2
 R3
-DEx4 work 15 laboratorio5_tb 0 22 aPIo;G17Sb9BjNDMkVH`_1
-l28
-L8
-VAI^^?i[?aB63Mfh6^4?C@3
-!s100 oD^XM[S9e[0Zah`CbA2iS3
-R6
+R4
+R5
+l0
+L138
+VfF`BnH604J<dl=hcoFK>B2
+!s100 WSBzFKLk96KT0Vfd>J7bg1
+R8
 31
-R18
+R23
 !i10b 1
 R24
 R25
 R26
 !i113 1
-R11
-R12
-Emem_rs232
-Z27 w1464450806
-R15
+R13
 R14
-R2
-R3
-R0
-Z28 8E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd
-Z29 FE:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd
-l0
-L6
-VOP>Nlb7kNO]<S38D^4@Td1
-!s100 ?HBDSz]MUK4AoFZK]VH>P1
-R6
-31
-R18
-!i10b 1
-R24
-Z30 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd|
-Z31 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/MEM_RS232.vhd|
-!i113 1
-R11
-R12
-Abeh
-R15
-R14
-R2
-R3
-DEx4 work 9 mem_rs232 0 22 OP>Nlb7kNO]<S38D^4@Td1
-l34
-L22
-Vbc>2ER?kNgQD9Mz_FRebN1
-!s100 YjYG0n8@nL2:GW?EbmL883
-R6
-31
-R18
-!i10b 1
-R24
-R30
-R31
-!i113 1
-R11
-R12
-Emux_4_1
-R1
-R2
-R3
-R0
-Z32 8E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd
-Z33 FE:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd
-l0
-L4
-VmQEh5EgEMgQYbGXWlTYPJ0
-!s100 YGUXlD[lK9g_Io90V?LYJ1
-R6
-31
-Z34 !s110 1464450844
-!i10b 1
-Z35 !s108 1464450844.000000
-Z36 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd|
-Z37 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/MUX_4_1.vhd|
-!i113 1
-R11
-R12
-Aflujo
-R2
-R3
-DEx4 work 7 mux_4_1 0 22 mQEh5EgEMgQYbGXWlTYPJ0
-l14
-L13
-Vhni8jXB=zIO<HUXWgZ=1F1
-!s100 I]6DjM;j?@ecCzF<U`=;I3
-R6
-31
-R34
-!i10b 1
-R35
-R36
-R37
-!i113 1
-R11
-R12
-Ppakete
-R14
-R2
-R3
-Z38 w1464449558
-R0
-Z39 8E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
-Z40 FE:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd
-l0
-L5
-VK^1:oUke705df5g6F^n]P3
-!s100 Q[Z^PEB4ei89C7IY?eR4Y1
-R6
-31
-b1
-R34
-!i10b 1
-R35
-Z41 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
-Z42 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Mem.vhd|
-!i113 1
-R11
-R12
-Bbody
-R15
-R14
-R2
-R3
-l0
-L138
-VfF`BnH604J<dl=hcoFK>B2
-!s100 WSBzFKLk96KT0Vfd>J7bg1
-R6
-31
-R34
-!i10b 1
-R35
-R41
-R42
-!i113 1
-R11
-R12
 nbody
-Eparity
-Z43 w1463947340
-R15
-R14
-R2
-R3
-R0
-Z44 8E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd
-Z45 FE:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd
-l0
-L6
-V^5m0k3;[1jMmiF@lP^LB^0
-!s100 o[jf>CFdh^K>LOZ]^X`lC0
-R6
-31
-R7
-!i10b 1
-R8
-Z46 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd|
-Z47 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Parity.vhd|
-!i113 1
-R11
-R12
-Abeh
-R15
-R14
-R2
-R3
-DEx4 work 6 parity 0 22 ^5m0k3;[1jMmiF@lP^LB^0
-l17
-L15
-VjoCYdCAPhc_jTZdEAnVFH2
-!s100 KgWARH9g`g<zcY_1H5HeC0
-R6
-31
-R7
-!i10b 1
-R8
-R46
-R47
-!i113 1
-R11
-R12
-Eparity_checker
-Z48 w1464138780
-R15
-R14
-R2
-R3
-R0
-Z49 8E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd
-Z50 FE:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd
-l0
-L6
-VVolgLoW5A<IL8cGX`>f@Z3
-!s100 Oa;55SE9zdM5Pac8`gA6F1
-R6
-31
-R18
-!i10b 1
-R24
-Z51 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd|
-Z52 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/Parity_checker.vhd|
-!i113 1
-R11
-R12
-Abeh
-R15
-R14
-R2
-R3
-DEx4 work 14 parity_checker 0 22 VolgLoW5A<IL8cGX`>f@Z3
-l18
-L16
-VB4[5OXiIak[cX?5AN<BB:1
-!s100 VPPnEm>2e_```DL`[]>@93
-R6
-31
-R18
-!i10b 1
-R24
-R51
-R52
-!i113 1
-R11
-R12
-Epll1
-Z53 w1463943716
-R2
-R3
-R0
-Z54 8E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd
-Z55 FE:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd
-l0
-L43
-Vh:f8:16AN^dJfH[R81gG_0
-!s100 b8imcindh_lkS2261<LJH0
-R6
-31
-R34
-!i10b 1
-R35
-Z56 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd|
-Z57 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL1.vhd|
-!i113 1
-R11
-R12
-Asyn
-R2
-R3
-DEx4 work 4 pll1 0 22 h:f8:16AN^dJfH[R81gG_0
-l138
-L55
-VKej9AMU`T4_nIgcYU1=8W2
-!s100 hzS68[^E[<`P6[ENU<_?j1
-R6
-31
-R34
-!i10b 1
-R35
-R56
-R57
-!i113 1
-R11
-R12
-vPLL1_altpll
-R34
-!i10b 1
-!s100 H=oB2B_n;M6b@US4EnEFZ0
-Ih5;>NG0iVP2FXC`o4Z<380
-Z58 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1464011036
-8E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v
-FE:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v
-Z59 L0 31
-Z60 OV;L;10.4b;61
-r1
-!s85 0
-31
-R35
-!s107 E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db|E:/Mega/Facultad/FPGA/Laboratorio5/db/pll1_altpll.v|
-!i113 1
-Z61 o-vlog01compat -work work
-Z62 !s92 -vlog01compat -work work +incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db
-n@p@l@l1_altpll
-Epll2
-R53
-R2
-R3
-R0
-Z63 8E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd
-Z64 FE:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd
-l0
-L43
-VhN_1FckJRlMQlV0<nKcW11
-!s100 hQmZ2k15FKcJSAATd:W@U0
-R6
-31
-R34
-!i10b 1
-R35
-Z65 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd|
-Z66 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/PLL/PLL2.vhd|
-!i113 1
-R11
-R12
-Asyn
-R2
-R3
-DEx4 work 4 pll2 0 22 hN_1FckJRlMQlV0<nKcW11
-l138
-L55
-VGCMP656:f6Z0fE0jHB`k63
-!s100 GA=HIXDBHC6dKmhPI3@1N3
-R6
-31
-R34
-!i10b 1
-R35
-R65
-R66
-!i113 1
-R11
-R12
-vPLL2_altpll
-R34
-!i10b 1
-!s100 ES?<z`Z;CDPPf?f>NdE;z2
-I_QYXBm4KkMZ_5b8lL4DQ33
-R58
-R0
-w1464011037
-8E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v
-FE:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v
-R59
-R60
-r1
-!s85 0
-31
-R35
-!s107 E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Mega/Facultad/FPGA/Laboratorio5/db|E:/Mega/Facultad/FPGA/Laboratorio5/db/pll2_altpll.v|
-!i113 1
-R61
-R62
-n@p@l@l2_altpll
-Erom
-Z67 w1464356481
-R15
-R14
-R2
-R3
-R0
-Z68 8E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
-Z69 FE:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd
-l0
-L6
-Vahl>bO]o>>N2H?=Ll4<cG3
-!s100 9WQ_e^U0M4jg^RNi?8<Ka0
-R6
-31
-R7
-!i10b 1
-R8
-Z70 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd|
-Z71 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/ROM.vhd|
-!i113 1
-R11
-R12
-Abeh
-R15
-R14
-R2
-R3
-DEx4 work 3 rom 0 22 ahl>bO]o>>N2H?=Ll4<cG3
-l40
-L14
-Vd9[I_Bj<[Sz3Q9KYML22?1
-!s100 KePf1>g4@B]cWR2AcMGN=2
-R6
-31
-R7
-!i10b 1
-R8
-R70
-R71
-!i113 1
-R11
-R12
-Ers232_rx
-Z72 w1464151304
-R15
-R14
-R2
-R3
-R0
-Z73 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd
-Z74 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd
-l0
-L6
-V3hYOXZFUgYOL^l_bObXHf0
-!s100 =aPGYOhSUGQknGgXLSP6D2
-R6
-31
-R18
-!i10b 1
-R24
-Z75 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd|
-Z76 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX.vhd|
-!i113 1
-R11
-R12
-Abeh
-R15
-R14
-R2
-R3
-DEx4 work 8 rs232_rx 0 22 3hYOXZFUgYOL^l_bObXHf0
-l22
-L17
-Voh[Y1F0AM0EZZe4ZHRYXm0
-!s100 4aD7jQJ2>_B6mdb3=?Wo50
-R6
-31
-R18
-!i10b 1
-R24
-R75
-R76
-!i113 1
-R11
-R12
-Ers232_rx_fsm
-Z77 w1464205655
-R14
-R2
-R3
-R0
-Z78 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd
-Z79 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd
-l0
-L5
-VoOM0]kPXMVTD@H^:Vl4O]1
-!s100 ;zLo0gmUNN>WST[R<bTcT2
-R6
-31
-R7
-!i10b 1
-R8
-Z80 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd|
-Z81 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_RX_FSM.vhd|
-!i113 1
-R11
-R12
-Abeh
-R14
-R2
-R3
-DEx4 work 12 rs232_rx_fsm 0 22 oOM0]kPXMVTD@H^:Vl4O]1
-l23
-L17
-VABSni@dQVFWL@cmnkA7JF0
-!s100 99FPRA9E;<6<:JzJhRhD]2
-R6
-31
-R7
-!i10b 1
-R8
-R80
-R81
-!i113 1
-R11
-R12
-Ers232_tx
-Z82 w1464449414
-R14
-R15
-R2
-R3
-R0
-Z83 8E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd
-Z84 FE:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd
-l0
-L5
-V`?94;fKzH5MeVa^4PHT^R0
-!s100 o]aRAF1QcGS=n?ERFUmW72
-R6
-31
-R18
-!i10b 1
-R24
-Z85 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd|
-Z86 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/RS232_TX.vhd|
-!i113 1
-R11
-R12
-Abeh
-R14
-R15
-R2
-R3
-DEx4 work 8 rs232_tx 0 22 `?94;fKzH5MeVa^4PHT^R0
-l27
-L17
-VZGc4zVB6MYFfdKAU;bWeL0
-!s100 ;FTYRe1LXE3cf4`lU@dcP0
-R6
-31
-R18
-!i10b 1
-R24
-R85
-R86
-!i113 1
-R11
-R12
-Eshift_register
-R1
-R14
-R2
-R3
-R0
-Z87 8E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd
-Z88 FE:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd
-l0
-L4
-VciOoaiN^lIgIMl1@f]9Q71
-!s100 iWSl_LdiZk`039834Y9dT1
-R6
-31
-R7
-!i10b 1
-R8
-Z89 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd|
-Z90 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER.vhd|
-!i113 1
-R11
-R12
-Abeh
-R14
-R2
-R3
-DEx4 work 14 shift_register 0 22 ciOoaiN^lIgIMl1@f]9Q71
-l18
-L15
-Vfm@H69N@l7gFHaYQ5NL@80
-!s100 e3YCPHOSZ?Oi?B69o:F;S2
-R6
-31
-R7
-!i10b 1
-R8
-R89
-R90
-!i113 1
-R11
-R12
-Eshift_register_rx
-Z91 w1464206221
-R14
-R2
-R3
-R0
-Z92 8E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd
-Z93 FE:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd
-l0
-L5
-V7Z@l8X781_XzIj^U3k1SG1
-!s100 1f=;cUJnEDo;VUdFFN0bF0
-R6
-31
-R7
-!i10b 1
-R8
-Z94 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd|
-Z95 !s107 E:/Mega/Facultad/FPGA/Laboratorio5/SHIFT_REGISTER_RX.vhd|
-!i113 1
-R11
-R12
-Abeh
-R14
-R2
-R3
-DEx4 work 17 shift_register_rx 0 22 7Z@l8X781_XzIj^U3k1SG1
-l19
-L16
-VfL2d0ln=Q3N_RnT=RF7_12
-!s100 PmDQcTVL73z5fZWATh^Tn1
-R6
-31
-R7
-!i10b 1
-R8
-R94
-R95
-!i113 1
-R11
-R12

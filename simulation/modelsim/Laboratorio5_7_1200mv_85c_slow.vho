@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
--- DATE "05/28/2016 13:01:00"
+-- DATE "05/31/2016 23:15:35"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -41,28 +41,28 @@ ENTITY 	LABORATORIO5 IS
 	SWITCH : IN std_logic;
 	BOTONES : IN std_logic_vector(3 DOWNTO 0);
 	FSEL : IN std_logic_vector(1 DOWNTO 0);
-	RX_OUT : BUFFER std_logic_vector(7 DOWNTO 0)
+	RX_OUT : OUT std_logic_vector(7 DOWNTO 0)
 	);
 END LABORATORIO5;
 
 -- Design Ports Information
--- RX_OUT[0]	=>  Location: PIN_AE16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[0]	=>  Location: PIN_AH17,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- RX_OUT[1]	=>  Location: PIN_AE15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[2]	=>  Location: PIN_AF15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[3]	=>  Location: PIN_AH17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[4]	=>  Location: PIN_AD15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[5]	=>  Location: PIN_AC15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[6]	=>  Location: PIN_AG17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RX_OUT[7]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[2]	=>  Location: PIN_AD15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[3]	=>  Location: PIN_AG17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[4]	=>  Location: PIN_AF16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[5]	=>  Location: PIN_AF15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[6]	=>  Location: PIN_AE16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RX_OUT[7]	=>  Location: PIN_AC15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- RESET	=>  Location: PIN_AD27,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- FSEL[0]	=>  Location: PIN_AC27,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- FSEL[1]	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- CLK	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SWITCH	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- BOTONES[0]	=>  Location: PIN_M23,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- BOTONES[2]	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- BOTONES[1]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- BOTONES[3]	=>  Location: PIN_R24,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- SWITCH	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF LABORATORIO5 IS
@@ -100,96 +100,111 @@ SIGNAL \~ALTERA_DATA0~~ibuf_o\ : std_logic;
 SIGNAL \RESET~input_o\ : std_logic;
 SIGNAL \CLK~input_o\ : std_logic;
 SIGNAL \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
-SIGNAL \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
-SIGNAL \FSEL[1]~input_o\ : std_logic;
 SIGNAL \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
+SIGNAL \FSEL[1]~input_o\ : std_logic;
 SIGNAL \FSEL[0]~input_o\ : std_logic;
 SIGNAL \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
-SIGNAL \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
 SIGNAL \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
+SIGNAL \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
 SIGNAL \Practica_RX|FREQ_SEL|Mux0~0_combout\ : std_logic;
+SIGNAL \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
 SIGNAL \Practica_RX|FREQ_SEL|Mux0~combout\ : std_logic;
 SIGNAL \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\ : std_logic;
 SIGNAL \Practica_TX|FREQ_SEL|Mux0~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FREQ_SEL|Mux0~combout\ : std_logic;
 SIGNAL \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.STOP~q\ : std_logic;
-SIGNAL \BOTONES[3]~input_o\ : std_logic;
-SIGNAL \BOTONES[0]~input_o\ : std_logic;
-SIGNAL \BOTONES[1]~input_o\ : std_logic;
 SIGNAL \BOTONES[2]~input_o\ : std_logic;
-SIGNAL \Practica_TX|FSM|Mux0~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:2:FFD|Q~feeder_combout\ : std_logic;
+SIGNAL \BOTONES[1]~input_o\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:1:FFD|Q~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:1:FFD|Q~q\ : std_logic;
+SIGNAL \BOTONES[0]~input_o\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:0:FFD|Q~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:0:FFD|Q~q\ : std_logic;
 SIGNAL \SWITCH~input_o\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector0~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector0~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.IDLE~q\ : std_logic;
-SIGNAL \Practica_TX|FSM|NS.INIT1~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|NS.INIT1~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.INIT1~q\ : std_logic;
+SIGNAL \BOTONES[3]~input_o\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:3:FFD|Q~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:3:FFD|Q~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|Mux0~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|NS.INIT2~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.INIT2~q\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~2_combout\ : std_logic;
-SIGNAL \Practica_TX|SR|Mux10~0_combout\ : std_logic;
-SIGNAL \Practica_TX|SR|DATA[0]~0_combout\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux9~0_combout\ : std_logic;
+SIGNAL \Practica_TX|SR|CONT[1]~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|SR|DATA[0]~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Selector2~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Selector2~1_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|CS.DATA~q\ : std_logic;
-SIGNAL \Practica_TX|FSM|WideOr3~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.STOP~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|WideOr5~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|WideOr5~combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~1\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~3_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|NS.INIT0~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|NS.INIT3~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|CS.INIT3~q\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~5_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector5~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector6~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~4\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~6_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~8_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|NS.INIT4~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.INIT4~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|NS.INIT0~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.INIT0~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.INIT0~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector13~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector18~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector6~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector7~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~7\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~9_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~11_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~10\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~12_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector6~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector7~1_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~13\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~14_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector5~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector6~1_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~15\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~16_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector4~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector4~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector5~2_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector5~3_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~17\ : std_logic;
 SIGNAL \Practica_TX|FSM|Add0~18_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector3~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|NS.INIT0~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.INIT0~q\ : std_logic;
-SIGNAL \Practica_TX|FSM|NS.INIT4~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|CS.INIT4~q\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector12~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|WideOr12~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector16~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Equal0~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector12~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector13~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Equal0~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector11~0_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Selector11~1_combout\ : std_logic;
-SIGNAL \Practica_TX|FSM|Equal0~2_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector4~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Selector17~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Equal0~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector12~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector12~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector13~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|ULTIMO[5]~feeder_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector14~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Equal0~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Equal0~2_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Equal0~3_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector3~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.LLAVE~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|Selector0~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.IDLE~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|NS.INIT1~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|NS.INIT1~1_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.INIT1~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|FF_SET~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|FD:2:FFD|Q~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|NS.INIT2~0_combout\ : std_logic;
+SIGNAL \Practica_TX|FSM|CS.INIT2~q\ : std_logic;
+SIGNAL \Practica_TX|FSM|WideOr4~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|Selector1~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|CS.START~q\ : std_logic;
+SIGNAL \Practica_TX|SR|Mux10~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|SS~0_combout\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux8~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|NS.PARITY~0_combout\ : std_logic;
 SIGNAL \Practica_TX|FSM|CS.PARITY~q\ : std_logic;
 SIGNAL \CLK~inputclkctrl_outclk\ : std_logic;
+SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\ : std_logic;
+SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\ : std_logic;
 SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a6\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux1~0_combout\ : std_logic;
-SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux2~0_combout\ : std_logic;
 SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a4\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux3~0_combout\ : std_logic;
@@ -199,41 +214,40 @@ SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux5~0_combout\ : std_logic;
 SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux6~0_combout\ : std_logic;
-SIGNAL \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\ : std_logic;
 SIGNAL \Practica_TX|SR|Mux7~0_combout\ : std_logic;
 SIGNAL \Practica_TX|OUT_MUX|Mux0~0_combout\ : std_logic;
 SIGNAL \Practica_TX|PARIDAD|bit_paridad~0_combout\ : std_logic;
 SIGNAL \Practica_TX|PARIDAD|bit_paridad~1_combout\ : std_logic;
 SIGNAL \Practica_TX|OUT_MUX|Mux0~1_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[8]~feeder_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT~3_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT[0]~feeder_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT~0_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT~2_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT~1_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|NS.PARITY~0_combout\ : std_logic;
+SIGNAL \Practica_RX|RX_FSM1|CS.PARITY~q\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|Selector1~0_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|CS.STOP~q\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|NS.IDLE~0_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|CS.IDLE~q\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT~0_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT~1_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|Selector0~0_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|Selector0~1_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|CS.DATA~q\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT~3_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT[0]~feeder_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT~2_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT[1]~feeder_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|NS.PARITY~0_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CS.PARITY~q\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|SHIFT~0_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[7]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[6]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[5]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[4]~feeder_combout\ : std_logic;
+SIGNAL \Practica_RX|SR1|DATA[3]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[2]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|SR1|DATA[1]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|DBUFFER|DATAOUT[0]~feeder_combout\ : std_logic;
-SIGNAL \Practica_RX|PCHECKER1|Paridad_Check~1_combout\ : std_logic;
 SIGNAL \Practica_RX|PCHECKER1|Paridad_Check~0_combout\ : std_logic;
+SIGNAL \Practica_RX|PCHECKER1|Paridad_Check~1_combout\ : std_logic;
 SIGNAL \Practica_RX|PCHECKER1|Paridad_Check~2_combout\ : std_logic;
 SIGNAL \Practica_RX|RX_FSM1|DATA_OK~0_combout\ : std_logic;
 SIGNAL \Practica_RX|DBUFFER|DATAOUT[1]~feeder_combout\ : std_logic;
@@ -243,16 +257,21 @@ SIGNAL \Practica_RX|DBUFFER|DATAOUT[4]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|DBUFFER|DATAOUT[5]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|DBUFFER|DATAOUT[6]~feeder_combout\ : std_logic;
 SIGNAL \Practica_RX|DBUFFER|DATAOUT[7]~feeder_combout\ : std_logic;
-SIGNAL \Practica_RX|RX_FSM1|CONT\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \Practica_TX|FSM|ULTIMO\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Practica_RX|DBUFFER|DATAOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \Practica_RX|DBUFFER|DATAOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \Practica_RX|SR1|DATA\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \Practica_TX|SR|DATA\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Practica_TX|FSM|ULTIMO\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \Practica_TX|SR|CONT\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \Practica_RX|RX_FSM1|CONT\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \Practica_TX|FSM|ADDRESS\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \ALT_INV_BOTONES[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_BOTONES[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_BOTONES[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_BOTONES[0]~input_o\ : std_logic;
 SIGNAL \ALT_INV_RESET~input_o\ : std_logic;
+SIGNAL \Practica_TX|FSM|ALT_INV_FF_SET~0_combout\ : std_logic;
 
 BEGIN
 
@@ -306,9 +325,14 @@ ww_devpor <= devpor;
 \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk\(1));
 
 \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk\(0));
+\ALT_INV_BOTONES[3]~input_o\ <= NOT \BOTONES[3]~input_o\;
+\ALT_INV_BOTONES[1]~input_o\ <= NOT \BOTONES[1]~input_o\;
+\ALT_INV_BOTONES[2]~input_o\ <= NOT \BOTONES[2]~input_o\;
+\ALT_INV_BOTONES[0]~input_o\ <= NOT \BOTONES[0]~input_o\;
 \ALT_INV_RESET~input_o\ <= NOT \RESET~input_o\;
+\Practica_TX|FSM|ALT_INV_FF_SET~0_combout\ <= NOT \Practica_TX|FSM|FF_SET~0_combout\;
 
--- Location: IOOBUF_X65_Y0_N23
+-- Location: IOOBUF_X62_Y0_N16
 \RX_OUT[0]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -332,7 +356,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(1));
 
--- Location: IOOBUF_X60_Y0_N2
+-- Location: IOOBUF_X60_Y0_N16
 \RX_OUT[2]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -344,7 +368,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(2));
 
--- Location: IOOBUF_X62_Y0_N16
+-- Location: IOOBUF_X62_Y0_N23
 \RX_OUT[3]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -356,7 +380,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(3));
 
--- Location: IOOBUF_X60_Y0_N16
+-- Location: IOOBUF_X65_Y0_N16
 \RX_OUT[4]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -368,7 +392,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(4));
 
--- Location: IOOBUF_X60_Y0_N23
+-- Location: IOOBUF_X60_Y0_N2
 \RX_OUT[5]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -380,7 +404,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(5));
 
--- Location: IOOBUF_X62_Y0_N23
+-- Location: IOOBUF_X65_Y0_N23
 \RX_OUT[6]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -392,7 +416,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_RX_OUT(6));
 
--- Location: IOOBUF_X65_Y0_N2
+-- Location: IOOBUF_X60_Y0_N23
 \RX_OUT[7]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -518,30 +542,6 @@ PORT MAP (
 	fbout => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_fbout\,
 	clk => \Practica_TX|PLL96_48|altpll_component|auto_generated|pll1_CLK_bus\);
 
--- Location: CLKCTRL_G13
-\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
--- pragma translate_off
-GENERIC MAP (
-	clock_type => "global clock",
-	ena_register_mode => "none")
--- pragma translate_on
-PORT MAP (
-	inclk => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	outclk => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
-
--- Location: IOIBUF_X115_Y14_N1
-\FSEL[1]~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_FSEL(1),
-	o => \FSEL[1]~input_o\);
-
 -- Location: CLKCTRL_G14
 \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
@@ -554,6 +554,17 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	outclk => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
+
+-- Location: IOIBUF_X115_Y14_N1
+\FSEL[1]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_FSEL(1),
+	o => \FSEL[1]~input_o\);
 
 -- Location: IOIBUF_X115_Y15_N8
 \FSEL[0]~input\ : cycloneive_io_ibuf
@@ -658,19 +669,6 @@ PORT MAP (
 	fbout => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_fbout\,
 	clk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|pll1_CLK_bus\);
 
--- Location: CLKCTRL_G3
-\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
--- pragma translate_off
-GENERIC MAP (
-	clock_type => "global clock",
-	ena_register_mode => "none")
--- pragma translate_on
-PORT MAP (
-	inclk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	outclk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
-
 -- Location: CLKCTRL_G4
 \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
@@ -684,43 +682,69 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
 
--- Location: LCCOMB_X60_Y2_N4
+-- Location: CLKCTRL_G3
+\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
+
+-- Location: LCCOMB_X113_Y37_N16
 \Practica_RX|FREQ_SEL|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|FREQ_SEL|Mux0~0_combout\ = (\FSEL[1]~input_o\ & (\FSEL[0]~input_o\)) # (!\FSEL[1]~input_o\ & ((\FSEL[0]~input_o\ & (GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\))) # (!\FSEL[0]~input_o\ & 
--- ((GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\))))))
+-- \Practica_RX|FREQ_SEL|Mux0~0_combout\ = (\FSEL[1]~input_o\ & (\FSEL[0]~input_o\)) # (!\FSEL[1]~input_o\ & ((\FSEL[0]~input_o\ & ((GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\)))) # (!\FSEL[0]~input_o\ & 
+-- (GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101100111001000",
+	lut_mask => "1101110010011000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \FSEL[1]~input_o\,
 	datab => \FSEL[0]~input_o\,
-	datac => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
-	datad => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	datac => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	datad => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
 	combout => \Practica_RX|FREQ_SEL|Mux0~0_combout\);
 
--- Location: LCCOMB_X59_Y2_N4
+-- Location: CLKCTRL_G13
+\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
+
+-- Location: LCCOMB_X114_Y37_N4
 \Practica_RX|FREQ_SEL|Mux0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|FREQ_SEL|Mux0~combout\ = LCELL((\FSEL[1]~input_o\ & ((\Practica_RX|FREQ_SEL|Mux0~0_combout\ & (GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\))) # (!\Practica_RX|FREQ_SEL|Mux0~0_combout\ & 
--- ((GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\)))))) # (!\FSEL[1]~input_o\ & (((\Practica_RX|FREQ_SEL|Mux0~0_combout\)))))
+-- \Practica_RX|FREQ_SEL|Mux0~combout\ = LCELL((\FSEL[1]~input_o\ & ((\Practica_RX|FREQ_SEL|Mux0~0_combout\ & ((GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\)))) # (!\Practica_RX|FREQ_SEL|Mux0~0_combout\ & 
+-- (GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\))))) # (!\FSEL[1]~input_o\ & (((\Practica_RX|FREQ_SEL|Mux0~0_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101111000000",
+	lut_mask => "1111100000111000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
+	dataa => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	datab => \FSEL[1]~input_o\,
-	datac => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	datad => \Practica_RX|FREQ_SEL|Mux0~0_combout\,
+	datac => \Practica_RX|FREQ_SEL|Mux0~0_combout\,
+	datad => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
 	combout => \Practica_RX|FREQ_SEL|Mux0~combout\);
 
--- Location: CLKCTRL_G18
+-- Location: CLKCTRL_G5
 \Practica_RX|FREQ_SEL|Mux0~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -733,43 +757,43 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\);
 
--- Location: LCCOMB_X60_Y2_N2
+-- Location: LCCOMB_X113_Y37_N6
 \Practica_TX|FREQ_SEL|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FREQ_SEL|Mux0~0_combout\ = (\FSEL[1]~input_o\ & (\FSEL[0]~input_o\)) # (!\FSEL[1]~input_o\ & ((\FSEL[0]~input_o\ & (GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\))) # (!\FSEL[0]~input_o\ & 
--- ((GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\))))))
+-- \Practica_TX|FREQ_SEL|Mux0~0_combout\ = (\FSEL[1]~input_o\ & (\FSEL[0]~input_o\)) # (!\FSEL[1]~input_o\ & ((\FSEL[0]~input_o\ & ((GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\)))) # (!\FSEL[0]~input_o\ & 
+-- (GLOBAL(\Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101100111001000",
+	lut_mask => "1101110010011000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \FSEL[1]~input_o\,
 	datab => \FSEL[0]~input_o\,
-	datac => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
-	datad => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	datac => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	datad => \Practica_TX|PLL_115_384|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
 	combout => \Practica_TX|FREQ_SEL|Mux0~0_combout\);
 
--- Location: LCCOMB_X59_Y2_N16
+-- Location: LCCOMB_X114_Y37_N2
 \Practica_TX|FREQ_SEL|Mux0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FREQ_SEL|Mux0~combout\ = LCELL((\FSEL[1]~input_o\ & ((\Practica_TX|FREQ_SEL|Mux0~0_combout\ & (GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\))) # (!\Practica_TX|FREQ_SEL|Mux0~0_combout\ & 
--- ((GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\)))))) # (!\FSEL[1]~input_o\ & (((\Practica_TX|FREQ_SEL|Mux0~0_combout\)))))
+-- \Practica_TX|FREQ_SEL|Mux0~combout\ = LCELL((\FSEL[1]~input_o\ & ((\Practica_TX|FREQ_SEL|Mux0~0_combout\ & ((GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\)))) # (!\Practica_TX|FREQ_SEL|Mux0~0_combout\ & 
+-- (GLOBAL(\Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\))))) # (!\FSEL[1]~input_o\ & (\Practica_TX|FREQ_SEL|Mux0~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101111000000",
+	lut_mask => "1110110001100100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
-	datab => \FSEL[1]~input_o\,
+	dataa => \FSEL[1]~input_o\,
+	datab => \Practica_TX|FREQ_SEL|Mux0~0_combout\,
 	datac => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	datad => \Practica_TX|FREQ_SEL|Mux0~0_combout\,
+	datad => \Practica_TX|PLL96_48|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
 	combout => \Practica_TX|FREQ_SEL|Mux0~combout\);
 
--- Location: CLKCTRL_G19
+-- Location: CLKCTRL_G8
 \Practica_TX|FREQ_SEL|Mux0~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -782,43 +806,29 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\);
 
--- Location: FF_X66_Y10_N1
-\Practica_TX|FSM|CS.STOP\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|CS.PARITY~q\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.STOP~q\);
-
--- Location: IOIBUF_X115_Y35_N22
-\BOTONES[3]~input\ : cycloneive_io_ibuf
+-- Location: IOIBUF_X115_Y42_N15
+\BOTONES[2]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_BOTONES(3),
-	o => \BOTONES[3]~input_o\);
+	i => ww_BOTONES(2),
+	o => \BOTONES[2]~input_o\);
 
--- Location: IOIBUF_X115_Y40_N8
-\BOTONES[0]~input\ : cycloneive_io_ibuf
+-- Location: LCCOMB_X113_Y38_N24
+\Practica_TX|FSM|FD:2:FFD|Q~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|FD:2:FFD|Q~feeder_combout\ = VCC
+
 -- pragma translate_off
 GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
+	lut_mask => "1111111111111111",
+	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	i => ww_BOTONES(0),
-	o => \BOTONES[0]~input_o\);
+	combout => \Practica_TX|FSM|FD:2:FFD|Q~feeder_combout\);
 
 -- Location: IOIBUF_X115_Y53_N15
 \BOTONES[1]~input\ : cycloneive_io_ibuf
@@ -831,34 +841,72 @@ PORT MAP (
 	i => ww_BOTONES(1),
 	o => \BOTONES[1]~input_o\);
 
--- Location: IOIBUF_X115_Y42_N15
-\BOTONES[2]~input\ : cycloneive_io_ibuf
+-- Location: LCCOMB_X113_Y38_N30
+\Practica_TX|FSM|FD:1:FFD|Q~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|FD:1:FFD|Q~feeder_combout\ = VCC
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	combout => \Practica_TX|FSM|FD:1:FFD|Q~feeder_combout\);
+
+-- Location: FF_X113_Y38_N31
+\Practica_TX|FSM|FD:1:FFD|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_BOTONES[1]~input_o\,
+	d => \Practica_TX|FSM|FD:1:FFD|Q~feeder_combout\,
+	clrn => \Practica_TX|FSM|ALT_INV_FF_SET~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|FD:1:FFD|Q~q\);
+
+-- Location: IOIBUF_X115_Y40_N8
+\BOTONES[0]~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_BOTONES(2),
-	o => \BOTONES[2]~input_o\);
+	i => ww_BOTONES(0),
+	o => \BOTONES[0]~input_o\);
 
--- Location: LCCOMB_X68_Y10_N22
-\Practica_TX|FSM|Mux0~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X111_Y38_N6
+\Practica_TX|FSM|FD:0:FFD|Q~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Mux0~0_combout\ = (\BOTONES[3]~input_o\ & (!\BOTONES[0]~input_o\ & (!\BOTONES[1]~input_o\ & !\BOTONES[2]~input_o\))) # (!\BOTONES[3]~input_o\ & ((\BOTONES[0]~input_o\ & (!\BOTONES[1]~input_o\ & !\BOTONES[2]~input_o\)) # 
--- (!\BOTONES[0]~input_o\ & (\BOTONES[1]~input_o\ $ (\BOTONES[2]~input_o\)))))
+-- \Practica_TX|FSM|FD:0:FFD|Q~feeder_combout\ = VCC
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100010110",
+	lut_mask => "1111111111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \BOTONES[3]~input_o\,
-	datab => \BOTONES[0]~input_o\,
-	datac => \BOTONES[1]~input_o\,
-	datad => \BOTONES[2]~input_o\,
-	combout => \Practica_TX|FSM|Mux0~0_combout\);
+	combout => \Practica_TX|FSM|FD:0:FFD|Q~feeder_combout\);
+
+-- Location: FF_X111_Y38_N7
+\Practica_TX|FSM|FD:0:FFD|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_BOTONES[0]~input_o\,
+	d => \Practica_TX|FSM|FD:0:FFD|Q~feeder_combout\,
+	clrn => \Practica_TX|FSM|ALT_INV_FF_SET~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|FD:0:FFD|Q~q\);
 
 -- Location: IOIBUF_X115_Y17_N1
 \SWITCH~input\ : cycloneive_io_ibuf
@@ -871,102 +919,64 @@ PORT MAP (
 	i => ww_SWITCH,
 	o => \SWITCH~input_o\);
 
--- Location: LCCOMB_X68_Y10_N8
-\Practica_TX|FSM|Selector0~0\ : cycloneive_lcell_comb
+-- Location: IOIBUF_X115_Y35_N22
+\BOTONES[3]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_BOTONES(3),
+	o => \BOTONES[3]~input_o\);
+
+-- Location: LCCOMB_X112_Y38_N14
+\Practica_TX|FSM|FD:3:FFD|Q~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector0~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\Practica_TX|FSM|Mux0~0_combout\ & !\SWITCH~input_o\))
+-- \Practica_TX|FSM|FD:3:FFD|Q~feeder_combout\ = VCC
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000101",
+	lut_mask => "1111111111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.IDLE~q\,
-	datac => \Practica_TX|FSM|Mux0~0_combout\,
-	datad => \SWITCH~input_o\,
-	combout => \Practica_TX|FSM|Selector0~0_combout\);
+	combout => \Practica_TX|FSM|FD:3:FFD|Q~feeder_combout\);
 
--- Location: LCCOMB_X67_Y10_N22
-\Practica_TX|FSM|Selector0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector0~1_combout\ = (!\Practica_TX|FSM|Selector0~0_combout\ & ((!\Practica_TX|FSM|Equal0~3_combout\) # (!\Practica_TX|FSM|CS.STOP~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.STOP~q\,
-	datab => \Practica_TX|FSM|Selector0~0_combout\,
-	datad => \Practica_TX|FSM|Equal0~3_combout\,
-	combout => \Practica_TX|FSM|Selector0~1_combout\);
-
--- Location: FF_X67_Y10_N13
-\Practica_TX|FSM|CS.IDLE\ : dffeas
+-- Location: FF_X112_Y38_N15
+\Practica_TX|FSM|FD:3:FFD|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector0~1_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
+	clk => \ALT_INV_BOTONES[3]~input_o\,
+	d => \Practica_TX|FSM|FD:3:FFD|Q~feeder_combout\,
+	clrn => \Practica_TX|FSM|ALT_INV_FF_SET~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.IDLE~q\);
+	q => \Practica_TX|FSM|FD:3:FFD|Q~q\);
 
--- Location: LCCOMB_X68_Y10_N10
-\Practica_TX|FSM|NS.INIT1~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X112_Y38_N4
+\Practica_TX|FSM|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|NS.INIT1~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\BOTONES[3]~input_o\ & !\BOTONES[0]~input_o\))
+-- \Practica_TX|FSM|Mux0~0_combout\ = (\Practica_TX|FSM|FD:1:FFD|Q~q\ & (!\Practica_TX|FSM|FD:3:FFD|Q~q\ & (!\Practica_TX|FSM|FD:0:FFD|Q~q\ & !\Practica_TX|FSM|FD:2:FFD|Q~q\))) # (!\Practica_TX|FSM|FD:1:FFD|Q~q\ & ((\Practica_TX|FSM|FD:3:FFD|Q~q\ & 
+-- (!\Practica_TX|FSM|FD:0:FFD|Q~q\ & !\Practica_TX|FSM|FD:2:FFD|Q~q\)) # (!\Practica_TX|FSM|FD:3:FFD|Q~q\ & (\Practica_TX|FSM|FD:0:FFD|Q~q\ $ (\Practica_TX|FSM|FD:2:FFD|Q~q\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000101",
+	lut_mask => "0000000100010110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.IDLE~q\,
-	datac => \BOTONES[3]~input_o\,
-	datad => \BOTONES[0]~input_o\,
-	combout => \Practica_TX|FSM|NS.INIT1~0_combout\);
+	dataa => \Practica_TX|FSM|FD:1:FFD|Q~q\,
+	datab => \Practica_TX|FSM|FD:3:FFD|Q~q\,
+	datac => \Practica_TX|FSM|FD:0:FFD|Q~q\,
+	datad => \Practica_TX|FSM|FD:2:FFD|Q~q\,
+	combout => \Practica_TX|FSM|Mux0~0_combout\);
 
--- Location: LCCOMB_X68_Y10_N28
-\Practica_TX|FSM|NS.INIT1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|NS.INIT1~1_combout\ = (\Practica_TX|FSM|NS.INIT1~0_combout\ & (\BOTONES[1]~input_o\ & !\BOTONES[2]~input_o\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_TX|FSM|NS.INIT1~0_combout\,
-	datac => \BOTONES[1]~input_o\,
-	datad => \BOTONES[2]~input_o\,
-	combout => \Practica_TX|FSM|NS.INIT1~1_combout\);
-
--- Location: FF_X68_Y10_N29
-\Practica_TX|FSM|CS.INIT1\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_TX|FSM|NS.INIT1~1_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.INIT1~q\);
-
--- Location: LCCOMB_X65_Y10_N8
+-- Location: LCCOMB_X65_Y7_N8
 \Practica_TX|FSM|Add0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~0_combout\ = \Practica_TX|FSM|ADDRESS\(0) $ (VCC)
@@ -974,130 +984,80 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010110101010",
+	lut_mask => "0011001111001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|ADDRESS\(0),
+	datab => \Practica_TX|FSM|ADDRESS\(0),
 	datad => VCC,
 	combout => \Practica_TX|FSM|Add0~0_combout\,
 	cout => \Practica_TX|FSM|Add0~1\);
 
--- Location: LCCOMB_X68_Y10_N26
-\Practica_TX|FSM|NS.INIT2~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|NS.INIT2~0_combout\ = (\Practica_TX|FSM|NS.INIT1~0_combout\ & (!\BOTONES[1]~input_o\ & \BOTONES[2]~input_o\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_TX|FSM|NS.INIT1~0_combout\,
-	datac => \BOTONES[1]~input_o\,
-	datad => \BOTONES[2]~input_o\,
-	combout => \Practica_TX|FSM|NS.INIT2~0_combout\);
-
--- Location: FF_X68_Y10_N27
-\Practica_TX|FSM|CS.INIT2\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_TX|FSM|NS.INIT2~0_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.INIT2~q\);
-
--- Location: LCCOMB_X65_Y10_N26
+-- Location: LCCOMB_X65_Y7_N2
 \Practica_TX|FSM|Add0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Add0~2_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|Add0~0_combout\)))) # (!\Practica_TX|FSM|CS.PARITY~q\ & ((\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|CS.INIT2~q\))))
+-- \Practica_TX|FSM|Add0~2_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (\Practica_TX|FSM|Add0~0_combout\)) # (!\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|CS.INIT1~q\) # (\Practica_TX|FSM|CS.INIT2~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001111100010",
+	lut_mask => "1010101011111100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT1~q\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|Add0~0_combout\,
-	datad => \Practica_TX|FSM|CS.INIT2~q\,
+	dataa => \Practica_TX|FSM|Add0~0_combout\,
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|CS.INIT2~q\,
+	datad => \Practica_TX|FSM|CS.PARITY~q\,
 	combout => \Practica_TX|FSM|Add0~2_combout\);
 
--- Location: LCCOMB_X66_Y10_N28
-\Practica_TX|SR|Mux10~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X67_Y7_N28
+\Practica_TX|SR|Mux9~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux10~0_combout\ = (!\Practica_TX|SR|CONT\(0) & ((\RESET~input_o\) # (!\Practica_TX|FSM|CS.START~q\)))
+-- \Practica_TX|SR|Mux9~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & (\RESET~input_o\ & (\Practica_TX|SR|CONT\(0) $ (\Practica_TX|SR|CONT\(1))))) # (!\Practica_TX|FSM|CS.START~q\ & (\Practica_TX|SR|CONT\(0) $ ((\Practica_TX|SR|CONT\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010001000110011",
+	lut_mask => "0011110000010100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RESET~input_o\,
+	dataa => \Practica_TX|FSM|CS.START~q\,
 	datab => \Practica_TX|SR|CONT\(0),
-	datad => \Practica_TX|FSM|CS.START~q\,
-	combout => \Practica_TX|SR|Mux10~0_combout\);
+	datac => \Practica_TX|SR|CONT\(1),
+	datad => \RESET~input_o\,
+	combout => \Practica_TX|SR|Mux9~0_combout\);
 
--- Location: LCCOMB_X67_Y10_N6
+-- Location: LCCOMB_X67_Y7_N12
+\Practica_TX|SR|CONT[1]~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|SR|CONT[1]~feeder_combout\ = \Practica_TX|SR|Mux9~0_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|SR|Mux9~0_combout\,
+	combout => \Practica_TX|SR|CONT[1]~feeder_combout\);
+
+-- Location: LCCOMB_X67_Y7_N16
 \Practica_TX|SR|DATA[0]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|DATA[0]~0_combout\ = (!\RESET~input_o\ & ((\Practica_TX|FSM|CS.DATA~q\) # (\Practica_TX|FSM|CS.START~q\)))
+-- \Practica_TX|SR|DATA[0]~0_combout\ = (!\RESET~input_o\ & ((\Practica_TX|FSM|CS.START~q\) # (\Practica_TX|FSM|CS.DATA~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011111100",
+	lut_mask => "0000000011111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_TX|FSM|CS.DATA~q\,
-	datac => \Practica_TX|FSM|CS.START~q\,
+	dataa => \Practica_TX|FSM|CS.START~q\,
+	datac => \Practica_TX|FSM|CS.DATA~q\,
 	datad => \RESET~input_o\,
 	combout => \Practica_TX|SR|DATA[0]~0_combout\);
 
--- Location: FF_X66_Y10_N23
-\Practica_TX|SR|CONT[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|SR|Mux10~0_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
-	ena => \Practica_TX|SR|DATA[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|SR|CONT\(0));
-
--- Location: LCCOMB_X66_Y10_N18
-\Practica_TX|SR|Mux9~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|SR|Mux9~0_combout\ = (\RESET~input_o\ & (\Practica_TX|SR|CONT\(0) $ ((\Practica_TX|SR|CONT\(1))))) # (!\RESET~input_o\ & (!\Practica_TX|FSM|CS.START~q\ & (\Practica_TX|SR|CONT\(0) $ (\Practica_TX|SR|CONT\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010100000111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \RESET~input_o\,
-	datab => \Practica_TX|SR|CONT\(0),
-	datac => \Practica_TX|SR|CONT\(1),
-	datad => \Practica_TX|FSM|CS.START~q\,
-	combout => \Practica_TX|SR|Mux9~0_combout\);
-
--- Location: FF_X66_Y10_N29
+-- Location: FF_X67_Y7_N13
 \Practica_TX|SR|CONT[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1106,47 +1066,46 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|SR|Mux9~0_combout\,
+	d => \Practica_TX|SR|CONT[1]~feeder_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
 	ena => \Practica_TX|SR|DATA[0]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|CONT\(1));
 
--- Location: LCCOMB_X66_Y10_N20
+-- Location: LCCOMB_X67_Y7_N4
 \Practica_TX|FSM|Selector2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector2~0_combout\ = (\Practica_TX|FSM|CS.DATA~q\ & (((!\Practica_TX|SR|CONT\(0)) # (!\Practica_TX|SR|CONT\(2))) # (!\Practica_TX|SR|CONT\(1))))
+-- \Practica_TX|FSM|Selector2~0_combout\ = (\Practica_TX|FSM|CS.DATA~q\ & (((!\Practica_TX|SR|CONT\(1)) # (!\Practica_TX|SR|CONT\(0))) # (!\Practica_TX|SR|CONT\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010101010101010",
+	lut_mask => "0111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.DATA~q\,
-	datab => \Practica_TX|SR|CONT\(1),
-	datac => \Practica_TX|SR|CONT\(2),
-	datad => \Practica_TX|SR|CONT\(0),
+	dataa => \Practica_TX|SR|CONT\(2),
+	datab => \Practica_TX|SR|CONT\(0),
+	datac => \Practica_TX|FSM|CS.DATA~q\,
+	datad => \Practica_TX|SR|CONT\(1),
 	combout => \Practica_TX|FSM|Selector2~0_combout\);
 
--- Location: LCCOMB_X67_Y10_N20
+-- Location: LCCOMB_X67_Y7_N6
 \Practica_TX|FSM|Selector2~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Selector2~1_combout\ = (\Practica_TX|FSM|CS.START~q\) # (\Practica_TX|FSM|Selector2~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111110000",
+	lut_mask => "1111111110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \Practica_TX|FSM|CS.START~q\,
+	dataa => \Practica_TX|FSM|CS.START~q\,
 	datad => \Practica_TX|FSM|Selector2~0_combout\,
 	combout => \Practica_TX|FSM|Selector2~1_combout\);
 
--- Location: FF_X67_Y10_N17
+-- Location: FF_X67_Y7_N5
 \Practica_TX|FSM|CS.DATA\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1162,24 +1121,55 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|CS.DATA~q\);
 
--- Location: LCCOMB_X67_Y10_N24
-\Practica_TX|FSM|WideOr3~0\ : cycloneive_lcell_comb
+-- Location: FF_X66_Y7_N9
+\Practica_TX|FSM|CS.STOP\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|CS.PARITY~q\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.STOP~q\);
+
+-- Location: LCCOMB_X66_Y7_N8
+\Practica_TX|FSM|WideOr5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|WideOr3~0_combout\ = (!\Practica_TX|FSM|CS.START~q\ & (\Practica_TX|FSM|CS.IDLE~q\ & (!\Practica_TX|FSM|CS.STOP~q\ & !\Practica_TX|FSM|CS.DATA~q\)))
+-- \Practica_TX|FSM|WideOr5~0_combout\ = (\Practica_TX|FSM|CS.DATA~q\) # ((\Practica_TX|FSM|CS.START~q\) # ((\Practica_TX|FSM|CS.STOP~q\) # (!\Practica_TX|FSM|CS.IDLE~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000100",
+	lut_mask => "1111111011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
-	datab => \Practica_TX|FSM|CS.IDLE~q\,
+	dataa => \Practica_TX|FSM|CS.DATA~q\,
+	datab => \Practica_TX|FSM|CS.START~q\,
 	datac => \Practica_TX|FSM|CS.STOP~q\,
-	datad => \Practica_TX|FSM|CS.DATA~q\,
-	combout => \Practica_TX|FSM|WideOr3~0_combout\);
+	datad => \Practica_TX|FSM|CS.IDLE~q\,
+	combout => \Practica_TX|FSM|WideOr5~0_combout\);
 
--- Location: FF_X65_Y10_N9
+-- Location: LCCOMB_X66_Y7_N12
+\Practica_TX|FSM|WideOr5\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|WideOr5~combout\ = (!\Practica_TX|FSM|WideOr5~0_combout\ & !\Practica_TX|FSM|CS.LLAVE~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|WideOr5~0_combout\,
+	datac => \Practica_TX|FSM|CS.LLAVE~q\,
+	combout => \Practica_TX|FSM|WideOr5~combout\);
+
+-- Location: FF_X65_Y7_N29
 \Practica_TX|FSM|ADDRESS[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1191,12 +1181,12 @@ PORT MAP (
 	asdata => \Practica_TX|FSM|Add0~2_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
-	ena => \Practica_TX|FSM|WideOr3~0_combout\,
+	ena => \Practica_TX|FSM|WideOr5~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(0));
 
--- Location: LCCOMB_X65_Y10_N10
+-- Location: LCCOMB_X65_Y7_N10
 \Practica_TX|FSM|Add0~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~3_combout\ = (\Practica_TX|FSM|ADDRESS\(1) & (!\Practica_TX|FSM|Add0~1\)) # (!\Practica_TX|FSM|ADDRESS\(1) & ((\Practica_TX|FSM|Add0~1\) # (GND)))
@@ -1214,39 +1204,39 @@ PORT MAP (
 	combout => \Practica_TX|FSM|Add0~3_combout\,
 	cout => \Practica_TX|FSM|Add0~4\);
 
--- Location: LCCOMB_X68_Y10_N20
+-- Location: LCCOMB_X112_Y38_N26
 \Practica_TX|FSM|NS.INIT0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|NS.INIT0~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\BOTONES[1]~input_o\ & !\BOTONES[2]~input_o\))
+-- \Practica_TX|FSM|NS.INIT0~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\Practica_TX|FSM|FD:2:FFD|Q~q\ & !\Practica_TX|FSM|FD:1:FFD|Q~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000101",
+	lut_mask => "0000000000010001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|CS.IDLE~q\,
-	datac => \BOTONES[1]~input_o\,
-	datad => \BOTONES[2]~input_o\,
+	datab => \Practica_TX|FSM|FD:2:FFD|Q~q\,
+	datad => \Practica_TX|FSM|FD:1:FFD|Q~q\,
 	combout => \Practica_TX|FSM|NS.INIT0~0_combout\);
 
--- Location: LCCOMB_X68_Y10_N18
+-- Location: LCCOMB_X112_Y38_N18
 \Practica_TX|FSM|NS.INIT3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|NS.INIT3~0_combout\ = (\Practica_TX|FSM|NS.INIT0~0_combout\ & (\BOTONES[3]~input_o\ & !\BOTONES[0]~input_o\))
+-- \Practica_TX|FSM|NS.INIT3~0_combout\ = (\Practica_TX|FSM|FD:3:FFD|Q~q\ & (!\Practica_TX|FSM|FD:0:FFD|Q~q\ & \Practica_TX|FSM|NS.INIT0~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010100000",
+	lut_mask => "0010000000100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|NS.INIT0~0_combout\,
-	datac => \BOTONES[3]~input_o\,
-	datad => \BOTONES[0]~input_o\,
+	dataa => \Practica_TX|FSM|FD:3:FFD|Q~q\,
+	datab => \Practica_TX|FSM|FD:0:FFD|Q~q\,
+	datac => \Practica_TX|FSM|NS.INIT0~0_combout\,
 	combout => \Practica_TX|FSM|NS.INIT3~0_combout\);
 
--- Location: FF_X68_Y10_N19
+-- Location: FF_X112_Y38_N23
 \Practica_TX|FSM|CS.INIT3\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1255,30 +1245,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_TX|FSM|NS.INIT3~0_combout\,
+	asdata => \Practica_TX|FSM|NS.INIT3~0_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|CS.INIT3~q\);
 
--- Location: LCCOMB_X65_Y10_N28
+-- Location: LCCOMB_X65_Y7_N4
 \Practica_TX|FSM|Add0~5\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~5_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (\Practica_TX|FSM|Add0~3_combout\)) # (!\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|CS.INIT1~q\) # (\Practica_TX|FSM|CS.INIT3~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101110111000",
+	lut_mask => "1010101011111100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|Add0~3_combout\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|CS.INIT1~q\,
-	datad => \Practica_TX|FSM|CS.INIT3~q\,
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|CS.INIT3~q\,
+	datad => \Practica_TX|FSM|CS.PARITY~q\,
 	combout => \Practica_TX|FSM|Add0~5_combout\);
 
--- Location: FF_X65_Y10_N11
+-- Location: FF_X65_Y7_N11
 \Practica_TX|FSM|ADDRESS[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1290,42 +1281,12 @@ PORT MAP (
 	asdata => \Practica_TX|FSM|Add0~5_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
-	ena => \Practica_TX|FSM|WideOr3~0_combout\,
+	ena => \Practica_TX|FSM|WideOr5~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(1));
 
--- Location: LCCOMB_X67_Y10_N2
-\Practica_TX|FSM|Selector5~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector5~0_combout\ = (\Practica_TX|FSM|ADDRESS\(5) & !\Practica_TX|FSM|WideOr3~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_TX|FSM|ADDRESS\(5),
-	datad => \Practica_TX|FSM|WideOr3~0_combout\,
-	combout => \Practica_TX|FSM|Selector5~0_combout\);
-
--- Location: LCCOMB_X66_Y10_N0
-\Practica_TX|FSM|Selector6~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector6~0_combout\ = (\Practica_TX|FSM|ADDRESS\(4) & !\Practica_TX|FSM|WideOr3~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|ADDRESS\(4),
-	datad => \Practica_TX|FSM|WideOr3~0_combout\,
-	combout => \Practica_TX|FSM|Selector6~0_combout\);
-
--- Location: LCCOMB_X65_Y10_N12
+-- Location: LCCOMB_X65_Y7_N12
 \Practica_TX|FSM|Add0~6\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~6_combout\ = (\Practica_TX|FSM|ADDRESS\(2) & (\Practica_TX|FSM|Add0~4\ $ (GND))) # (!\Practica_TX|FSM|ADDRESS\(2) & (!\Practica_TX|FSM|Add0~4\ & VCC))
@@ -1333,34 +1294,34 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_TX|FSM|ADDRESS\(2),
+	dataa => \Practica_TX|FSM|ADDRESS\(2),
 	datad => VCC,
 	cin => \Practica_TX|FSM|Add0~4\,
 	combout => \Practica_TX|FSM|Add0~6_combout\,
 	cout => \Practica_TX|FSM|Add0~7\);
 
--- Location: LCCOMB_X65_Y10_N6
+-- Location: LCCOMB_X65_Y7_N30
 \Practica_TX|FSM|Add0~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~8_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (\Practica_TX|FSM|Add0~6_combout\)) # (!\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|CS.INIT1~q\) # (\Practica_TX|FSM|CS.INIT2~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101110111000",
+	lut_mask => "1010101011111100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|Add0~6_combout\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|CS.INIT1~q\,
-	datad => \Practica_TX|FSM|CS.INIT2~q\,
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|CS.INIT2~q\,
+	datad => \Practica_TX|FSM|CS.PARITY~q\,
 	combout => \Practica_TX|FSM|Add0~8_combout\);
 
--- Location: FF_X65_Y10_N13
+-- Location: FF_X65_Y7_N13
 \Practica_TX|FSM|ADDRESS[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1372,12 +1333,170 @@ PORT MAP (
 	asdata => \Practica_TX|FSM|Add0~8_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
-	ena => \Practica_TX|FSM|WideOr3~0_combout\,
+	ena => \Practica_TX|FSM|WideOr5~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(2));
 
--- Location: LCCOMB_X65_Y10_N14
+-- Location: LCCOMB_X112_Y38_N30
+\Practica_TX|FSM|NS.INIT4~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|NS.INIT4~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\Practica_TX|FSM|Mux0~0_combout\ & \SWITCH~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|CS.IDLE~q\,
+	datac => \Practica_TX|FSM|Mux0~0_combout\,
+	datad => \SWITCH~input_o\,
+	combout => \Practica_TX|FSM|NS.INIT4~0_combout\);
+
+-- Location: FF_X112_Y38_N9
+\Practica_TX|FSM|CS.INIT4\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|NS.INIT4~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.INIT4~q\);
+
+-- Location: LCCOMB_X112_Y38_N16
+\Practica_TX|FSM|NS.INIT0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|NS.INIT0~1_combout\ = (!\Practica_TX|FSM|FD:3:FFD|Q~q\ & (\Practica_TX|FSM|NS.INIT0~0_combout\ & \Practica_TX|FSM|FD:0:FFD|Q~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|FD:3:FFD|Q~q\,
+	datac => \Practica_TX|FSM|NS.INIT0~0_combout\,
+	datad => \Practica_TX|FSM|FD:0:FFD|Q~q\,
+	combout => \Practica_TX|FSM|NS.INIT0~1_combout\);
+
+-- Location: LCCOMB_X112_Y38_N0
+\Practica_TX|FSM|CS.INIT0~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|CS.INIT0~feeder_combout\ = \Practica_TX|FSM|NS.INIT0~1_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|NS.INIT0~1_combout\,
+	combout => \Practica_TX|FSM|CS.INIT0~feeder_combout\);
+
+-- Location: FF_X112_Y38_N1
+\Practica_TX|FSM|CS.INIT0\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_TX|FSM|CS.INIT0~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.INIT0~q\);
+
+-- Location: LCCOMB_X112_Y38_N2
+\Practica_TX|FSM|Selector13~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector13~0_combout\ = (!\Practica_TX|FSM|CS.INIT3~q\ & (!\Practica_TX|FSM|CS.INIT4~q\ & !\Practica_TX|FSM|CS.INIT0~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|CS.INIT3~q\,
+	datac => \Practica_TX|FSM|CS.INIT4~q\,
+	datad => \Practica_TX|FSM|CS.INIT0~q\,
+	combout => \Practica_TX|FSM|Selector13~0_combout\);
+
+-- Location: LCCOMB_X66_Y7_N0
+\Practica_TX|FSM|Selector18~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector18~0_combout\ = ((\Practica_TX|FSM|CS.INIT1~q\) # ((!\Practica_TX|FSM|CS.INIT2~q\ & \Practica_TX|FSM|ULTIMO\(0)))) # (!\Practica_TX|FSM|Selector13~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111101001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|CS.INIT2~q\,
+	datab => \Practica_TX|FSM|ULTIMO\(0),
+	datac => \Practica_TX|FSM|Selector13~0_combout\,
+	datad => \Practica_TX|FSM|CS.INIT1~q\,
+	combout => \Practica_TX|FSM|Selector18~0_combout\);
+
+-- Location: FF_X66_Y7_N23
+\Practica_TX|FSM|ULTIMO[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|Selector18~0_combout\,
+	sload => VCC,
+	ena => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|ULTIMO\(0));
+
+-- Location: LCCOMB_X66_Y7_N6
+\Practica_TX|FSM|Selector6~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector6~0_combout\ = (\Practica_TX|FSM|ADDRESS\(5) & ((\Practica_TX|FSM|WideOr5~0_combout\) # (\Practica_TX|FSM|CS.LLAVE~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|WideOr5~0_combout\,
+	datac => \Practica_TX|FSM|ADDRESS\(5),
+	datad => \Practica_TX|FSM|CS.LLAVE~q\,
+	combout => \Practica_TX|FSM|Selector6~0_combout\);
+
+-- Location: LCCOMB_X66_Y7_N4
+\Practica_TX|FSM|Selector7~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector7~0_combout\ = (\Practica_TX|FSM|ADDRESS\(4) & ((\Practica_TX|FSM|CS.LLAVE~q\) # (\Practica_TX|FSM|WideOr5~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|CS.LLAVE~q\,
+	datac => \Practica_TX|FSM|WideOr5~0_combout\,
+	datad => \Practica_TX|FSM|ADDRESS\(4),
+	combout => \Practica_TX|FSM|Selector7~0_combout\);
+
+-- Location: LCCOMB_X65_Y7_N14
 \Practica_TX|FSM|Add0~9\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~9_combout\ = (\Practica_TX|FSM|ADDRESS\(3) & (!\Practica_TX|FSM|Add0~7\)) # (!\Practica_TX|FSM|ADDRESS\(3) & ((\Practica_TX|FSM|Add0~7\) # (GND)))
@@ -1395,24 +1514,24 @@ PORT MAP (
 	combout => \Practica_TX|FSM|Add0~9_combout\,
 	cout => \Practica_TX|FSM|Add0~10\);
 
--- Location: LCCOMB_X65_Y10_N0
+-- Location: LCCOMB_X65_Y7_N24
 \Practica_TX|FSM|Add0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Add0~11_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|Add0~9_combout\)))) # (!\Practica_TX|FSM|CS.PARITY~q\ & ((\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|CS.INIT3~q\))))
+-- \Practica_TX|FSM|Add0~11_combout\ = (\Practica_TX|FSM|CS.PARITY~q\ & (\Practica_TX|FSM|Add0~9_combout\)) # (!\Practica_TX|FSM|CS.PARITY~q\ & (((\Practica_TX|FSM|CS.INIT3~q\) # (\Practica_TX|FSM|CS.INIT1~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001111100010",
+	lut_mask => "1101110111011000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT1~q\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|Add0~9_combout\,
-	datad => \Practica_TX|FSM|CS.INIT3~q\,
+	dataa => \Practica_TX|FSM|CS.PARITY~q\,
+	datab => \Practica_TX|FSM|Add0~9_combout\,
+	datac => \Practica_TX|FSM|CS.INIT3~q\,
+	datad => \Practica_TX|FSM|CS.INIT1~q\,
 	combout => \Practica_TX|FSM|Add0~11_combout\);
 
--- Location: FF_X65_Y10_N15
+-- Location: FF_X65_Y7_N15
 \Practica_TX|FSM|ADDRESS[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1424,12 +1543,12 @@ PORT MAP (
 	asdata => \Practica_TX|FSM|Add0~11_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
-	ena => \Practica_TX|FSM|WideOr3~0_combout\,
+	ena => \Practica_TX|FSM|WideOr5~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(3));
 
--- Location: LCCOMB_X65_Y10_N16
+-- Location: LCCOMB_X65_Y7_N16
 \Practica_TX|FSM|Add0~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~12_combout\ = (\Practica_TX|FSM|ADDRESS\(4) & (\Practica_TX|FSM|Add0~10\ $ (GND))) # (!\Practica_TX|FSM|ADDRESS\(4) & (!\Practica_TX|FSM|Add0~10\ & VCC))
@@ -1437,20 +1556,20 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_TX|FSM|ADDRESS\(4),
+	dataa => \Practica_TX|FSM|ADDRESS\(4),
 	datad => VCC,
 	cin => \Practica_TX|FSM|Add0~10\,
 	combout => \Practica_TX|FSM|Add0~12_combout\,
 	cout => \Practica_TX|FSM|Add0~13\);
 
--- Location: LCCOMB_X65_Y10_N2
-\Practica_TX|FSM|Selector6~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y7_N6
+\Practica_TX|FSM|Selector7~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector6~1_combout\ = (\Practica_TX|FSM|CS.INIT3~q\) # ((\Practica_TX|FSM|Selector6~0_combout\) # ((\Practica_TX|FSM|CS.PARITY~q\ & \Practica_TX|FSM|Add0~12_combout\)))
+-- \Practica_TX|FSM|Selector7~1_combout\ = (\Practica_TX|FSM|Selector7~0_combout\) # ((\Practica_TX|FSM|CS.INIT3~q\) # ((\Practica_TX|FSM|Add0~12_combout\ & \Practica_TX|FSM|CS.PARITY~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1458,13 +1577,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT3~q\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|Selector6~0_combout\,
-	datad => \Practica_TX|FSM|Add0~12_combout\,
-	combout => \Practica_TX|FSM|Selector6~1_combout\);
+	dataa => \Practica_TX|FSM|Selector7~0_combout\,
+	datab => \Practica_TX|FSM|Add0~12_combout\,
+	datac => \Practica_TX|FSM|CS.INIT3~q\,
+	datad => \Practica_TX|FSM|CS.PARITY~q\,
+	combout => \Practica_TX|FSM|Selector7~1_combout\);
 
--- Location: FF_X65_Y10_N17
+-- Location: FF_X65_Y7_N17
 \Practica_TX|FSM|ADDRESS[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1473,14 +1592,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector6~1_combout\,
+	asdata => \Practica_TX|FSM|Selector7~1_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(4));
 
--- Location: LCCOMB_X65_Y10_N18
+-- Location: LCCOMB_X65_Y7_N18
 \Practica_TX|FSM|Add0~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~14_combout\ = (\Practica_TX|FSM|ADDRESS\(5) & (!\Practica_TX|FSM|Add0~13\)) # (!\Practica_TX|FSM|ADDRESS\(5) & ((\Practica_TX|FSM|Add0~13\) # (GND)))
@@ -1498,10 +1617,10 @@ PORT MAP (
 	combout => \Practica_TX|FSM|Add0~14_combout\,
 	cout => \Practica_TX|FSM|Add0~15\);
 
--- Location: LCCOMB_X66_Y10_N16
-\Practica_TX|FSM|Selector5~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X66_Y7_N20
+\Practica_TX|FSM|Selector6~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector5~1_combout\ = (\Practica_TX|FSM|Selector5~0_combout\) # ((\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|Add0~14_combout\ & \Practica_TX|FSM|CS.PARITY~q\)))
+-- \Practica_TX|FSM|Selector6~1_combout\ = (\Practica_TX|FSM|Selector6~0_combout\) # ((\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|Add0~14_combout\ & \Practica_TX|FSM|CS.PARITY~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1509,13 +1628,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|Selector5~0_combout\,
+	dataa => \Practica_TX|FSM|Selector6~0_combout\,
 	datab => \Practica_TX|FSM|Add0~14_combout\,
 	datac => \Practica_TX|FSM|CS.PARITY~q\,
 	datad => \Practica_TX|FSM|CS.INIT1~q\,
-	combout => \Practica_TX|FSM|Selector5~1_combout\);
+	combout => \Practica_TX|FSM|Selector6~1_combout\);
 
--- Location: FF_X65_Y10_N19
+-- Location: FF_X65_Y7_N19
 \Practica_TX|FSM|ADDRESS[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1524,14 +1643,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector5~1_combout\,
+	asdata => \Practica_TX|FSM|Selector6~1_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(5));
 
--- Location: LCCOMB_X65_Y10_N20
+-- Location: LCCOMB_X65_Y7_N20
 \Practica_TX|FSM|Add0~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|Add0~16_combout\ = (\Practica_TX|FSM|ADDRESS\(6) & (\Practica_TX|FSM|Add0~15\ $ (GND))) # (!\Practica_TX|FSM|ADDRESS\(6) & (!\Practica_TX|FSM|Add0~15\ & VCC))
@@ -1539,50 +1658,51 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_TX|FSM|ADDRESS\(6),
+	dataa => \Practica_TX|FSM|ADDRESS\(6),
 	datad => VCC,
 	cin => \Practica_TX|FSM|Add0~15\,
 	combout => \Practica_TX|FSM|Add0~16_combout\,
 	cout => \Practica_TX|FSM|Add0~17\);
 
--- Location: LCCOMB_X65_Y10_N24
-\Practica_TX|FSM|Selector4~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y7_N0
+\Practica_TX|FSM|Selector5~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector4~0_combout\ = (\Practica_TX|FSM|CS.INIT3~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|Add0~16_combout\ & \Practica_TX|FSM|CS.PARITY~q\)))
+-- \Practica_TX|FSM|Selector5~2_combout\ = (\Practica_TX|FSM|CS.INIT3~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|CS.PARITY~q\ & \Practica_TX|FSM|Add0~16_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111000",
+	lut_mask => "1111111011111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|Add0~16_combout\,
+	dataa => \Practica_TX|FSM|CS.INIT3~q\,
 	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|CS.INIT3~q\,
-	datad => \Practica_TX|FSM|CS.INIT2~q\,
-	combout => \Practica_TX|FSM|Selector4~0_combout\);
+	datac => \Practica_TX|FSM|CS.INIT2~q\,
+	datad => \Practica_TX|FSM|Add0~16_combout\,
+	combout => \Practica_TX|FSM|Selector5~2_combout\);
 
--- Location: LCCOMB_X65_Y10_N4
-\Practica_TX|FSM|Selector4~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X66_Y7_N14
+\Practica_TX|FSM|Selector5~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector4~1_combout\ = (\Practica_TX|FSM|Selector4~0_combout\) # ((\Practica_TX|FSM|ADDRESS\(6) & !\Practica_TX|FSM|WideOr3~0_combout\))
+-- \Practica_TX|FSM|Selector5~3_combout\ = (\Practica_TX|FSM|Selector5~2_combout\) # ((\Practica_TX|FSM|ADDRESS\(6) & ((\Practica_TX|FSM|CS.LLAVE~q\) # (\Practica_TX|FSM|WideOr5~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101011101110",
+	lut_mask => "1111111011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|Selector4~0_combout\,
-	datab => \Practica_TX|FSM|ADDRESS\(6),
-	datad => \Practica_TX|FSM|WideOr3~0_combout\,
-	combout => \Practica_TX|FSM|Selector4~1_combout\);
+	dataa => \Practica_TX|FSM|CS.LLAVE~q\,
+	datab => \Practica_TX|FSM|WideOr5~0_combout\,
+	datac => \Practica_TX|FSM|Selector5~2_combout\,
+	datad => \Practica_TX|FSM|ADDRESS\(6),
+	combout => \Practica_TX|FSM|Selector5~3_combout\);
 
--- Location: FF_X65_Y10_N21
+-- Location: FF_X65_Y7_N21
 \Practica_TX|FSM|ADDRESS[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1591,47 +1711,47 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector4~1_combout\,
+	asdata => \Practica_TX|FSM|Selector5~3_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(6));
 
--- Location: LCCOMB_X65_Y10_N22
+-- Location: LCCOMB_X65_Y7_N22
 \Practica_TX|FSM|Add0~18\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Add0~18_combout\ = \Practica_TX|FSM|ADDRESS\(7) $ (\Practica_TX|FSM|Add0~17\)
+-- \Practica_TX|FSM|Add0~18_combout\ = \Practica_TX|FSM|Add0~17\ $ (\Practica_TX|FSM|ADDRESS\(7))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111100",
+	lut_mask => "0000111111110000",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_TX|FSM|ADDRESS\(7),
+	datad => \Practica_TX|FSM|ADDRESS\(7),
 	cin => \Practica_TX|FSM|Add0~17\,
 	combout => \Practica_TX|FSM|Add0~18_combout\);
 
--- Location: LCCOMB_X65_Y10_N30
-\Practica_TX|FSM|Selector3~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X65_Y7_N26
+\Practica_TX|FSM|Selector4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector3~0_combout\ = (\Practica_TX|FSM|Add0~18_combout\ & ((\Practica_TX|FSM|CS.PARITY~q\) # ((\Practica_TX|FSM|ADDRESS\(7) & !\Practica_TX|FSM|WideOr3~0_combout\)))) # (!\Practica_TX|FSM|Add0~18_combout\ & 
--- (((\Practica_TX|FSM|ADDRESS\(7) & !\Practica_TX|FSM|WideOr3~0_combout\))))
+-- \Practica_TX|FSM|Selector4~0_combout\ = (\Practica_TX|FSM|Add0~18_combout\ & ((\Practica_TX|FSM|CS.PARITY~q\) # ((\Practica_TX|FSM|ADDRESS\(7) & !\Practica_TX|FSM|WideOr5~combout\)))) # (!\Practica_TX|FSM|Add0~18_combout\ & (\Practica_TX|FSM|ADDRESS\(7) & 
+-- (!\Practica_TX|FSM|WideOr5~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100011111000",
+	lut_mask => "1010111000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|Add0~18_combout\,
-	datab => \Practica_TX|FSM|CS.PARITY~q\,
-	datac => \Practica_TX|FSM|ADDRESS\(7),
-	datad => \Practica_TX|FSM|WideOr3~0_combout\,
-	combout => \Practica_TX|FSM|Selector3~0_combout\);
+	datab => \Practica_TX|FSM|ADDRESS\(7),
+	datac => \Practica_TX|FSM|WideOr5~combout\,
+	datad => \Practica_TX|FSM|CS.PARITY~q\,
+	combout => \Practica_TX|FSM|Selector4~0_combout\);
 
--- Location: FF_X65_Y10_N5
+-- Location: FF_X65_Y7_N23
 \Practica_TX|FSM|ADDRESS[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1640,328 +1760,32 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector3~0_combout\,
+	asdata => \Practica_TX|FSM|Selector4~0_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|ADDRESS\(7));
 
--- Location: LCCOMB_X68_Y10_N12
-\Practica_TX|FSM|NS.INIT0~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X66_Y7_N28
+\Practica_TX|FSM|Selector17~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|NS.INIT0~1_combout\ = (\Practica_TX|FSM|NS.INIT0~0_combout\ & (!\BOTONES[3]~input_o\ & \BOTONES[0]~input_o\))
+-- \Practica_TX|FSM|Selector17~0_combout\ = (\Practica_TX|FSM|CS.INIT0~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|ULTIMO\(1) & \Practica_TX|FSM|WideOr4~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|NS.INIT0~0_combout\,
-	datac => \BOTONES[3]~input_o\,
-	datad => \BOTONES[0]~input_o\,
-	combout => \Practica_TX|FSM|NS.INIT0~1_combout\);
-
--- Location: FF_X68_Y10_N13
-\Practica_TX|FSM|CS.INIT0\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_TX|FSM|NS.INIT0~1_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.INIT0~q\);
-
--- Location: LCCOMB_X68_Y10_N16
-\Practica_TX|FSM|NS.INIT4~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|NS.INIT4~0_combout\ = (!\Practica_TX|FSM|CS.IDLE~q\ & (!\Practica_TX|FSM|Mux0~0_combout\ & \SWITCH~input_o\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.IDLE~q\,
-	datac => \Practica_TX|FSM|Mux0~0_combout\,
-	datad => \SWITCH~input_o\,
-	combout => \Practica_TX|FSM|NS.INIT4~0_combout\);
-
--- Location: FF_X68_Y10_N25
-\Practica_TX|FSM|CS.INIT4\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|NS.INIT4~0_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|CS.INIT4~q\);
-
--- Location: LCCOMB_X68_Y10_N24
-\Practica_TX|FSM|Selector12~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector12~0_combout\ = (!\Practica_TX|FSM|CS.INIT0~q\ & (!\Practica_TX|FSM|CS.INIT4~q\ & !\Practica_TX|FSM|CS.INIT3~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT0~q\,
-	datac => \Practica_TX|FSM|CS.INIT4~q\,
-	datad => \Practica_TX|FSM|CS.INIT3~q\,
-	combout => \Practica_TX|FSM|Selector12~0_combout\);
-
--- Location: LCCOMB_X67_Y10_N16
-\Practica_TX|FSM|WideOr12~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|WideOr12~0_combout\ = (!\Practica_TX|FSM|CS.INIT2~q\ & (\Practica_TX|FSM|Selector12~0_combout\ & !\Practica_TX|FSM|CS.INIT1~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT2~q\,
-	datab => \Practica_TX|FSM|Selector12~0_combout\,
-	datad => \Practica_TX|FSM|CS.INIT1~q\,
-	combout => \Practica_TX|FSM|WideOr12~0_combout\);
-
--- Location: LCCOMB_X67_Y10_N14
-\Practica_TX|FSM|Selector16~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector16~0_combout\ = (\Practica_TX|FSM|CS.INIT0~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|ULTIMO\(1) & \Practica_TX|FSM|WideOr12~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111011111010",
+	lut_mask => "1111111111101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|CS.INIT0~q\,
 	datab => \Practica_TX|FSM|ULTIMO\(1),
-	datac => \Practica_TX|FSM|CS.INIT2~q\,
-	datad => \Practica_TX|FSM|WideOr12~0_combout\,
-	combout => \Practica_TX|FSM|Selector16~0_combout\);
-
--- Location: FF_X67_Y10_N11
-\Practica_TX|FSM|ULTIMO[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector16~0_combout\,
-	sload => VCC,
-	ena => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|ULTIMO\(1));
-
--- Location: LCCOMB_X67_Y10_N10
-\Practica_TX|FSM|Equal0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Equal0~1_combout\ = (\Practica_TX|FSM|ADDRESS\(7)) # ((\Practica_TX|FSM|ADDRESS\(1) & ((!\Practica_TX|FSM|ADDRESS\(3)) # (!\Practica_TX|FSM|ULTIMO\(1)))) # (!\Practica_TX|FSM|ADDRESS\(1) & ((\Practica_TX|FSM|ULTIMO\(1)) # 
--- (\Practica_TX|FSM|ADDRESS\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|ADDRESS\(1),
-	datab => \Practica_TX|FSM|ADDRESS\(7),
-	datac => \Practica_TX|FSM|ULTIMO\(1),
-	datad => \Practica_TX|FSM|ADDRESS\(3),
-	combout => \Practica_TX|FSM|Equal0~1_combout\);
-
--- Location: LCCOMB_X67_Y10_N18
-\Practica_TX|FSM|Selector12~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector12~1_combout\ = ((!\Practica_TX|FSM|CS.INIT2~q\ & (\Practica_TX|FSM|ULTIMO\(5) & !\Practica_TX|FSM|CS.INIT1~q\))) # (!\Practica_TX|FSM|Selector12~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001101110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT2~q\,
-	datab => \Practica_TX|FSM|Selector12~0_combout\,
-	datac => \Practica_TX|FSM|ULTIMO\(5),
-	datad => \Practica_TX|FSM|CS.INIT1~q\,
-	combout => \Practica_TX|FSM|Selector12~1_combout\);
-
--- Location: FF_X67_Y10_N27
-\Practica_TX|FSM|ULTIMO[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector12~1_combout\,
-	sload => VCC,
-	ena => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|ULTIMO\(5));
-
--- Location: LCCOMB_X67_Y10_N0
-\Practica_TX|FSM|Selector13~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector13~0_combout\ = (\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|Selector12~0_combout\ & (\Practica_TX|FSM|ULTIMO\(4) & !\Practica_TX|FSM|CS.INIT1~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101011101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT2~q\,
-	datab => \Practica_TX|FSM|Selector12~0_combout\,
-	datac => \Practica_TX|FSM|ULTIMO\(4),
-	datad => \Practica_TX|FSM|CS.INIT1~q\,
-	combout => \Practica_TX|FSM|Selector13~0_combout\);
-
--- Location: FF_X67_Y10_N5
-\Practica_TX|FSM|ULTIMO[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector13~0_combout\,
-	sload => VCC,
-	ena => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|ULTIMO\(4));
-
--- Location: LCCOMB_X67_Y10_N4
-\Practica_TX|FSM|Equal0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Equal0~0_combout\ = (\Practica_TX|FSM|ULTIMO\(5) & (\Practica_TX|FSM|ADDRESS\(5) & (\Practica_TX|FSM|ADDRESS\(4) $ (!\Practica_TX|FSM|ULTIMO\(4))))) # (!\Practica_TX|FSM|ULTIMO\(5) & (!\Practica_TX|FSM|ADDRESS\(5) & 
--- (\Practica_TX|FSM|ADDRESS\(4) $ (!\Practica_TX|FSM|ULTIMO\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000001001000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|ULTIMO\(5),
-	datab => \Practica_TX|FSM|ADDRESS\(4),
-	datac => \Practica_TX|FSM|ULTIMO\(4),
-	datad => \Practica_TX|FSM|ADDRESS\(5),
-	combout => \Practica_TX|FSM|Equal0~0_combout\);
-
--- Location: LCCOMB_X68_Y10_N2
-\Practica_TX|FSM|Selector11~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector11~0_combout\ = (\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|CS.INIT3~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # (\Practica_TX|FSM|CS.INIT4~q\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT1~q\,
-	datab => \Practica_TX|FSM|CS.INIT3~q\,
-	datac => \Practica_TX|FSM|CS.INIT2~q\,
-	datad => \Practica_TX|FSM|CS.INIT4~q\,
-	combout => \Practica_TX|FSM|Selector11~0_combout\);
-
--- Location: LCCOMB_X67_Y10_N26
-\Practica_TX|FSM|Selector11~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector11~1_combout\ = (\Practica_TX|FSM|Selector11~0_combout\) # ((\Practica_TX|FSM|WideOr12~0_combout\ & \Practica_TX|FSM|ULTIMO\(6)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|Selector11~0_combout\,
-	datab => \Practica_TX|FSM|WideOr12~0_combout\,
-	datad => \Practica_TX|FSM|ULTIMO\(6),
-	combout => \Practica_TX|FSM|Selector11~1_combout\);
-
--- Location: FF_X67_Y10_N9
-\Practica_TX|FSM|ULTIMO[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_TX|FSM|Selector11~1_combout\,
-	sload => VCC,
-	ena => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_TX|FSM|ULTIMO\(6));
-
--- Location: LCCOMB_X67_Y10_N8
-\Practica_TX|FSM|Equal0~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Equal0~2_combout\ = (!\Practica_TX|FSM|Equal0~1_combout\ & (\Practica_TX|FSM|Equal0~0_combout\ & (\Practica_TX|FSM|ULTIMO\(6) $ (!\Practica_TX|FSM|ADDRESS\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|Equal0~1_combout\,
-	datab => \Practica_TX|FSM|Equal0~0_combout\,
-	datac => \Practica_TX|FSM|ULTIMO\(6),
-	datad => \Practica_TX|FSM|ADDRESS\(6),
-	combout => \Practica_TX|FSM|Equal0~2_combout\);
-
--- Location: LCCOMB_X67_Y10_N28
-\Practica_TX|FSM|Selector17~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_TX|FSM|Selector17~0_combout\ = ((\Practica_TX|FSM|CS.INIT1~q\) # ((!\Practica_TX|FSM|CS.INIT2~q\ & \Practica_TX|FSM|ULTIMO\(0)))) # (!\Practica_TX|FSM|Selector12~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111101110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_TX|FSM|CS.INIT2~q\,
-	datab => \Practica_TX|FSM|Selector12~0_combout\,
-	datac => \Practica_TX|FSM|ULTIMO\(0),
-	datad => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|WideOr4~0_combout\,
+	datad => \Practica_TX|FSM|CS.INIT2~q\,
 	combout => \Practica_TX|FSM|Selector17~0_combout\);
 
--- Location: FF_X67_Y10_N31
-\Practica_TX|FSM|ULTIMO[0]\ : dffeas
+-- Location: FF_X66_Y7_N27
+\Practica_TX|FSM|ULTIMO[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1974,43 +1798,419 @@ PORT MAP (
 	ena => \ALT_INV_RESET~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \Practica_TX|FSM|ULTIMO\(0));
+	q => \Practica_TX|FSM|ULTIMO\(1));
 
--- Location: LCCOMB_X67_Y10_N30
+-- Location: LCCOMB_X66_Y7_N26
+\Practica_TX|FSM|Equal0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Equal0~1_combout\ = (\Practica_TX|FSM|ADDRESS\(7)) # ((\Practica_TX|FSM|ADDRESS\(3) & ((!\Practica_TX|FSM|ADDRESS\(1)) # (!\Practica_TX|FSM|ULTIMO\(1)))) # (!\Practica_TX|FSM|ADDRESS\(3) & ((\Practica_TX|FSM|ULTIMO\(1)) # 
+-- (\Practica_TX|FSM|ADDRESS\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|ADDRESS\(7),
+	datab => \Practica_TX|FSM|ADDRESS\(3),
+	datac => \Practica_TX|FSM|ULTIMO\(1),
+	datad => \Practica_TX|FSM|ADDRESS\(1),
+	combout => \Practica_TX|FSM|Equal0~1_combout\);
+
+-- Location: LCCOMB_X112_Y38_N22
+\Practica_TX|FSM|Selector12~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector12~0_combout\ = (\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|CS.INIT3~q\) # (\Practica_TX|FSM|CS.INIT4~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|CS.INIT1~q\,
+	datab => \Practica_TX|FSM|CS.INIT2~q\,
+	datac => \Practica_TX|FSM|CS.INIT3~q\,
+	datad => \Practica_TX|FSM|CS.INIT4~q\,
+	combout => \Practica_TX|FSM|Selector12~0_combout\);
+
+-- Location: LCCOMB_X66_Y7_N24
+\Practica_TX|FSM|Selector12~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector12~1_combout\ = (\Practica_TX|FSM|Selector12~0_combout\) # ((\Practica_TX|FSM|WideOr4~0_combout\ & \Practica_TX|FSM|ULTIMO\(6)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111110001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|WideOr4~0_combout\,
+	datab => \Practica_TX|FSM|ULTIMO\(6),
+	datad => \Practica_TX|FSM|Selector12~0_combout\,
+	combout => \Practica_TX|FSM|Selector12~1_combout\);
+
+-- Location: FF_X66_Y7_N3
+\Practica_TX|FSM|ULTIMO[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|Selector12~1_combout\,
+	sload => VCC,
+	ena => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|ULTIMO\(6));
+
+-- Location: LCCOMB_X112_Y38_N12
+\Practica_TX|FSM|Selector13~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector13~1_combout\ = ((\Practica_TX|FSM|ULTIMO\(5) & (!\Practica_TX|FSM|CS.INIT1~q\ & !\Practica_TX|FSM|CS.INIT2~q\))) # (!\Practica_TX|FSM|Selector13~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|ULTIMO\(5),
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|CS.INIT2~q\,
+	datad => \Practica_TX|FSM|Selector13~0_combout\,
+	combout => \Practica_TX|FSM|Selector13~1_combout\);
+
+-- Location: LCCOMB_X111_Y38_N28
+\Practica_TX|FSM|ULTIMO[5]~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|ULTIMO[5]~feeder_combout\ = \Practica_TX|FSM|Selector13~1_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|Selector13~1_combout\,
+	combout => \Practica_TX|FSM|ULTIMO[5]~feeder_combout\);
+
+-- Location: FF_X111_Y38_N29
+\Practica_TX|FSM|ULTIMO[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_TX|FSM|ULTIMO[5]~feeder_combout\,
+	ena => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|ULTIMO\(5));
+
+-- Location: LCCOMB_X66_Y7_N18
+\Practica_TX|FSM|Selector14~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector14~0_combout\ = (\Practica_TX|FSM|CS.INIT2~q\) # ((\Practica_TX|FSM|ULTIMO\(4) & (!\Practica_TX|FSM|CS.INIT1~q\ & \Practica_TX|FSM|Selector13~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|ULTIMO\(4),
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|Selector13~0_combout\,
+	datad => \Practica_TX|FSM|CS.INIT2~q\,
+	combout => \Practica_TX|FSM|Selector14~0_combout\);
+
+-- Location: FF_X66_Y7_N11
+\Practica_TX|FSM|ULTIMO[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|Selector14~0_combout\,
+	sload => VCC,
+	ena => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|ULTIMO\(4));
+
+-- Location: LCCOMB_X66_Y7_N10
+\Practica_TX|FSM|Equal0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Equal0~0_combout\ = (\Practica_TX|FSM|ADDRESS\(5) & (\Practica_TX|FSM|ULTIMO\(5) & (\Practica_TX|FSM|ULTIMO\(4) $ (!\Practica_TX|FSM|ADDRESS\(4))))) # (!\Practica_TX|FSM|ADDRESS\(5) & (!\Practica_TX|FSM|ULTIMO\(5) & 
+-- (\Practica_TX|FSM|ULTIMO\(4) $ (!\Practica_TX|FSM|ADDRESS\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001000000001001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|ADDRESS\(5),
+	datab => \Practica_TX|FSM|ULTIMO\(5),
+	datac => \Practica_TX|FSM|ULTIMO\(4),
+	datad => \Practica_TX|FSM|ADDRESS\(4),
+	combout => \Practica_TX|FSM|Equal0~0_combout\);
+
+-- Location: LCCOMB_X66_Y7_N2
+\Practica_TX|FSM|Equal0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Equal0~2_combout\ = (!\Practica_TX|FSM|Equal0~1_combout\ & (\Practica_TX|FSM|Equal0~0_combout\ & (\Practica_TX|FSM|ADDRESS\(6) $ (!\Practica_TX|FSM|ULTIMO\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|Equal0~1_combout\,
+	datab => \Practica_TX|FSM|ADDRESS\(6),
+	datac => \Practica_TX|FSM|ULTIMO\(6),
+	datad => \Practica_TX|FSM|Equal0~0_combout\,
+	combout => \Practica_TX|FSM|Equal0~2_combout\);
+
+-- Location: LCCOMB_X65_Y7_N28
 \Practica_TX|FSM|Equal0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Equal0~3_combout\ = (\Practica_TX|FSM|Equal0~2_combout\ & ((\Practica_TX|FSM|ADDRESS\(0) & (\Practica_TX|FSM|ULTIMO\(0) & \Practica_TX|FSM|ADDRESS\(2))) # (!\Practica_TX|FSM|ADDRESS\(0) & (!\Practica_TX|FSM|ULTIMO\(0) & 
--- !\Practica_TX|FSM|ADDRESS\(2)))))
+-- \Practica_TX|FSM|Equal0~3_combout\ = (\Practica_TX|FSM|Equal0~2_combout\ & ((\Practica_TX|FSM|ADDRESS\(2) & (\Practica_TX|FSM|ULTIMO\(0) & \Practica_TX|FSM|ADDRESS\(0))) # (!\Practica_TX|FSM|ADDRESS\(2) & (!\Practica_TX|FSM|ULTIMO\(0) & 
+-- !\Practica_TX|FSM|ADDRESS\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000000000000100",
+	lut_mask => "1000000100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|ADDRESS\(0),
-	datab => \Practica_TX|FSM|Equal0~2_combout\,
-	datac => \Practica_TX|FSM|ULTIMO\(0),
-	datad => \Practica_TX|FSM|ADDRESS\(2),
+	dataa => \Practica_TX|FSM|ADDRESS\(2),
+	datab => \Practica_TX|FSM|ULTIMO\(0),
+	datac => \Practica_TX|FSM|ADDRESS\(0),
+	datad => \Practica_TX|FSM|Equal0~2_combout\,
 	combout => \Practica_TX|FSM|Equal0~3_combout\);
 
--- Location: LCCOMB_X67_Y10_N12
-\Practica_TX|FSM|Selector1~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X66_Y8_N20
+\Practica_TX|FSM|Selector3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|Selector1~0_combout\ = ((\Practica_TX|FSM|CS.STOP~q\ & !\Practica_TX|FSM|Equal0~3_combout\)) # (!\Practica_TX|FSM|WideOr12~0_combout\)
+-- \Practica_TX|FSM|Selector3~0_combout\ = (\Practica_TX|FSM|Equal0~3_combout\ & ((\Practica_TX|FSM|CS.STOP~q\) # ((\Practica_TX|FSM|CS.LLAVE~q\ & \SWITCH~input_o\)))) # (!\Practica_TX|FSM|Equal0~3_combout\ & (((\Practica_TX|FSM|CS.LLAVE~q\ & 
+-- \SWITCH~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010001011111111",
+	lut_mask => "1111100010001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.STOP~q\,
+	dataa => \Practica_TX|FSM|Equal0~3_combout\,
+	datab => \Practica_TX|FSM|CS.STOP~q\,
+	datac => \Practica_TX|FSM|CS.LLAVE~q\,
+	datad => \SWITCH~input_o\,
+	combout => \Practica_TX|FSM|Selector3~0_combout\);
+
+-- Location: FF_X66_Y7_N13
+\Practica_TX|FSM|CS.LLAVE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|Selector3~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.LLAVE~q\);
+
+-- Location: LCCOMB_X112_Y38_N24
+\Practica_TX|FSM|Selector0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector0~0_combout\ = (\SWITCH~input_o\) # ((!\Practica_TX|FSM|CS.LLAVE~q\ & ((\Practica_TX|FSM|CS.IDLE~q\) # (\Practica_TX|FSM|Mux0~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101011111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \SWITCH~input_o\,
+	datab => \Practica_TX|FSM|CS.IDLE~q\,
+	datac => \Practica_TX|FSM|Mux0~0_combout\,
+	datad => \Practica_TX|FSM|CS.LLAVE~q\,
+	combout => \Practica_TX|FSM|Selector0~0_combout\);
+
+-- Location: FF_X112_Y38_N29
+\Practica_TX|FSM|CS.IDLE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|Selector0~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.IDLE~q\);
+
+-- Location: LCCOMB_X112_Y38_N28
+\Practica_TX|FSM|NS.INIT1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|NS.INIT1~0_combout\ = (!\Practica_TX|FSM|FD:0:FFD|Q~q\ & (!\Practica_TX|FSM|CS.IDLE~q\ & !\Practica_TX|FSM|FD:3:FFD|Q~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|FD:0:FFD|Q~q\,
+	datac => \Practica_TX|FSM|CS.IDLE~q\,
+	datad => \Practica_TX|FSM|FD:3:FFD|Q~q\,
+	combout => \Practica_TX|FSM|NS.INIT1~0_combout\);
+
+-- Location: LCCOMB_X112_Y38_N10
+\Practica_TX|FSM|NS.INIT1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|NS.INIT1~1_combout\ = (!\Practica_TX|FSM|FD:2:FFD|Q~q\ & (\Practica_TX|FSM|FD:1:FFD|Q~q\ & \Practica_TX|FSM|NS.INIT1~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|FD:2:FFD|Q~q\,
+	datac => \Practica_TX|FSM|FD:1:FFD|Q~q\,
+	datad => \Practica_TX|FSM|NS.INIT1~0_combout\,
+	combout => \Practica_TX|FSM|NS.INIT1~1_combout\);
+
+-- Location: FF_X112_Y38_N27
+\Practica_TX|FSM|CS.INIT1\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|NS.INIT1~1_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.INIT1~q\);
+
+-- Location: LCCOMB_X112_Y38_N6
+\Practica_TX|FSM|FF_SET~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|FF_SET~0_combout\ = (\RESET~input_o\) # ((\Practica_TX|FSM|CS.INIT1~q\) # ((\Practica_TX|FSM|CS.INIT2~q\) # (!\Practica_TX|FSM|Selector13~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \RESET~input_o\,
+	datab => \Practica_TX|FSM|CS.INIT1~q\,
+	datac => \Practica_TX|FSM|CS.INIT2~q\,
+	datad => \Practica_TX|FSM|Selector13~0_combout\,
+	combout => \Practica_TX|FSM|FF_SET~0_combout\);
+
+-- Location: FF_X113_Y38_N25
+\Practica_TX|FSM|FD:2:FFD|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_BOTONES[2]~input_o\,
+	d => \Practica_TX|FSM|FD:2:FFD|Q~feeder_combout\,
+	clrn => \Practica_TX|FSM|ALT_INV_FF_SET~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|FD:2:FFD|Q~q\);
+
+-- Location: LCCOMB_X112_Y38_N20
+\Practica_TX|FSM|NS.INIT2~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|NS.INIT2~0_combout\ = (\Practica_TX|FSM|FD:2:FFD|Q~q\ & (!\Practica_TX|FSM|FD:1:FFD|Q~q\ & \Practica_TX|FSM|NS.INIT1~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|FSM|FD:2:FFD|Q~q\,
+	datac => \Practica_TX|FSM|FD:1:FFD|Q~q\,
+	datad => \Practica_TX|FSM|NS.INIT1~0_combout\,
+	combout => \Practica_TX|FSM|NS.INIT2~0_combout\);
+
+-- Location: FF_X112_Y38_N13
+\Practica_TX|FSM|CS.INIT2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|FSM|NS.INIT2~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|FSM|CS.INIT2~q\);
+
+-- Location: LCCOMB_X66_Y7_N22
+\Practica_TX|FSM|WideOr4~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|WideOr4~0_combout\ = (!\Practica_TX|FSM|CS.INIT2~q\ & (\Practica_TX|FSM|Selector13~0_combout\ & !\Practica_TX|FSM|CS.INIT1~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|CS.INIT2~q\,
+	datab => \Practica_TX|FSM|Selector13~0_combout\,
+	datad => \Practica_TX|FSM|CS.INIT1~q\,
+	combout => \Practica_TX|FSM|WideOr4~0_combout\);
+
+-- Location: LCCOMB_X66_Y7_N30
+\Practica_TX|FSM|Selector1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|FSM|Selector1~0_combout\ = ((!\Practica_TX|FSM|Equal0~3_combout\ & \Practica_TX|FSM|CS.STOP~q\)) # (!\Practica_TX|FSM|WideOr4~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111011101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_TX|FSM|WideOr4~0_combout\,
 	datab => \Practica_TX|FSM|Equal0~3_combout\,
-	datad => \Practica_TX|FSM|WideOr12~0_combout\,
+	datad => \Practica_TX|FSM|CS.STOP~q\,
 	combout => \Practica_TX|FSM|Selector1~0_combout\);
 
--- Location: FF_X67_Y10_N23
+-- Location: FF_X66_Y7_N25
 \Practica_TX|FSM|CS.START\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2026,39 +2226,72 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|FSM|CS.START~q\);
 
--- Location: LCCOMB_X66_Y10_N30
+-- Location: LCCOMB_X67_Y7_N22
+\Practica_TX|SR|Mux10~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_TX|SR|Mux10~0_combout\ = (!\Practica_TX|SR|CONT\(0) & ((\RESET~input_o\) # (!\Practica_TX|FSM|CS.START~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_TX|SR|CONT\(0),
+	datac => \Practica_TX|FSM|CS.START~q\,
+	datad => \RESET~input_o\,
+	combout => \Practica_TX|SR|Mux10~0_combout\);
+
+-- Location: FF_X67_Y7_N7
+\Practica_TX|SR|CONT[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_TX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	asdata => \Practica_TX|SR|Mux10~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	ena => \Practica_TX|SR|DATA[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_TX|SR|CONT\(0));
+
+-- Location: LCCOMB_X67_Y7_N18
 \Practica_TX|FSM|SS~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|FSM|SS~0_combout\ = (\RESET~input_o\) # (!\Practica_TX|FSM|CS.START~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101011111111",
+	lut_mask => "1111111101010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RESET~input_o\,
-	datad => \Practica_TX|FSM|CS.START~q\,
+	dataa => \Practica_TX|FSM|CS.START~q\,
+	datad => \RESET~input_o\,
 	combout => \Practica_TX|FSM|SS~0_combout\);
 
--- Location: LCCOMB_X66_Y10_N26
+-- Location: LCCOMB_X67_Y7_N30
 \Practica_TX|SR|Mux8~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux8~0_combout\ = (\Practica_TX|FSM|SS~0_combout\ & (\Practica_TX|SR|CONT\(2) $ (((\Practica_TX|SR|CONT\(1) & \Practica_TX|SR|CONT\(0))))))
+-- \Practica_TX|SR|Mux8~0_combout\ = (\Practica_TX|FSM|SS~0_combout\ & (\Practica_TX|SR|CONT\(2) $ (((\Practica_TX|SR|CONT\(0) & \Practica_TX|SR|CONT\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010100010100000",
+	lut_mask => "0110101000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|SS~0_combout\,
-	datab => \Practica_TX|SR|CONT\(1),
-	datac => \Practica_TX|SR|CONT\(2),
-	datad => \Practica_TX|SR|CONT\(0),
+	dataa => \Practica_TX|SR|CONT\(2),
+	datab => \Practica_TX|SR|CONT\(0),
+	datac => \Practica_TX|SR|CONT\(1),
+	datad => \Practica_TX|FSM|SS~0_combout\,
 	combout => \Practica_TX|SR|Mux8~0_combout\);
 
--- Location: FF_X66_Y10_N21
+-- Location: FF_X67_Y7_N19
 \Practica_TX|SR|CONT[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2075,10 +2308,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|CONT\(2));
 
--- Location: LCCOMB_X66_Y10_N8
+-- Location: LCCOMB_X67_Y7_N20
 \Practica_TX|FSM|NS.PARITY~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|FSM|NS.PARITY~0_combout\ = (\Practica_TX|SR|CONT\(2) & (\Practica_TX|SR|CONT\(0) & (\Practica_TX|SR|CONT\(1) & \Practica_TX|FSM|CS.DATA~q\)))
+-- \Practica_TX|FSM|NS.PARITY~0_combout\ = (\Practica_TX|SR|CONT\(2) & (\Practica_TX|SR|CONT\(0) & (\Practica_TX|FSM|CS.DATA~q\ & \Practica_TX|SR|CONT\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2088,11 +2321,11 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Practica_TX|SR|CONT\(2),
 	datab => \Practica_TX|SR|CONT\(0),
-	datac => \Practica_TX|SR|CONT\(1),
-	datad => \Practica_TX|FSM|CS.DATA~q\,
+	datac => \Practica_TX|FSM|CS.DATA~q\,
+	datad => \Practica_TX|SR|CONT\(1),
 	combout => \Practica_TX|FSM|NS.PARITY~0_combout\);
 
--- Location: FF_X66_Y10_N31
+-- Location: FF_X66_Y7_N31
 \Practica_TX|FSM|CS.PARITY\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2121,7 +2354,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \CLK~inputclkctrl_outclk\);
 
--- Location: M9K_X64_Y10_N0
+-- Location: M9K_X64_Y7_N0
 \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -2159,24 +2392,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X66_Y10_N14
+-- Location: LCCOMB_X66_Y7_N16
 \Practica_TX|SR|Mux1~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|SR|Mux1~0_combout\ = (!\Practica_TX|FSM|CS.DATA~q\ & ((\Practica_TX|FSM|SS~0_combout\ & (\Practica_TX|SR|DATA\(6))) # (!\Practica_TX|FSM|SS~0_combout\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a6\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000100100000",
+	lut_mask => "0101000101000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|SS~0_combout\,
-	datab => \Practica_TX|FSM|CS.DATA~q\,
+	dataa => \Practica_TX|FSM|CS.DATA~q\,
+	datab => \Practica_TX|FSM|SS~0_combout\,
 	datac => \Practica_TX|SR|DATA\(6),
 	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a6\,
 	combout => \Practica_TX|SR|Mux1~0_combout\);
 
--- Location: FF_X66_Y10_N15
+-- Location: FF_X66_Y7_N17
 \Practica_TX|SR|DATA[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2191,25 +2424,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(6));
 
--- Location: LCCOMB_X66_Y10_N6
+-- Location: LCCOMB_X67_Y7_N14
 \Practica_TX|SR|Mux2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux2~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(6))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(6)))
+-- \Practica_TX|SR|Mux2~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & ((\Practica_TX|SR|DATA\(6)))) # (!\RESET~input_o\ & (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\)))) # (!\Practica_TX|FSM|CS.START~q\ & 
+-- (((\Practica_TX|SR|DATA\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1100110010101100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
+	dataa => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\,
 	datab => \Practica_TX|SR|DATA\(6),
-	datac => \RESET~input_o\,
-	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\,
+	datac => \Practica_TX|FSM|CS.START~q\,
+	datad => \RESET~input_o\,
 	combout => \Practica_TX|SR|Mux2~0_combout\);
 
--- Location: FF_X66_Y10_N7
+-- Location: FF_X67_Y7_N15
 \Practica_TX|SR|DATA[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2225,25 +2458,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(5));
 
--- Location: LCCOMB_X66_Y10_N12
+-- Location: LCCOMB_X67_Y7_N24
 \Practica_TX|SR|Mux3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux3~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(5))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a4\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(5)))
+-- \Practica_TX|SR|Mux3~0_combout\ = (\RESET~input_o\ & (\Practica_TX|SR|DATA\(5))) # (!\RESET~input_o\ & ((\Practica_TX|FSM|CS.START~q\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a4\))) # (!\Practica_TX|FSM|CS.START~q\ & 
+-- (\Practica_TX|SR|DATA\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1011101010001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
-	datab => \Practica_TX|SR|DATA\(5),
-	datac => \RESET~input_o\,
+	dataa => \Practica_TX|SR|DATA\(5),
+	datab => \RESET~input_o\,
+	datac => \Practica_TX|FSM|CS.START~q\,
 	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a4\,
 	combout => \Practica_TX|SR|Mux3~0_combout\);
 
--- Location: FF_X66_Y10_N13
+-- Location: FF_X67_Y7_N25
 \Practica_TX|SR|DATA[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2259,25 +2492,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(4));
 
--- Location: LCCOMB_X66_Y10_N10
+-- Location: LCCOMB_X67_Y7_N26
 \Practica_TX|SR|Mux4~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|SR|Mux4~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(4))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(4)))
+-- (((\Practica_TX|SR|DATA\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1111001011010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|FSM|CS.START~q\,
-	datab => \Practica_TX|SR|DATA\(4),
-	datac => \RESET~input_o\,
+	datab => \RESET~input_o\,
+	datac => \Practica_TX|SR|DATA\(4),
 	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\,
 	combout => \Practica_TX|SR|Mux4~0_combout\);
 
--- Location: FF_X66_Y10_N11
+-- Location: FF_X67_Y7_N27
 \Practica_TX|SR|DATA[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2293,25 +2526,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(3));
 
--- Location: LCCOMB_X66_Y10_N4
+-- Location: LCCOMB_X67_Y7_N0
 \Practica_TX|SR|Mux5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux5~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(3))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(3)))
+-- \Practica_TX|SR|Mux5~0_combout\ = (\RESET~input_o\ & (\Practica_TX|SR|DATA\(3))) # (!\RESET~input_o\ & ((\Practica_TX|FSM|CS.START~q\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\))) # (!\Practica_TX|FSM|CS.START~q\ & 
+-- (\Practica_TX|SR|DATA\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1011101010001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
-	datab => \Practica_TX|SR|DATA\(3),
-	datac => \RESET~input_o\,
+	dataa => \Practica_TX|SR|DATA\(3),
+	datab => \RESET~input_o\,
+	datac => \Practica_TX|FSM|CS.START~q\,
 	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\,
 	combout => \Practica_TX|SR|Mux5~0_combout\);
 
--- Location: FF_X66_Y10_N5
+-- Location: FF_X67_Y7_N1
 \Practica_TX|SR|DATA[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2327,25 +2560,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(2));
 
--- Location: LCCOMB_X66_Y10_N2
+-- Location: LCCOMB_X67_Y7_N10
 \Practica_TX|SR|Mux6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux6~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(2))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(2)))
+-- \Practica_TX|SR|Mux6~0_combout\ = (\RESET~input_o\ & (\Practica_TX|SR|DATA\(2))) # (!\RESET~input_o\ & ((\Practica_TX|FSM|CS.START~q\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\))) # (!\Practica_TX|FSM|CS.START~q\ & 
+-- (\Practica_TX|SR|DATA\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1011101010001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
-	datab => \Practica_TX|SR|DATA\(2),
-	datac => \RESET~input_o\,
+	dataa => \Practica_TX|SR|DATA\(2),
+	datab => \RESET~input_o\,
+	datac => \Practica_TX|FSM|CS.START~q\,
 	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\,
 	combout => \Practica_TX|SR|Mux6~0_combout\);
 
--- Location: FF_X66_Y10_N3
+-- Location: FF_X67_Y7_N11
 \Practica_TX|SR|DATA[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2361,25 +2594,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(1));
 
--- Location: LCCOMB_X66_Y10_N24
+-- Location: LCCOMB_X67_Y7_N2
 \Practica_TX|SR|Mux7~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|SR|Mux7~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & (\Practica_TX|SR|DATA\(1))) # (!\RESET~input_o\ & ((\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\))))) # (!\Practica_TX|FSM|CS.START~q\ & 
--- (\Practica_TX|SR|DATA\(1)))
+-- \Practica_TX|SR|Mux7~0_combout\ = (\Practica_TX|FSM|CS.START~q\ & ((\RESET~input_o\ & ((\Practica_TX|SR|DATA\(1)))) # (!\RESET~input_o\ & (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\)))) # (!\Practica_TX|FSM|CS.START~q\ & 
+-- (((\Practica_TX|SR|DATA\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111011000100",
+	lut_mask => "1100110010101100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.START~q\,
+	dataa => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\,
 	datab => \Practica_TX|SR|DATA\(1),
-	datac => \RESET~input_o\,
-	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\,
+	datac => \Practica_TX|FSM|CS.START~q\,
+	datad => \RESET~input_o\,
 	combout => \Practica_TX|SR|Mux7~0_combout\);
 
--- Location: FF_X66_Y10_N25
+-- Location: FF_X67_Y7_N3
 \Practica_TX|SR|DATA[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2395,27 +2628,27 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_TX|SR|DATA\(0));
 
--- Location: LCCOMB_X66_Y10_N22
+-- Location: LCCOMB_X67_Y7_N8
 \Practica_TX|OUT_MUX|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|OUT_MUX|Mux0~0_combout\ = (\Practica_TX|FSM|CS.DATA~q\ & (!\Practica_TX|SR|DATA\(0))) # (!\Practica_TX|FSM|CS.DATA~q\ & ((\Practica_TX|FSM|CS.START~q\)))
+-- \Practica_TX|OUT_MUX|Mux0~0_combout\ = (\Practica_TX|FSM|CS.DATA~q\ & ((!\Practica_TX|SR|DATA\(0)))) # (!\Practica_TX|FSM|CS.DATA~q\ & (\Practica_TX|FSM|CS.START~q\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111011100100010",
+	lut_mask => "0011101000111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.DATA~q\,
+	dataa => \Practica_TX|FSM|CS.START~q\,
 	datab => \Practica_TX|SR|DATA\(0),
-	datad => \Practica_TX|FSM|CS.START~q\,
+	datac => \Practica_TX|FSM|CS.DATA~q\,
 	combout => \Practica_TX|OUT_MUX|Mux0~0_combout\);
 
--- Location: LCCOMB_X63_Y10_N16
+-- Location: LCCOMB_X63_Y7_N0
 \Practica_TX|PARIDAD|bit_paridad~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_TX|PARIDAD|bit_paridad~0_combout\ = \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\ $ 
--- (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\)))
+-- \Practica_TX|PARIDAD|bit_paridad~0_combout\ = \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\ $ 
+-- (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2424,12 +2657,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a0~portadataout\,
-	datab => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\,
+	datab => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\,
 	datac => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a2\,
-	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a1\,
+	datad => \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a3\,
 	combout => \Practica_TX|PARIDAD|bit_paridad~0_combout\);
 
--- Location: LCCOMB_X63_Y10_N18
+-- Location: LCCOMB_X63_Y7_N6
 \Practica_TX|PARIDAD|bit_paridad~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|PARIDAD|bit_paridad~1_combout\ = \Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a4\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a5\ $ (\Practica_TX|MEMORIA|Mux6_rtl_0|auto_generated|ram_block1a6\ $ 
@@ -2447,24 +2680,24 @@ PORT MAP (
 	datad => \Practica_TX|PARIDAD|bit_paridad~0_combout\,
 	combout => \Practica_TX|PARIDAD|bit_paridad~1_combout\);
 
--- Location: LCCOMB_X63_Y10_N24
+-- Location: LCCOMB_X63_Y7_N16
 \Practica_TX|OUT_MUX|Mux0~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_TX|OUT_MUX|Mux0~1_combout\ = (\RESET~input_o\) # ((\Practica_TX|FSM|CS.PARITY~q\ & ((\Practica_TX|PARIDAD|bit_paridad~1_combout\))) # (!\Practica_TX|FSM|CS.PARITY~q\ & (!\Practica_TX|OUT_MUX|Mux0~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111111001101",
+	lut_mask => "1110111110101011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_TX|FSM|CS.PARITY~q\,
-	datab => \RESET~input_o\,
+	dataa => \RESET~input_o\,
+	datab => \Practica_TX|FSM|CS.PARITY~q\,
 	datac => \Practica_TX|OUT_MUX|Mux0~0_combout\,
 	datad => \Practica_TX|PARIDAD|bit_paridad~1_combout\,
 	combout => \Practica_TX|OUT_MUX|Mux0~1_combout\);
 
--- Location: LCCOMB_X62_Y10_N30
+-- Location: LCCOMB_X62_Y7_N18
 \Practica_RX|SR1|DATA[8]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[8]~feeder_combout\ = \Practica_TX|OUT_MUX|Mux0~1_combout\
@@ -2478,209 +2711,7 @@ PORT MAP (
 	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
 	combout => \Practica_RX|SR1|DATA[8]~feeder_combout\);
 
--- Location: LCCOMB_X63_Y10_N10
-\Practica_RX|RX_FSM1|Selector1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|Selector1~0_combout\ = (\Practica_RX|RX_FSM1|CS.PARITY~q\) # ((\Practica_RX|RX_FSM1|CS.STOP~q\ & !\Practica_TX|OUT_MUX|Mux0~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_RX|RX_FSM1|CS.PARITY~q\,
-	datac => \Practica_RX|RX_FSM1|CS.STOP~q\,
-	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
-	combout => \Practica_RX|RX_FSM1|Selector1~0_combout\);
-
--- Location: FF_X63_Y10_N11
-\Practica_RX|RX_FSM1|CS.STOP\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_RX|RX_FSM1|Selector1~0_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_RX|RX_FSM1|CS.STOP~q\);
-
--- Location: LCCOMB_X63_Y10_N6
-\Practica_RX|RX_FSM1|NS.IDLE~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|NS.IDLE~0_combout\ = ((\Practica_RX|RX_FSM1|CS.IDLE~q\ & !\Practica_RX|RX_FSM1|CS.STOP~q\)) # (!\Practica_TX|OUT_MUX|Mux0~1_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101011111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CS.IDLE~q\,
-	datac => \Practica_RX|RX_FSM1|CS.STOP~q\,
-	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
-	combout => \Practica_RX|RX_FSM1|NS.IDLE~0_combout\);
-
--- Location: LCCOMB_X63_Y10_N20
-\Practica_RX|RX_FSM1|CS.IDLE~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\ = \Practica_RX|RX_FSM1|NS.IDLE~0_combout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \Practica_RX|RX_FSM1|NS.IDLE~0_combout\,
-	combout => \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\);
-
--- Location: FF_X63_Y10_N21
-\Practica_RX|RX_FSM1|CS.IDLE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_RX|RX_FSM1|CS.IDLE~q\);
-
--- Location: LCCOMB_X69_Y10_N18
-\Practica_RX|RX_FSM1|CONT~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CONT~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\ & (!\RESET~input_o\ & \Practica_RX|RX_FSM1|CS.IDLE~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CS.DATA~q\,
-	datac => \RESET~input_o\,
-	datad => \Practica_RX|RX_FSM1|CS.IDLE~q\,
-	combout => \Practica_RX|RX_FSM1|CONT~0_combout\);
-
--- Location: LCCOMB_X69_Y10_N0
-\Practica_RX|RX_FSM1|CONT~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CONT~1_combout\ = (\Practica_RX|RX_FSM1|CONT~0_combout\ & (\Practica_RX|RX_FSM1|CONT\(2) $ (((\Practica_RX|RX_FSM1|CONT\(1) & \Practica_RX|RX_FSM1|CONT\(0))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CONT\(1),
-	datab => \Practica_RX|RX_FSM1|CONT\(0),
-	datac => \Practica_RX|RX_FSM1|CONT\(2),
-	datad => \Practica_RX|RX_FSM1|CONT~0_combout\,
-	combout => \Practica_RX|RX_FSM1|CONT~1_combout\);
-
--- Location: LCCOMB_X69_Y10_N8
-\Practica_RX|RX_FSM1|CONT[2]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\ = \Practica_RX|RX_FSM1|CONT~1_combout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_RX|RX_FSM1|CONT~1_combout\,
-	combout => \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\);
-
--- Location: LCCOMB_X69_Y10_N2
-\Practica_RX|RX_FSM1|CONTCTRL[0]~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\) # ((\RESET~input_o\) # (!\Practica_RX|RX_FSM1|CS.IDLE~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101011111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CS.DATA~q\,
-	datac => \RESET~input_o\,
-	datad => \Practica_RX|RX_FSM1|CS.IDLE~q\,
-	combout => \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\);
-
--- Location: FF_X69_Y10_N9
-\Practica_RX|RX_FSM1|CONT[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\,
-	ena => \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_RX|RX_FSM1|CONT\(2));
-
--- Location: LCCOMB_X69_Y10_N10
-\Practica_RX|RX_FSM1|Selector0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|Selector0~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\ & (((!\Practica_RX|RX_FSM1|CONT\(0)) # (!\Practica_RX|RX_FSM1|CONT\(2))) # (!\Practica_RX|RX_FSM1|CONT\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CONT\(1),
-	datab => \Practica_RX|RX_FSM1|CS.DATA~q\,
-	datac => \Practica_RX|RX_FSM1|CONT\(2),
-	datad => \Practica_RX|RX_FSM1|CONT\(0),
-	combout => \Practica_RX|RX_FSM1|Selector0~0_combout\);
-
--- Location: LCCOMB_X63_Y10_N30
-\Practica_RX|RX_FSM1|Selector0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|Selector0~1_combout\ = (\Practica_RX|RX_FSM1|Selector0~0_combout\) # ((!\Practica_RX|RX_FSM1|CS.IDLE~q\ & !\Practica_TX|OUT_MUX|Mux0~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011011101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CS.IDLE~q\,
-	datab => \Practica_RX|RX_FSM1|Selector0~0_combout\,
-	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
-	combout => \Practica_RX|RX_FSM1|Selector0~1_combout\);
-
--- Location: FF_X63_Y10_N31
-\Practica_RX|RX_FSM1|CS.DATA\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_RX|RX_FSM1|Selector0~1_combout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \Practica_RX|RX_FSM1|CS.DATA~q\);
-
--- Location: LCCOMB_X69_Y10_N22
+-- Location: LCCOMB_X63_Y8_N28
 \Practica_RX|RX_FSM1|CONT~3\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|RX_FSM1|CONT~3_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\ & (!\Practica_RX|RX_FSM1|CONT\(0) & (!\RESET~input_o\ & \Practica_RX|RX_FSM1|CS.IDLE~q\)))
@@ -2697,21 +2728,37 @@ PORT MAP (
 	datad => \Practica_RX|RX_FSM1|CS.IDLE~q\,
 	combout => \Practica_RX|RX_FSM1|CONT~3_combout\);
 
--- Location: LCCOMB_X69_Y10_N20
+-- Location: LCCOMB_X63_Y8_N20
 \Practica_RX|RX_FSM1|CONT[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|RX_FSM1|CONT[0]~feeder_combout\ = \Practica_RX|RX_FSM1|CONT~3_combout\
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_RX|RX_FSM1|CONT~3_combout\,
+	datab => \Practica_RX|RX_FSM1|CONT~3_combout\,
 	combout => \Practica_RX|RX_FSM1|CONT[0]~feeder_combout\);
 
--- Location: FF_X69_Y10_N21
+-- Location: LCCOMB_X63_Y8_N24
+\Practica_RX|RX_FSM1|CONTCTRL[0]~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\) # ((\RESET~input_o\) # (!\Practica_RX|RX_FSM1|CS.IDLE~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datac => \RESET~input_o\,
+	datad => \Practica_RX|RX_FSM1|CS.IDLE~q\,
+	combout => \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\);
+
+-- Location: FF_X63_Y8_N21
 \Practica_RX|RX_FSM1|CONT[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2726,7 +2773,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|RX_FSM1|CONT\(0));
 
--- Location: LCCOMB_X69_Y10_N24
+-- Location: LCCOMB_X63_Y8_N18
+\Practica_RX|RX_FSM1|CONT~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|CONT~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\ & (!\RESET~input_o\ & \Practica_RX|RX_FSM1|CS.IDLE~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datab => \RESET~input_o\,
+	datad => \Practica_RX|RX_FSM1|CS.IDLE~q\,
+	combout => \Practica_RX|RX_FSM1|CONT~0_combout\);
+
+-- Location: LCCOMB_X63_Y8_N22
 \Practica_RX|RX_FSM1|CONT~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|RX_FSM1|CONT~2_combout\ = (\Practica_RX|RX_FSM1|CONT~0_combout\ & (\Practica_RX|RX_FSM1|CONT\(0) $ (\Practica_RX|RX_FSM1|CONT\(1))))
@@ -2742,21 +2805,7 @@ PORT MAP (
 	datad => \Practica_RX|RX_FSM1|CONT~0_combout\,
 	combout => \Practica_RX|RX_FSM1|CONT~2_combout\);
 
--- Location: LCCOMB_X69_Y10_N30
-\Practica_RX|RX_FSM1|CONT[1]~feeder\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|RX_FSM1|CONT[1]~feeder_combout\ = \Practica_RX|RX_FSM1|CONT~2_combout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \Practica_RX|RX_FSM1|CONT~2_combout\,
-	combout => \Practica_RX|RX_FSM1|CONT[1]~feeder_combout\);
-
--- Location: FF_X69_Y10_N31
+-- Location: FF_X63_Y8_N19
 \Practica_RX|RX_FSM1|CONT[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2765,16 +2814,63 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	d => \Practica_RX|RX_FSM1|CONT[1]~feeder_combout\,
+	asdata => \Practica_RX|RX_FSM1|CONT~2_combout\,
+	sload => VCC,
 	ena => \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_RX|RX_FSM1|CONT\(1));
 
--- Location: LCCOMB_X69_Y10_N12
+-- Location: LCCOMB_X63_Y8_N10
+\Practica_RX|RX_FSM1|CONT~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|CONT~1_combout\ = (\Practica_RX|RX_FSM1|CONT~0_combout\ & (\Practica_RX|RX_FSM1|CONT\(2) $ (((\Practica_RX|RX_FSM1|CONT\(1) & \Practica_RX|RX_FSM1|CONT\(0))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CONT\(1),
+	datab => \Practica_RX|RX_FSM1|CONT\(0),
+	datac => \Practica_RX|RX_FSM1|CONT\(2),
+	datad => \Practica_RX|RX_FSM1|CONT~0_combout\,
+	combout => \Practica_RX|RX_FSM1|CONT~1_combout\);
+
+-- Location: LCCOMB_X63_Y8_N4
+\Practica_RX|RX_FSM1|CONT[2]~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\ = \Practica_RX|RX_FSM1|CONT~1_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CONT~1_combout\,
+	combout => \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\);
+
+-- Location: FF_X63_Y8_N5
+\Practica_RX|RX_FSM1|CONT[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_RX|RX_FSM1|CONT[2]~feeder_combout\,
+	ena => \Practica_RX|RX_FSM1|CONTCTRL[0]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_RX|RX_FSM1|CONT\(2));
+
+-- Location: LCCOMB_X63_Y8_N12
 \Practica_RX|RX_FSM1|NS.PARITY~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|RX_FSM1|NS.PARITY~0_combout\ = (\Practica_RX|RX_FSM1|CONT\(1) & (\Practica_RX|RX_FSM1|CONT\(2) & (\Practica_RX|RX_FSM1|CS.DATA~q\ & \Practica_RX|RX_FSM1|CONT\(0))))
+-- \Practica_RX|RX_FSM1|NS.PARITY~0_combout\ = (\Practica_RX|RX_FSM1|CONT\(1) & (\Practica_RX|RX_FSM1|CS.DATA~q\ & (\Practica_RX|RX_FSM1|CONT\(2) & \Practica_RX|RX_FSM1|CONT\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2783,12 +2879,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Practica_RX|RX_FSM1|CONT\(1),
-	datab => \Practica_RX|RX_FSM1|CONT\(2),
-	datac => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datab => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datac => \Practica_RX|RX_FSM1|CONT\(2),
 	datad => \Practica_RX|RX_FSM1|CONT\(0),
 	combout => \Practica_RX|RX_FSM1|NS.PARITY~0_combout\);
 
--- Location: FF_X62_Y10_N27
+-- Location: FF_X62_Y7_N23
 \Practica_RX|RX_FSM1|CS.PARITY\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2804,23 +2900,147 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|RX_FSM1|CS.PARITY~q\);
 
--- Location: LCCOMB_X62_Y10_N26
-\Practica_RX|RX_FSM1|SHIFT~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X63_Y7_N14
+\Practica_RX|RX_FSM1|Selector1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|RX_FSM1|SHIFT~0_combout\ = (!\RESET~input_o\ & ((\Practica_RX|RX_FSM1|CS.PARITY~q\) # (\Practica_RX|RX_FSM1|CS.DATA~q\)))
+-- \Practica_RX|RX_FSM1|Selector1~0_combout\ = (\Practica_RX|RX_FSM1|CS.PARITY~q\) # ((\Practica_RX|RX_FSM1|CS.STOP~q\ & !\Practica_TX|OUT_MUX|Mux0~1_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101010000",
+	lut_mask => "1010101011111010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RESET~input_o\,
+	dataa => \Practica_RX|RX_FSM1|CS.PARITY~q\,
+	datac => \Practica_RX|RX_FSM1|CS.STOP~q\,
+	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
+	combout => \Practica_RX|RX_FSM1|Selector1~0_combout\);
+
+-- Location: FF_X63_Y7_N15
+\Practica_RX|RX_FSM1|CS.STOP\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_RX|RX_FSM1|Selector1~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_RX|RX_FSM1|CS.STOP~q\);
+
+-- Location: LCCOMB_X63_Y7_N2
+\Practica_RX|RX_FSM1|NS.IDLE~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|NS.IDLE~0_combout\ = ((\Practica_RX|RX_FSM1|CS.IDLE~q\ & !\Practica_RX|RX_FSM1|CS.STOP~q\)) # (!\Practica_TX|OUT_MUX|Mux0~1_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CS.IDLE~q\,
+	datab => \Practica_RX|RX_FSM1|CS.STOP~q\,
+	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
+	combout => \Practica_RX|RX_FSM1|NS.IDLE~0_combout\);
+
+-- Location: LCCOMB_X63_Y7_N4
+\Practica_RX|RX_FSM1|CS.IDLE~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\ = \Practica_RX|RX_FSM1|NS.IDLE~0_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \Practica_RX|RX_FSM1|NS.IDLE~0_combout\,
+	combout => \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\);
+
+-- Location: FF_X63_Y7_N5
+\Practica_RX|RX_FSM1|CS.IDLE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_RX|RX_FSM1|CS.IDLE~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_RX|RX_FSM1|CS.IDLE~q\);
+
+-- Location: LCCOMB_X63_Y8_N30
+\Practica_RX|RX_FSM1|Selector0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|Selector0~0_combout\ = (\Practica_RX|RX_FSM1|CS.DATA~q\ & (((!\Practica_RX|RX_FSM1|CONT\(0)) # (!\Practica_RX|RX_FSM1|CONT\(2))) # (!\Practica_RX|RX_FSM1|CONT\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CONT\(1),
+	datab => \Practica_RX|RX_FSM1|CONT\(2),
+	datac => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datad => \Practica_RX|RX_FSM1|CONT\(0),
+	combout => \Practica_RX|RX_FSM1|Selector0~0_combout\);
+
+-- Location: LCCOMB_X63_Y7_N22
+\Practica_RX|RX_FSM1|Selector0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|Selector0~1_combout\ = (\Practica_RX|RX_FSM1|Selector0~0_combout\) # ((!\Practica_RX|RX_FSM1|CS.IDLE~q\ & !\Practica_TX|OUT_MUX|Mux0~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011011101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|RX_FSM1|CS.IDLE~q\,
+	datab => \Practica_RX|RX_FSM1|Selector0~0_combout\,
+	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
+	combout => \Practica_RX|RX_FSM1|Selector0~1_combout\);
+
+-- Location: FF_X63_Y7_N23
+\Practica_RX|RX_FSM1|CS.DATA\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
+	d => \Practica_RX|RX_FSM1|Selector0~1_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \Practica_RX|RX_FSM1|CS.DATA~q\);
+
+-- Location: LCCOMB_X62_Y7_N22
+\Practica_RX|RX_FSM1|SHIFT~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|RX_FSM1|SHIFT~0_combout\ = (!\RESET~input_o\ & ((\Practica_RX|RX_FSM1|CS.DATA~q\) # (\Practica_RX|RX_FSM1|CS.PARITY~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \Practica_RX|RX_FSM1|CS.DATA~q\,
 	datac => \Practica_RX|RX_FSM1|CS.PARITY~q\,
-	datad => \Practica_RX|RX_FSM1|CS.DATA~q\,
+	datad => \RESET~input_o\,
 	combout => \Practica_RX|RX_FSM1|SHIFT~0_combout\);
 
--- Location: FF_X62_Y10_N31
+-- Location: FF_X62_Y7_N19
 \Practica_RX|SR1|DATA[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2836,21 +3056,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(8));
 
--- Location: LCCOMB_X62_Y10_N12
+-- Location: LCCOMB_X62_Y7_N4
 \Practica_RX|SR1|DATA[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[7]~feeder_combout\ = \Practica_RX|SR1|DATA\(8)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_RX|SR1|DATA\(8),
+	datac => \Practica_RX|SR1|DATA\(8),
 	combout => \Practica_RX|SR1|DATA[7]~feeder_combout\);
 
--- Location: FF_X62_Y10_N13
+-- Location: FF_X62_Y7_N5
 \Practica_RX|SR1|DATA[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2866,21 +3086,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(7));
 
--- Location: LCCOMB_X62_Y10_N22
+-- Location: LCCOMB_X62_Y7_N26
 \Practica_RX|SR1|DATA[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[6]~feeder_combout\ = \Practica_RX|SR1|DATA\(7)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011001100",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_RX|SR1|DATA\(7),
+	datad => \Practica_RX|SR1|DATA\(7),
 	combout => \Practica_RX|SR1|DATA[6]~feeder_combout\);
 
--- Location: FF_X62_Y10_N23
+-- Location: FF_X62_Y7_N27
 \Practica_RX|SR1|DATA[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2896,7 +3116,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(6));
 
--- Location: LCCOMB_X62_Y10_N0
+-- Location: LCCOMB_X62_Y7_N28
 \Practica_RX|SR1|DATA[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[5]~feeder_combout\ = \Practica_RX|SR1|DATA\(6)
@@ -2910,7 +3130,7 @@ PORT MAP (
 	datac => \Practica_RX|SR1|DATA\(6),
 	combout => \Practica_RX|SR1|DATA[5]~feeder_combout\);
 
--- Location: FF_X62_Y10_N1
+-- Location: FF_X62_Y7_N29
 \Practica_RX|SR1|DATA[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2926,21 +3146,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(5));
 
--- Location: LCCOMB_X62_Y10_N20
+-- Location: LCCOMB_X62_Y7_N20
 \Practica_RX|SR1|DATA[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[4]~feeder_combout\ = \Practica_RX|SR1|DATA\(5)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \Practica_RX|SR1|DATA\(5),
+	datab => \Practica_RX|SR1|DATA\(5),
 	combout => \Practica_RX|SR1|DATA[4]~feeder_combout\);
 
--- Location: FF_X62_Y10_N21
+-- Location: FF_X62_Y7_N21
 \Practica_RX|SR1|DATA[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2956,7 +3176,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(4));
 
--- Location: FF_X62_Y10_N7
+-- Location: LCCOMB_X62_Y7_N10
+\Practica_RX|SR1|DATA[3]~feeder\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|SR1|DATA[3]~feeder_combout\ = \Practica_RX|SR1|DATA\(4)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \Practica_RX|SR1|DATA\(4),
+	combout => \Practica_RX|SR1|DATA[3]~feeder_combout\);
+
+-- Location: FF_X62_Y7_N11
 \Practica_RX|SR1|DATA[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2965,29 +3199,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Practica_RX|FREQ_SEL|Mux0~clkctrl_outclk\,
-	asdata => \Practica_RX|SR1|DATA\(4),
+	d => \Practica_RX|SR1|DATA[3]~feeder_combout\,
 	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
 	ena => \Practica_RX|RX_FSM1|SHIFT~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(3));
 
--- Location: LCCOMB_X62_Y10_N28
+-- Location: LCCOMB_X62_Y7_N12
 \Practica_RX|SR1|DATA[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[2]~feeder_combout\ = \Practica_RX|SR1|DATA\(3)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \Practica_RX|SR1|DATA\(3),
+	dataa => \Practica_RX|SR1|DATA\(3),
 	combout => \Practica_RX|SR1|DATA[2]~feeder_combout\);
 
--- Location: FF_X62_Y10_N29
+-- Location: FF_X62_Y7_N13
 \Practica_RX|SR1|DATA[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3003,7 +3236,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(2));
 
--- Location: LCCOMB_X62_Y10_N10
+-- Location: LCCOMB_X62_Y7_N30
 \Practica_RX|SR1|DATA[1]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|SR1|DATA[1]~feeder_combout\ = \Practica_RX|SR1|DATA\(2)
@@ -3017,7 +3250,7 @@ PORT MAP (
 	datac => \Practica_RX|SR1|DATA\(2),
 	combout => \Practica_RX|SR1|DATA[1]~feeder_combout\);
 
--- Location: FF_X62_Y10_N11
+-- Location: FF_X62_Y7_N31
 \Practica_RX|SR1|DATA[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3033,7 +3266,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(1));
 
--- Location: FF_X62_Y10_N17
+-- Location: FF_X62_Y7_N17
 \Practica_RX|SR1|DATA[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3050,7 +3283,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|SR1|DATA\(0));
 
--- Location: LCCOMB_X63_Y10_N4
+-- Location: LCCOMB_X63_Y7_N24
 \Practica_RX|DBUFFER|DATAOUT[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[0]~feeder_combout\ = \Practica_RX|SR1|DATA\(0)
@@ -3064,10 +3297,10 @@ PORT MAP (
 	datac => \Practica_RX|SR1|DATA\(0),
 	combout => \Practica_RX|DBUFFER|DATAOUT[0]~feeder_combout\);
 
--- Location: LCCOMB_X62_Y10_N24
-\Practica_RX|PCHECKER1|Paridad_Check~1\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X62_Y7_N14
+\Practica_RX|PCHECKER1|Paridad_Check~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|PCHECKER1|Paridad_Check~1_combout\ = \Practica_RX|SR1|DATA\(2) $ (\Practica_RX|SR1|DATA\(1) $ (\Practica_RX|SR1|DATA\(4) $ (\Practica_RX|SR1|DATA\(3))))
+-- \Practica_RX|PCHECKER1|Paridad_Check~0_combout\ = \Practica_RX|SR1|DATA\(7) $ (\Practica_RX|SR1|DATA\(5) $ (\Practica_RX|SR1|DATA\(6) $ (\Practica_RX|SR1|DATA\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3075,33 +3308,33 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_RX|SR1|DATA\(2),
-	datab => \Practica_RX|SR1|DATA\(1),
+	dataa => \Practica_RX|SR1|DATA\(7),
+	datab => \Practica_RX|SR1|DATA\(5),
+	datac => \Practica_RX|SR1|DATA\(6),
+	datad => \Practica_RX|SR1|DATA\(8),
+	combout => \Practica_RX|PCHECKER1|Paridad_Check~0_combout\);
+
+-- Location: LCCOMB_X62_Y7_N24
+\Practica_RX|PCHECKER1|Paridad_Check~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Practica_RX|PCHECKER1|Paridad_Check~1_combout\ = \Practica_RX|SR1|DATA\(1) $ (\Practica_RX|SR1|DATA\(2) $ (\Practica_RX|SR1|DATA\(4) $ (\Practica_RX|SR1|DATA\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110010110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Practica_RX|SR1|DATA\(1),
+	datab => \Practica_RX|SR1|DATA\(2),
 	datac => \Practica_RX|SR1|DATA\(4),
 	datad => \Practica_RX|SR1|DATA\(3),
 	combout => \Practica_RX|PCHECKER1|Paridad_Check~1_combout\);
 
--- Location: LCCOMB_X62_Y10_N18
-\Practica_RX|PCHECKER1|Paridad_Check~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Practica_RX|PCHECKER1|Paridad_Check~0_combout\ = \Practica_RX|SR1|DATA\(8) $ (\Practica_RX|SR1|DATA\(7) $ (\Practica_RX|SR1|DATA\(5) $ (\Practica_RX|SR1|DATA\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100110010110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \Practica_RX|SR1|DATA\(8),
-	datab => \Practica_RX|SR1|DATA\(7),
-	datac => \Practica_RX|SR1|DATA\(5),
-	datad => \Practica_RX|SR1|DATA\(6),
-	combout => \Practica_RX|PCHECKER1|Paridad_Check~0_combout\);
-
--- Location: LCCOMB_X62_Y10_N16
+-- Location: LCCOMB_X62_Y7_N16
 \Practica_RX|PCHECKER1|Paridad_Check~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|PCHECKER1|Paridad_Check~2_combout\ = \Practica_RX|PCHECKER1|Paridad_Check~1_combout\ $ (\Practica_RX|SR1|DATA\(0) $ (\Practica_RX|PCHECKER1|Paridad_Check~0_combout\))
+-- \Practica_RX|PCHECKER1|Paridad_Check~2_combout\ = \Practica_RX|PCHECKER1|Paridad_Check~0_combout\ $ (\Practica_RX|SR1|DATA\(0) $ (\Practica_RX|PCHECKER1|Paridad_Check~1_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3109,29 +3342,29 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \Practica_RX|PCHECKER1|Paridad_Check~1_combout\,
+	datab => \Practica_RX|PCHECKER1|Paridad_Check~0_combout\,
 	datac => \Practica_RX|SR1|DATA\(0),
-	datad => \Practica_RX|PCHECKER1|Paridad_Check~0_combout\,
+	datad => \Practica_RX|PCHECKER1|Paridad_Check~1_combout\,
 	combout => \Practica_RX|PCHECKER1|Paridad_Check~2_combout\);
 
--- Location: LCCOMB_X63_Y10_N12
+-- Location: LCCOMB_X63_Y7_N8
 \Practica_RX|RX_FSM1|DATA_OK~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Practica_RX|RX_FSM1|DATA_OK~0_combout\ = (!\RESET~input_o\ & (\Practica_RX|RX_FSM1|CS.STOP~q\ & (!\Practica_RX|PCHECKER1|Paridad_Check~2_combout\ & \Practica_TX|OUT_MUX|Mux0~1_combout\)))
+-- \Practica_RX|RX_FSM1|DATA_OK~0_combout\ = (\Practica_RX|RX_FSM1|CS.STOP~q\ & (!\RESET~input_o\ & (!\Practica_RX|PCHECKER1|Paridad_Check~2_combout\ & \Practica_TX|OUT_MUX|Mux0~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010000000000",
+	lut_mask => "0000001000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RESET~input_o\,
-	datab => \Practica_RX|RX_FSM1|CS.STOP~q\,
+	dataa => \Practica_RX|RX_FSM1|CS.STOP~q\,
+	datab => \RESET~input_o\,
 	datac => \Practica_RX|PCHECKER1|Paridad_Check~2_combout\,
 	datad => \Practica_TX|OUT_MUX|Mux0~1_combout\,
 	combout => \Practica_RX|RX_FSM1|DATA_OK~0_combout\);
 
--- Location: FF_X63_Y10_N5
+-- Location: FF_X63_Y7_N25
 \Practica_RX|DBUFFER|DATAOUT[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3146,21 +3379,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(0));
 
--- Location: LCCOMB_X63_Y10_N22
+-- Location: LCCOMB_X63_Y7_N30
 \Practica_RX|DBUFFER|DATAOUT[1]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[1]~feeder_combout\ = \Practica_RX|SR1|DATA\(1)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000000",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \Practica_RX|SR1|DATA\(1),
+	datac => \Practica_RX|SR1|DATA\(1),
 	combout => \Practica_RX|DBUFFER|DATAOUT[1]~feeder_combout\);
 
--- Location: FF_X63_Y10_N23
+-- Location: FF_X63_Y7_N31
 \Practica_RX|DBUFFER|DATAOUT[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3175,21 +3408,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(1));
 
--- Location: LCCOMB_X63_Y10_N0
+-- Location: LCCOMB_X63_Y7_N28
 \Practica_RX|DBUFFER|DATAOUT[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[2]~feeder_combout\ = \Practica_RX|SR1|DATA\(2)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000000",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \Practica_RX|SR1|DATA\(2),
+	datac => \Practica_RX|SR1|DATA\(2),
 	combout => \Practica_RX|DBUFFER|DATAOUT[2]~feeder_combout\);
 
--- Location: FF_X63_Y10_N1
+-- Location: FF_X63_Y7_N29
 \Practica_RX|DBUFFER|DATAOUT[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3204,7 +3437,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(2));
 
--- Location: LCCOMB_X63_Y10_N14
+-- Location: LCCOMB_X63_Y7_N26
 \Practica_RX|DBUFFER|DATAOUT[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[3]~feeder_combout\ = \Practica_RX|SR1|DATA\(3)
@@ -3218,7 +3451,7 @@ PORT MAP (
 	datac => \Practica_RX|SR1|DATA\(3),
 	combout => \Practica_RX|DBUFFER|DATAOUT[3]~feeder_combout\);
 
--- Location: FF_X63_Y10_N15
+-- Location: FF_X63_Y7_N27
 \Practica_RX|DBUFFER|DATAOUT[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3233,7 +3466,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(3));
 
--- Location: LCCOMB_X63_Y10_N28
+-- Location: LCCOMB_X63_Y7_N12
 \Practica_RX|DBUFFER|DATAOUT[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[4]~feeder_combout\ = \Practica_RX|SR1|DATA\(4)
@@ -3247,7 +3480,7 @@ PORT MAP (
 	datac => \Practica_RX|SR1|DATA\(4),
 	combout => \Practica_RX|DBUFFER|DATAOUT[4]~feeder_combout\);
 
--- Location: FF_X63_Y10_N29
+-- Location: FF_X63_Y7_N13
 \Practica_RX|DBUFFER|DATAOUT[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3262,21 +3495,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(4));
 
--- Location: LCCOMB_X63_Y10_N2
+-- Location: LCCOMB_X63_Y7_N10
 \Practica_RX|DBUFFER|DATAOUT[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[5]~feeder_combout\ = \Practica_RX|SR1|DATA\(5)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010101010",
+	lut_mask => "1111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Practica_RX|SR1|DATA\(5),
+	datac => \Practica_RX|SR1|DATA\(5),
 	combout => \Practica_RX|DBUFFER|DATAOUT[5]~feeder_combout\);
 
--- Location: FF_X63_Y10_N3
+-- Location: FF_X63_Y7_N11
 \Practica_RX|DBUFFER|DATAOUT[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3291,21 +3524,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(5));
 
--- Location: LCCOMB_X63_Y10_N8
+-- Location: LCCOMB_X63_Y7_N20
 \Practica_RX|DBUFFER|DATAOUT[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[6]~feeder_combout\ = \Practica_RX|SR1|DATA\(6)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000000",
+	lut_mask => "1100110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \Practica_RX|SR1|DATA\(6),
+	datab => \Practica_RX|SR1|DATA\(6),
 	combout => \Practica_RX|DBUFFER|DATAOUT[6]~feeder_combout\);
 
--- Location: FF_X63_Y10_N9
+-- Location: FF_X63_Y7_N21
 \Practica_RX|DBUFFER|DATAOUT[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3320,21 +3553,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \Practica_RX|DBUFFER|DATAOUT\(6));
 
--- Location: LCCOMB_X63_Y10_N26
+-- Location: LCCOMB_X63_Y7_N18
 \Practica_RX|DBUFFER|DATAOUT[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Practica_RX|DBUFFER|DATAOUT[7]~feeder_combout\ = \Practica_RX|SR1|DATA\(7)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
+	lut_mask => "1010101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \Practica_RX|SR1|DATA\(7),
+	dataa => \Practica_RX|SR1|DATA\(7),
 	combout => \Practica_RX|DBUFFER|DATAOUT[7]~feeder_combout\);
 
--- Location: FF_X63_Y10_N27
+-- Location: FF_X63_Y7_N19
 \Practica_RX|DBUFFER|DATAOUT[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (

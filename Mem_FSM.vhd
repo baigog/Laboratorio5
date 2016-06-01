@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.PAKETE.all;
+use work.Lab5_Pack.all;
 
 entity Mem_fsm is
 	port(
@@ -88,7 +88,6 @@ end process;
 Output: process(Rst,Current_state)
 begin
 	if (Rst='1') then
-		direccion <= Inicial0;
 		data_ready <= '0';
 		RE <= '0';
 		busy<='0';
@@ -100,36 +99,54 @@ begin
 			when IDLE =>
 				busy <= '0';
 			when INIT0 =>
-				direccion <= Inicial0;
-				ultimo <= Inicial1;
 				RE <= '1';
 			when INIT1 =>
-				direccion <= Inicial1;
-				ultimo <= Inicial2;
 				RE <= '1';
 			when INIT2 =>
-				direccion <= Inicial2;
-				ultimo <= Inicial3;
 				RE <= '1';
 			when INIT3 =>
-				direccion <= Inicial3;
-				ultimo <= Final3;
 				RE <= '1';
 			when INIT4 =>
-				direccion <= Inicial0;
-				ultimo <= Final3;
 				RE <= '1';
 			when ACTUAL =>
 				RE <= '1';
 				data_ready <= '1';
 			when NEXT_DATA =>
-				direccion <= std_logic_vector(unsigned(direccion)+1);
 				RE <= '1';
 			when ESPERA =>
 				RE <= '1';
-			when others =>
-				direccion <= Inicial0;
+			when others => NULL;
 			end case;
+	end if;
+end process;
+
+synch_outputs: process(clk,current_state,rst)
+begin
+	if(rst='1') then
+		direccion <=	X"00";
+	elsif rising_edge(clk) then
+		CASE current_state IS
+			WHEN IDLE	=> NULL;
+			when INIT0 =>
+				direccion <= Inicial0;
+				ultimo <= Inicial1;
+			when INIT1 =>
+				direccion <= Inicial1;
+				ultimo <= Inicial2;
+			when INIT2 =>
+				direccion <= Inicial2;
+				ultimo <= Inicial3;
+			when INIT3 =>
+				direccion <= Inicial3;
+				ultimo <= Final3;
+			when INIT4 =>
+				direccion <= Inicial0;
+				ultimo <= Final3;
+			WHEN ACTUAL	=> null;
+			WHEN NEXt_DATA	=> direccion <= std_logic_vector(unsigned(direccion)+1);
+			WHEN ESPERA	=>	NULL;
+			WHEN OTHERS	=>	NULL;
+		END CASE;
 	end if;
 end process;
 

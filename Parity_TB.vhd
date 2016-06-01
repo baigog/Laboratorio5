@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.Lab5_Pack.all;
 
 entity Parity_TB is
 end Parity_TB;
@@ -9,15 +10,15 @@ architecture tb of Parity_TB is
 
 	component Parity is
 		port(
-		data	:	in std_logic_vector(7 downto 0);
-		Rst	:	in std_logic;
+		data				:	in std_logic_vector(data_width-1 downto 0);
+		Rst				:	in std_logic;
 		
-		bit_parity	:	out	std_logic
+		bit_parity		:	out	std_logic
 		);
 	end component;
 	
-	signal Rst	:	std_logic := '0';
-	signal data	:	std_logic_vector (7 downto 0) := (others=>'0');
+	signal Rst			:	std_logic := '0';
+	signal data			:	std_logic_vector (data_width-1 downto 0) := (others=>'0');
 	signal bit_parity	:	std_logic;
 	
 begin
